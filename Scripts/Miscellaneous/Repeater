@@ -1,0 +1,20 @@
+alias Switch d0
+
+alias value r0
+
+start:
+l value Switch Setting
+
+brdns d1 2
+s d1 Setting value
+brdns d2 2
+s d2 Setting value
+brdns d3 2
+s d3 Setting value
+brdns d4 2
+s d4 Setting value
+brdns d5 2
+s d5 Setting value
+
+yield
+j start

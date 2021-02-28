@@ -1,0 +1,119 @@
+define TEMPERATURE 20
+define DELTARATIOTEMPERATURE 100
+define PRESSURE 101
+define DEFAULTVENT 0.01
+
+define RATIOOXYGEN 0.2
+define KRATIOOXYGEN 0.1
+define RATIOCARBONDIOXIDE 0.1
+define RATIOPOLLUTANT 0.01
+define RATIOVOLATILES 0.01
+define RATIOWATER 0.1
+
+define KELVIN 273.15
+
+alias Self db
+alias Sensor1 d0
+alias VentIn1 d1
+alias VentOut1 d2
+alias Sensor2 d3
+alias VentIn2 d4
+alias VentOut2 d5
+
+alias mode r0
+alias inP r1
+alias rOut r2
+alias var r3
+alias rVent r4
+
+start:
+l mode Self Setting
+
+move inP PRESSURE
+move rVent DEFAULTVENT
+alias Sensor d0
+alias VentIn d1
+alias VentOut d2
+jal computeROut
+jal applyROut
+
+move inP PRESSURE
+move rVent DEFAULTVENT
+alias Sensor d3
+alias VentIn d4
+alias VentOut d5
+jal computeROut
+jal applyROut
+
+yield
+j start
+
+computeROut:
+
+bdns Sensor ra
+
+# If depressurisation asked
+breq mode 0 4
+move inP 0
+move rVent 1
+j ra
+
+# RVent function Temperature
+l var Sensor Temperature
+sub var var TEMPERATURE
+sub var var KELVIN
+abs var var
+div var var DELTARATIOTEMPERATURE
+min var var 1
+max rVent rVent var
+
+# RVent function Oxygen
+l var Sensor RatioOxygen
+sub var var RATIOOXYGEN
+abs var var
+div var var RATIOOXYGEN
+mul var var KRATIOOXYGEN
+min var var 1
+max rVent rVent var
+
+# RVent function CarbonDioxide
+l var Sensor RatioCarbonDioxide
+div var var RATIOCARBONDIOXIDE
+min var var 1
+max rVent rVent var
+
+# RVent function Pollutant
+l var Sensor RatioPollutant
+div var var RATIOPOLLUTANT
+min var var 1
+max rVent rVent var
+
+# RVent function Volatiles
+l var Sensor RatioVolatiles
+div var var RATIOVOLATILES
+min var var 1
+max rVent rVent var
+
+# RVent function Water
+l var Sensor RatioWater
+div var var RATIOWATER
+min var var 1
+max rVent rVent var
+
+j ra
+
+applyROut:
+
+bdns Sensor ra
+bdns VentIn ra
+bdns VentOut ra
+
+sub rOut 1 rVent
+l var Sensor Pressure
+mul var var rOut
+min var var PRESSURE
+max var var 0
+s VentIn PressureExternal inP
+s VentOut PressureExternal var
+
+j ra
