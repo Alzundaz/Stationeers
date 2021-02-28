@@ -14,4 +14,4 @@ Contains IC scripts with minimal comments (due to 128 line limitation).
 ## Misc
 All previous folders can contain a Miscellaneous folder.
 This folder contains miscellaneous stuff.
-These are usually items that can be used with other scripts (like functions or small scripts) or diagrams (like the symbol for pump, tank, etc.) 
+These are usually items that can be used with other scripts (like functions or small scripts) or diagrams (like the symbol for pump, tank, etc.)
