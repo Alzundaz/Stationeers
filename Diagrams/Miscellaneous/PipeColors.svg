@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="360" height="180">
+  <title>Pipe colors</title>
+  <desc>
+    List of all pipe colors.
+  </desc>
+
+  <circle cx="15" cy="15" r="10" fill="blue" />
+  <circle cx="15" cy="45" r="10" fill="grey" />
+  <circle cx="15" cy="75" r="10" fill="green" />
+  <circle cx="15" cy="105" r="10" fill="orange" />
+  <circle cx="15" cy="135" r="10" fill="red" />
+  <circle cx="15" cy="165" r="10" fill="yellow" />
+
+  <circle cx="175" cy="15" r="10" fill="white" stroke="black"/>
+  <circle cx="175" cy="45" r="10" fill="black" />
+  <circle cx="175" cy="75" r="10" fill="brown" />
+  <circle cx="175" cy="105" r="10" fill="khaki" />
+  <circle cx="175" cy="135" r="10" fill="pink" />
+  <circle cx="175" cy="165" r="10" fill="purple" />
+
+  <text x="30" y="20">Blue : X Cold</text>
+  <text x="30" y="50">Grey : Hydroponics</text>
+  <text x="30" y="80">Green : Nitrogen</text>
+  <text x="30" y="110">Orange : Fuel</text>
+  <text x="30" y="140">Red : Hydrogen</text>
+  <text x="30" y="170">Yellow : Waste</text>
+
+  <text x="190" y="20">White : Oxygen</text>
+  <text x="190" y="50">Black : Cabon Dioxyde</text>
+  <text x="190" y="80">Brown : Nitrous Oxide</text>
+  <text x="190" y="110">Khaki : Air (breathable)</text>
+  <text x="190" y="140">Pink : X</text>
+  <text x="190" y="170">Purple : X Hot</text>
+
+</svg>
