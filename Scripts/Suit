@@ -1,0 +1,58 @@
+define TMIN 278.15
+define TMAX 313.15
+define AOX -1.18
+define BOX 139
+
+alias Suit db
+alias Helmet d0
+alias Backpack d1
+
+alias value r0
+alias status r1
+alias tempStatus r2
+alias minOxRatio r3
+alias var r4
+
+start:
+
+l value Suit RatioPollutant
+slt status 0 value
+
+l value Suit PressureExternal
+mul var value AOX
+add var var BOX
+min var var 100
+max var var 5
+div minOxRatio var 100
+
+l value Suit RatioOxygen
+slt value value minOxRatio
+or status status value
+
+l value Suit TemperatureExternal
+slt tempStatus value TMIN
+or status status tempStatus
+slt tempStatus TMAX value
+or status status tempStatus
+
+updateSuit:
+
+l value Suit On
+breq value status 2
+s Suit On status
+
+l value Suit AirRelease
+breq value status 2
+s Suit AirRelease status
+
+l value Suit Filtration
+breq value status 2
+s Suit Filtration status
+
+xor status status 1
+l value Helmet Open
+breq value status 2
+s Helmet Open status
+
+yield
+j start
