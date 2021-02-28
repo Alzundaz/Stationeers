@@ -13,14 +13,14 @@
   <rect width="7" height="7" x="41" y="5" fill="darkblue"/>
   <rect width="7" height="7" x="48" y="5" fill="blue"/>
 
-  <line x1="25" y1="8" x2="35" y2="8" stroke="black" stroke-width="2" />
-  <circle cx="30" cy="8" r="2" fill="black" />
+  <line x1="25" y1="8" x2="35" y2="8" stroke="black" stroke-width="2"/>
+  <circle cx="30" cy="8" r="2" fill="black"/>
 
-  <path d="M 5 23 V 18 H 55 V 23" stroke="black"  stroke-width="0.3" fill="transparent"/>
-  <path d="M 5 29 V 24 H 55 V 29" stroke="black"  stroke-width="0.3" fill="transparent"/>
-  <path d="M 5 35 V 30 H 55 V 35" stroke="black"  stroke-width="0.3" fill="transparent"/>
-  <path d="M 5 41 V 36 H 55 V 41" stroke="black"  stroke-width="0.3" fill="transparent"/>
-  <path d="M 5 47 V 42 H 55 V 47" stroke="black"  stroke-width="0.3" fill="transparent"/>
-  <path d="M 5 53 V 48 H 55 V 53" stroke="black"  stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 23 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 29 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 35 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 41 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 47 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 53 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
   <path d="M 5 55 H 55" stroke="black"  stroke-width="0.3" fill="transparent"/>
 </svg>
