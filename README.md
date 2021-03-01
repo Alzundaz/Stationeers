@@ -5,6 +5,8 @@ Stationeers scripts and plans
 Contains all the diagrams of the different structures.
 They are all in svg format.
 
+To know the color code used in atmospheric networks, please consult [Pipe colors](./Documentations/Miscellaneous/PipeColors.md).
+
 ## Documentations
 Contains markdown files to describe scripts or include diagrams.
 
