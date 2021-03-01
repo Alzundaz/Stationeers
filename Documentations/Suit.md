@@ -1,4 +1,6 @@
 # Suit script
+Script : [Suit](/Scripts/Suit)
+
 This is a simple script to automatically close / open the helmet from the external environment.
 
 ## Polluant
