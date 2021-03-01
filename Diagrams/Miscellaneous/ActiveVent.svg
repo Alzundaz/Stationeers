@@ -22,5 +22,5 @@
   <path d="M 5 41 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
   <path d="M 5 47 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
   <path d="M 5 53 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
-  <path d="M 5 55 H 55" stroke="black"  stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 54 H 55" stroke="black"  stroke-width="0.3" fill="transparent"/>
 </svg>
