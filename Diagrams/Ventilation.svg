@@ -6,18 +6,198 @@
   </desc>
 
   <!-- Devices placement start -->
-  <image href="./Miscellaneous/ActiveVent.svg" transform="rotate(180 30,90)"  x="0" y="60" height="60" width="60"/>
-  <image href="./Miscellaneous/ActiveVent.svg" transform="rotate(180 390,90)"  x="360" y="60" height="60" width="60"/>
-  <image href="./Miscellaneous/ActiveVent.svg" transform="rotate(0 30,330)"  x="0" y="300" height="60" width="60"/>
-  <image href="./Miscellaneous/ActiveVent.svg" transform="rotate(0 390,330)"  x="360" y="300" height="60" width="60"/>
+  <defs>
+    <g id="ActiveVent">
+      <!-- Outlines -->
+      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white" />
+      
+      <!-- Buttons start -->
+      <rect width="14" height="7" x="5" y="5" stroke="black" fill="transparent"/>
+      <rect width="7" height="7" x="5" y="5" fill="darkred"/>
+      <rect width="7" height="7" x="12" y="5" fill="red"/>
+      <rect width="14" height="7" x="41" y="5" stroke="black" fill="transparent"/>
+      <rect width="7" height="7" x="41" y="5" fill="darkblue"/>
+      <rect width="7" height="7" x="48" y="5" fill="blue"/>
+      <!-- Buttons end -->
 
-  <image href="./Miscellaneous/GasSensor.svg" transform="rotate(-90 30,210)"  x="0" y="180" height="60" width="60"/>
-  <image href="./Miscellaneous/GasSensor.svg" transform="rotate(90 390,210)"  x="360" y="180" height="60" width="60"/>
+      <!-- Floppy slot start -->
+      <line x1="25" y1="8" x2="35" y2="8" stroke="black" stroke-width="2"/>
+      <circle cx="30" cy="8" r="2" fill="black"/>
+      <!-- Floppy slot end -->
 
-  <image href="./Miscellaneous/ICHousing.svg" x="120" y="180" height="60" width="60"/>
-  <image href="./Miscellaneous/ICHousing.svg" x="240" y="180" height="60" width="60"/>
+      <!-- Vent grid start -->
+      <path d="M 5 23 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 29 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 35 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 41 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 47 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 53 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 54 H 55" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <!-- Vent grid start -->
+    </g>
 
-  <image href="./Miscellaneous/Lever.svg" x="180" y="180" height="60" width="60"/>
+    <g id="GasSensor">
+      <!-- Base structure start -->
+      <path d="M 10 30 L 25 60 L 35 60 L 50 30" fill="grey"/>
+      <circle cx="30" cy="30" r="20" fill="grey"/>
+      <circle cx="30" cy="30" r="19" fill="lightgrey"/>
+      <circle cx="30" cy="30" r="17" fill="grey"/>
+      <!-- Base structure end -->
+
+      <!-- Vents start -->
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(0 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(40 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(80 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(120 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(160 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(200 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(240 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(280 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(320 30,30)" fill="#656565"/>
+      
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(0 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(40 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(80 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(120 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(160 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(200 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(240 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(280 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(320 30,30)" stroke="#505050"/>
+      
+      <circle cx="30" cy="30" r="7" fill="grey"/>
+      <!-- Vents end -->
+    </g>
+    <g id="ICHousing">
+      <!-- Background -->
+      <rect width="60" height="60" x="0" y="0" fill="#505050"/>
+
+      <!-- External pins start -->
+      <rect width="4" height="57" x="7" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="13" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="19" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="25" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="31" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="37" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="43" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="49" y="1.5" fill="whitesmoke"/>
+
+      <rect width="4" height="55" x="7" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="13" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="19" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="25" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="31" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="37" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="43" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="49" y="2.5" fill="white"/>
+
+      <rect width="57" height="4" x="1.5" y="7" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="13" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="19" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="25" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="31" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="37" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="43" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="49" fill="whitesmoke"/>
+
+      <rect width="55" height="4" x="2.5" y="7" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="13" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="19" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="25" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="31" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="37" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="43" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="49" fill="white"/>
+      <!-- External pins end -->
+
+      <!-- Main chip -->
+      <rect width="50" height="50" x="5" y="5" fill="grey"/>
+
+      <!-- Head -->
+      <circle cx="13" cy="11" r="2" fill="red"/>
+      <text x="20" y="10" font-size="5" fill="white">CIRCUIT</text>
+      <text x="19" y="15" font-size="5" fill="white">HOUSING</text>
+
+      <!-- Device connectors start -->
+      <path d="M 9 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="20" fill="darkgrey"/>
+      <text x="9.5" y="19" font-size="3" fill="white" font-family="monospace">D0</text>
+
+      <path d="M 9 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="33" fill="darkgrey"/>
+      <text x="9.5" y="32" font-size="3" fill="white" font-family="monospace">D1</text>
+
+      <path d="M 9 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="46" fill="darkgrey"/>
+      <text x="9.5" y="45" font-size="3" fill="white" font-family="monospace">D2</text>
+
+      <path d="M 47 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="20" fill="darkgrey"/>
+      <text x="47.5" y="19" font-size="3" fill="white" font-family="monospace">D3</text>
+
+      <path d="M 47 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="33" fill="darkgrey"/>
+      <text x="47.5" y="32" font-size="3" fill="white" font-family="monospace">D4</text>
+
+      <path d="M 47 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="46" fill="darkgrey"/>
+      <text x="47.5" y="45" font-size="3" fill="white" font-family="monospace">D5</text>
+      <!-- Device connectors end -->
+
+      <!-- IC Housing -->
+      <rect width="26" height="33" x="17" y="17" fill="black"/>
+
+      <!-- External IC pins start -->
+      <rect width="20" height="2" x="20" y="22" fill="white"/>
+      <rect width="20" height="2" x="20" y="29" fill="white"/>
+      <rect width="20" height="2" x="20" y="37" fill="white"/>
+      <rect width="20" height="2" x="20" y="44" fill="white"/>
+      <!-- External IC pins end -->
+
+      <!-- IC chip start -->
+      <rect width="15" height="30" x="22.5" y="18.5" fill="grey"/>
+      <path d="M 26.5 18.5 q 0 3.5 3.5 3.5 q 3.5 0 3.5 -3.5" fill="#505050"/>
+      <path d="M 26.5 48.5 q 0 -3.5 3.5 -3.5 q 3.5 0 3.5 3.5" fill="#505050"/>
+      <text x="28" y="40" transform="rotate(-90 28,40)" font-size="3" fill="white" font-family="monospace">RECATEK</text>
+      <text x="32" y="40" transform="rotate(-90 32,40)" font-size="4" fill="white" font-family="monospace">IC</text>
+      <text x="32" y="35" transform="rotate(-90 32,35)" font-size="4" fill="darkred" font-family="monospace">10</text>
+      <!-- IC chip end -->
+    </g>
+    <g id="Lever">
+      <!-- Base start -->
+      <rect width="30" height="60" x="15" y="0" fill="grey"/>
+      <rect width="26" height="46" x="17" y="7" fill="lightgrey"/>
+      <rect width="20" height="25" x="20" y="10" fill="grey"/>
+      <rect width="3" height="40" x="20" y="10" fill="grey"/>
+      <rect width="3" height="40" x="37" y="10" fill="grey"/>
+      <!-- Base end -->
+
+      <!-- Lever start -->
+      <rect width="2.5" height="37.5" x="20.5" y="12.5" fill="darkgrey"/>
+      <rect width="2.5" height="37.5" x="37" y="12.5" fill="darkgrey"/>
+      <rect width="14" height="4" x="23" y="12.5" fill="black"/>
+      <!-- Lever end -->
+
+      <!-- Strips start -->
+      <path d="M 23 12.5 l 3.5 0 l -3.5 4" fill="yellow"/>
+      <path d="M 26.5 16.5 l 3.5 0 l 3.5 -4 l -3.5 0" fill="yellow"/>
+      <path d="M 37 12.5 l 0 4 l -3.5 0 l 3.5 -4" fill="yellow"/>
+      <!-- Strips end -->
+    </g>
+  </defs>
+  
+  <use href="#ActiveVent" transform="rotate(180 30,90)" x="0" y="60"/>
+  <use href="#ActiveVent" transform="rotate(180 390,90)" x="360" y="60"/>
+  <use href="#ActiveVent" transform="rotate(0 30,330)" x="0" y="300"/>
+  <use href="#ActiveVent" transform="rotate(0 390,330)" x="360" y="300"/>
+
+  <use href="#GasSensor" transform="rotate(-90 30,210)" x="0" y="180"/>
+  <use href="#GasSensor" transform="rotate(90 390,210)" x="360" y="180"/>
+
+  <use href="#ICHousing" x="120" y="180"/>
+  <use href="#ICHousing" x="240" y="180"/>
+
+  <use href="#Lever" x="180" y="180"/>
   <!-- Devices placement end -->
 
   <!-- Cables placement start -->
