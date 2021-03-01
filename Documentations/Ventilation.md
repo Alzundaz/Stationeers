@@ -27,10 +27,15 @@ Script : [Ventilation](/Scripts/Ventilation)
 - D4 : Vent In 2
 - D5 : Vent Out 2
 
+**Vent In** provide air from connected pipe network.
+**Vent Out** pump air from the room to connected pipe network.
+
 Each IC can control two pairs of vents and use two sensors. You can use the same sensor (read only).
 
 The script handle both parts separately (D0,D1,D2 and D3,D4, D5)
 You can connect two vents and a sensor in only one side without any crash.
+
+NB : The script doesn't On/Off the vent but the mode is changed automatically.
 
 ## Diagram
 

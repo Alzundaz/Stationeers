@@ -115,5 +115,7 @@ min var var PRESSURE
 max var var 0
 s VentIn PressureExternal inP
 s VentOut PressureExternal var
+s VentIn Mode 0
+s VentOut Mode 1
 
 j ra
