@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="420" height="420">
+  <title>Ventilation</title>
+  <desc>
+    Ventilation diagram.
+  </desc>
+
+  <!-- Devices placement start -->
+  <image xlink:href="./Miscellaneous/ActiveVent.svg" transform="rotate(180 30,90)"  x="0" y="60" height="60" width="60"/>
+  <image xlink:href="./Miscellaneous/ActiveVent.svg" transform="rotate(180 390,90)"  x="360" y="60" height="60" width="60"/>
+  <image xlink:href="./Miscellaneous/ActiveVent.svg" transform="rotate(0 30,330)"  x="0" y="300" height="60" width="60"/>
+  <image xlink:href="./Miscellaneous/ActiveVent.svg" transform="rotate(0 390,330)"  x="360" y="300" height="60" width="60"/>
+
+  <image xlink:href="./Miscellaneous/GasSensor.svg" transform="rotate(-90 30,210)"  x="0" y="180" height="60" width="60"/>
+  <image xlink:href="./Miscellaneous/GasSensor.svg" transform="rotate(90 390,210)"  x="360" y="180" height="60" width="60"/>
+
+  <image xlink:href="./Miscellaneous/ICHousing.svg" x="120" y="180" height="60" width="60"/>
+  <image xlink:href="./Miscellaneous/ICHousing.svg" x="240" y="180" height="60" width="60"/>
+
+  <image xlink:href="./Miscellaneous/Lever.svg" x="180" y="180" height="60" width="60"/>
+  <!-- Devices placement end -->
+
+  <!-- Cables placement start -->
+  <path d="M 30 120 q 0 30 30 30 l 300 0 q 30 0 30 -30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 30 300 q 0 -30 30 -30 l 300 0 q 30 0 30 30" stroke="red" stroke-width="5" fill="transparent"/>
+
+  <path d="M 60 150 q 30 0 30 30 q 0 30 -30 30 q 30 0 30 30 q 0 30 -30 30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 360 150 q -30 0 -30 30 q 0 30 30 30 q -30 0 -30 30 q 0 30 30 30" stroke="red" stroke-width="5" fill="transparent"/>
+
+  <path d="M 120 150 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 l 0 60 q 0 30 -30 30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 300 270 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 l 0 -60 q 0 -30 30 -30" stroke="red" stroke-width="5" fill="transparent"/>
+  <!-- Cables placement end -->
+
+  <!-- Pipes placement start-->
+  <path d="M 20 60 q 0 -40 40 -40 l 360 0 l 0 20 l -20 0 l 0 20 l -20 0 l 0 -20 l -320 0 q -20 0 -20 20" fill="khaki"/>
+  <path d="M 20 360 q 0 40 40 40 l 360 0 l 0 -20 l -20 0 l 0 -20 l -20 0 l 0 20 l -320 0 q -20 0 -20 -20" fill="brown"/>
+  <!-- Pipes placement end-->
+
+  <!-- Texts placement start -->
+  <g font-size="10">
+    <text x="10" y="55" >Vent In 1</text>
+    <text x="370" y="55">Vent In 2</text>
+    <text x="10" y="370">Vent Out 1</text>
+    <text x="370" y="370">Vent Out 2</text>
+    <text x="15" y="180">Sensor 1</text>
+    <text x="370" y="180">Sensor 2</text>
+    <text x="130" y="170">Repeater</text>
+    <text x="245" y="170">Vent Control</text>
+    <text x="200" y="170">Lever</text>
+  </g>
+  <!-- Texts placement end -->
+
+</svg>
