@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Lever</title>
+  <desc>
+    Lever diagram.
+  </desc>
+
+  <!-- Base start -->
+  <rect width="30" height="60" x="15" y="0" fill="grey"/>
+  <rect width="26" height="46" x="17" y="7" fill="lightgrey"/>
+  <rect width="20" height="25" x="20" y="10" fill="grey"/>
+  <rect width="3" height="40" x="20" y="10" fill="grey"/>
+  <rect width="3" height="40" x="37" y="10" fill="grey"/>
+  <!-- Base end -->
+
+  <!-- Lever start -->
+  <rect width="2.5" height="37.5" x="20.5" y="12.5" fill="darkgrey"/>
+  <rect width="2.5" height="37.5" x="37" y="12.5" fill="darkgrey"/>
+  <rect width="14" height="5" x="23" y="12.5" fill="black"/>
+  <!-- Lever end -->
+
+  <!-- Strips start -->
+  <path d="M 23 12.5 l 3.5 0 l -3.5 5" fill="yellow"/>
+  <path d="M 26.5 17.5 l 3.5 0 l 3.5 -5 l -3.5 0" fill="yellow"/>
+  <path d="M 37 12.5 l 0 5 l -3.5 0 l 3.5 -5" fill="yellow"/>
+  <!-- Strips end -->
+
+</svg>
