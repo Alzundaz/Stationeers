@@ -224,6 +224,18 @@
       <rect width="3.5" height="1" x="41.5" y="35.5" fill="darkgrey"/>
       <!-- Device connectors end -->
     </g>
+    <g id="FlashingLight">
+      <!-- Base structure start -->
+      <path d="M 10 30 L 25 60 L 35 60 L 50 30" fill="grey"/>
+      <path d="M 30 10 l 5 0 q 15 0 15 15 l 0 10 q 0 15 -15 15 l -10 0 q -15 0 -15 -15 l 0 -10 q 0 -15 15 -15 l 5 0" fill="grey"/>
+      <!-- Base structure end -->
+
+      <!-- Light start -->
+      <circle cx="30" cy="30" r="16" fill="darkgrey"/>
+      <circle cx="30" cy="30" r="13" fill="yellow"/>
+      <rect width="26" height="5" x="17" y="27.5" transform="rotate(-15 30,30)" fill="grey"/>
+      <!-- Light end -->
+    </g>
   </defs>
   
   <use href="#ActiveVent" transform="rotate(90 630,330)" x="600" y="300"/>
@@ -231,6 +243,7 @@
 
   <use href="#Memory" transform="rotate(-90 210,390)" x="180" y="360"/>
   <use href="#GasSensor" transform="rotate(180 150,390)" x="120" y="360"/>
+  <use href="#FlashingLight" transform="rotate(180 90,390)" x="60" y="360"/>
 
   <use href="#ICHousing" transform="rotate(-90 390,330)" x="360" y="300"/>
   <use href="#ICHousing" transform="rotate(-90 390,450)" x="360" y="420"/>
