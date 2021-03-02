@@ -1,0 +1,76 @@
+define DEPRESSURE_PRECISION 0
+define PRESSURE_PRECISION 10
+
+alias StatusMemory d0
+alias VentIn d1
+alias VentOut d2
+alias SensorIn d3
+alias SensorOut d4
+alias SensorSAS d5
+
+alias status r0
+
+alias var r1
+alias pressureExt r2
+
+s VentIn Lock 1
+s VentOut Lock 1
+
+start:
+yield
+
+s VentIn On 0
+s VentIn On 0
+
+l status StatusMemory Setting
+beq status 0 start
+
+brne status 1 3
+alias Vent d2
+jr 2
+alias Vent d1
+jal depressure
+yield
+
+brne status 1 4
+alias Vent d1
+alias Sensor d3
+jr 3
+alias Vent d2
+alias Sensor d4
+jal pressure
+
+s StatusMemory Setting 0
+j start
+
+depressure:
+
+s Vent Mode 1
+s Vent On 1
+s Vent PressureExternal 0
+
+yield
+l var SensorSAS Pressure
+sub var var DEPRESSURE_PRECISION
+brgt var 0 -3
+
+s Vent On 0
+
+j ra
+
+pressure:
+
+s Vent Mode 0
+s Vent On 1
+
+yield
+l pressureExt Sensor Pressure
+l var SensorSAS Pressure
+s Vent PressureExternal pressureExt
+sub pressureExt pressureExt PRESSURE_PRECISION
+brlt var pressureExt -5
+
+s Vent On 0
+s Vent Mode 1
+
+j ra
