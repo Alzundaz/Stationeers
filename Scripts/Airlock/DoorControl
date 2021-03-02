@@ -1,0 +1,96 @@
+define STATUS_WAIT 0
+define STATUS_INWARD 1
+define STATUS_OUTWARD 2
+
+alias DoorIn d0
+alias DoorOut d1
+alias Light d2
+alias StatusMemory d3
+
+alias status r0
+alias action r1
+
+alias var r2
+
+s DoorIn Lock 0
+s DoorOut Lock 0
+s DoorIn Mode 1
+s DoorOut Mode 1
+
+s StatusMemory Setting STATUS_WAIT
+move action STATUS_WAIT
+jal correctDoor
+
+start:
+yield
+
+l status StatusMemory Setting
+jal correctDoor
+sgt var status STATUS_WAIT
+s Light On var
+
+bgt status STATUS_WAIT start
+
+jal openDoor
+jal getActionButton
+
+breq action STATUS_WAIT 4
+s DoorIn Setting 0
+s DoorOut Setting 0
+jal launchAction
+
+j start
+
+openDoor:
+
+brne action STATUS_INWARD 2
+s DoorIn Open 1
+brne action STATUS_OUTWARD 2
+s DoorOut Open 1
+
+s DoorIn Lock 0
+s DoorOut Lock 0
+
+j ra
+
+getActionButton:
+
+move action STATUS_WAIT
+
+l var DoorIn Open
+bne var 0 nextDoor
+l var DoorIn Setting
+beq var 0 nextDoor
+move action STATUS_INWARD
+j ra
+
+nextDoor:
+
+l var DoorOut Open
+bne var 0 ra
+l var DoorOut Setting
+beq var 0 ra
+move action STATUS_OUTWARD
+j ra
+
+launchAction:
+
+s DoorIn Lock 1
+s DoorOut Lock 1
+s DoorIn Open 0
+s DoorOut Open 0
+s StatusMemory Setting action
+
+j ra
+
+correctDoor:
+
+l var DoorIn Open
+beq var 0 ra
+l var DoorOut Open
+beq var 0 ra
+breq status STATUS_WAIT 2
+s DoorIn Open 0
+s DoorOut Open 0
+
+j ra
