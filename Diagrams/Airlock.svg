@@ -236,10 +236,27 @@
       <rect width="26" height="5" x="17" y="27.5" transform="rotate(-15 30,30)" fill="grey"/>
       <!-- Light end -->
     </g>
+    <g id="PassiveVent">
+      <!-- Outlines -->
+      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white" />
+
+      <!-- Vent grid start -->
+      <path d="M 5 12.1 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 19.3 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 26.4 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 33.6 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 40.7 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 47.8 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 55 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 56 H 55" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <!-- Vent grid start -->
+    </g>
   </defs>
   
   <use href="#ActiveVent" transform="rotate(90 630,330)" x="600" y="300"/>
   <use href="#ActiveVent" transform="rotate(90 630,450)" x="600" y="420"/>
+  <use href="#PassiveVent" transform="rotate(90 630,150)" x="600" y="120"/>
+  <use href="#PassiveVent" transform="rotate(90 630,630)" x="600" y="600"/>
 
   <use href="#Memory" transform="rotate(-90 210,390)" x="180" y="360"/>
   <use href="#GasSensor" transform="rotate(180 150,390)" x="120" y="360"/>
