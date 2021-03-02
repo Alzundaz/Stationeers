@@ -6,7 +6,6 @@
   </desc>
 
   <!-- Grid start -->
-
   <line x1="0" y1="30" x2="780" y2="30" stroke="grey" />
   <line x1="0" y1="270" x2="780" y2="270" stroke="grey" />
   <line x1="0" y1="510" x2="780" y2="510" stroke="grey" />
@@ -16,10 +15,9 @@
   <line x1="270" y1="0" x2="270" y2="780" stroke="grey" />
   <line x1="510" y1="0" x2="510" y2="780" stroke="grey" />
   <line x1="750" y1="0" x2="750" y2="780" stroke="grey" />
-
   <!-- Grid end -->
 
-  <!-- Devices placement start -->
+  <!-- Devices definition start -->
   <defs>
     <g id="ActiveVent">
       <!-- Outlines -->
@@ -252,7 +250,25 @@
       <!-- Vent grid start -->
     </g>
   </defs>
+  <!-- Devices definition end -->
   
+  <!-- Cables placement start -->
+  <path d="M 90 360 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 330 300 q 0 30 -30 30 q 30 0 30 30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 120 330 h 240" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 330 300 v 180 M 450 300 v 180 M 360 390 h 300" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 450 360 q 0 30 30 30 q -30 0 -30 30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 330 300 q 0 30 30 30 q -30 0 -30 30 q 0 30 30 30 q -30 0 -30 30 q 0 30 30 30 q -30 0 -30 30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 450 300 q 0 30 -30 30 q 30 0 30 30 q 0 30 -30 30 q 30 0 30 30 q 0 30 -30 30 q 30 0 30 30" stroke="red" stroke-width="5" fill="transparent"/>
+  <path d="M 660 330 q 30 0 30 30 q 0 30 -30 30 q 30 0 30 30 q 0 30 -30 30 M 690 360 v 60" stroke="red" stroke-width="5" fill="transparent"/>
+  <!-- Cables placement end -->
+
+  <!-- Pipes placement start-->
+  <path d="M 600 140 q -40 0 -40 40 v 120 q 0 40 40 40 v -20 q -20 0 -20 -20 v -120 q 0 -20 20 -20 v -20" fill="yellow"/>
+  <path d="M 600 440 q -40 0 -40 40 v 120 q 0 40 40 40 v -20 q -20 0 -20 -20 v -120 q 0 -20 20 -20 v -20" fill="yellow"/>
+  <!-- Pipes placement end-->
+
+  <!-- Devices placement start -->
   <use href="#ActiveVent" transform="rotate(90 630,330)" x="600" y="300"/>
   <use href="#ActiveVent" transform="rotate(90 630,450)" x="600" y="420"/>
   <use href="#PassiveVent" transform="rotate(90 630,150)" x="600" y="120"/>
@@ -264,6 +280,5 @@
 
   <use href="#ICHousing" transform="rotate(-90 390,330)" x="360" y="300"/>
   <use href="#ICHousing" transform="rotate(-90 390,450)" x="360" y="420"/>
-
   <!-- Devices placement end -->
 </svg>
