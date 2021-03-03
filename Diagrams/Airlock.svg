@@ -329,7 +329,21 @@
   <use href="#ICHousing" transform="rotate(-90 390,330)" x="360" y="300"/>
   <use href="#ICHousing" transform="rotate(-90 390,450)" x="360" y="420"/>
 
-  <use href="#Airlock" transform="rotate(0 390,510)" x="180" y="480"/>
   <use href="#Airlock" transform="rotate(180 390,270)" x="180" y="240"/>
+  <use href="#Airlock" transform="rotate(0 390,510)" x="180" y="480"/>
   <!-- Devices placement end -->
+
+  <!-- Labels placement start -->
+  <g font-size="10">
+    <text x="614" y="370" transform="rotate(0 630,330)">Vent In</text>
+    <text x="610" y="415" transform="rotate(0 630,450)">Vent Out</text>
+    <text x="370" y="250" transform="rotate(0 390,510)">Airlock In</text>
+    <text x="370" y="540" transform="rotate(0 390,270)">Airlock Out</text>
+    <text x="365" y="370" transform="rotate(0 390,330)">Vent Control</text>
+    <text x="365" y="415" transform="rotate(0 390,450)">Door Control</text>
+    <text x="80" y="365" transform="rotate(-90 90,390)">Light</text>
+    <text x="120" y="365" transform="rotate(-90 150,390)">Gas Sensor SAS</text>
+    <text x="180" y="370" transform="rotate(-90 210,390)">Status Memory</text>
+  </g>
+  <!-- Labels placement end -->
 </svg>
