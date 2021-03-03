@@ -353,6 +353,20 @@
     <text x="180" y="370" transform="rotate(-90 210,390)">Status Memory</text>
     <text x="120" y="125" transform="rotate(0 150,150)">Gas Sensor In</text>
     <text x="120" y="660" transform="rotate(0 150,630)">Gas Sensor Out</text>
+
+    <g fill="grey">
+      <text x="35" y="40">Indoor left</text>
+      <text x="275" y="40">Indoor</text>
+      <text x="515" y="40">Indoor right</text>
+      <text x="35" y="280">Sas left</text>
+      <text x="275" y="295">Sas</text>
+      <text x="515" y="290">Sas right</text>
+      <text x="35" y="520">Outdoor left</text>
+      <text x="275" y="545">Outdoor</text>
+      <text x="515" y="530">Outdoor right</text>
+    </g>
+
   </g>
+  <!-- Add grey label for 9 panels -->
   <!-- Labels placement end -->
 </svg>
