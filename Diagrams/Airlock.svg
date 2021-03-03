@@ -249,6 +249,54 @@
       <path d="M 5 56 H 55" stroke="black" stroke-width="0.3" fill="transparent"/>
       <!-- Vent grid start -->
     </g>
+    <g id="Airlock">
+      <defs>
+        <g id="Pad">
+          <rect width="18" height="7.5" x="0" y="0" fill="#909090"/>
+          <rect width="16" height="4" x="1" y="2.5" fill="whitesmoke"/>
+          <rect width="5.3" height="1" x="1" y="5.5" fill="red"/>
+          <rect width="5.3" height="1" x="11.7" y="5.5" fill="green"/>
+          
+          <line x1="6.3" y1="0" x2="6.3" y2="7.5" stroke-width="0.3" stroke="#909090"/>
+          <line x1="11.7" y1="0" x2="11.7" y2="7.5" stroke-width="0.3" stroke="#909090"/>
+
+          <line x1="0" y1="3.5" x2="18" y2="3.5" stroke-width="0.1" stroke="#909090"/>
+          <line x1="0" y1="4.5" x2="18" y2="4.5" stroke-width="0.1" stroke="#909090"/>
+          <line x1="0" y1="5.5" x2="18" y2="5.5" stroke-width="0.1" stroke="#909090"/>
+        </g>
+      </defs>
+      
+      <!-- Connectors start -->
+      <rect width="13" height="13" x="142" y="0" fill="lightgrey"/>
+      <rect width="13" height="13" x="265" y="0" fill="lightgrey"/>
+      <path d="M 271.5 2 l -3 5 h 3 v 4 l 3 -5 h -3 v -4" fill="yellow"/>
+      <rect width="4" height="4" x="143" y="2" fill="green"/>
+      <rect width="4" height="4" x="150" y="2" fill="green"/>
+      <rect width="4" height="4" x="146.5" y="8" fill="green"/>
+      <path d="M 145 6 v 1 h 7 v -1 M 148.5 8 v -1" stroke-width="0.3" stroke="green" fill="transparent"/>
+      <!-- Connectors end -->
+
+      <!-- Funitures start -->
+      <rect width="20" height="35" x="135" y="12.5" fill="whitesmoke"/>
+      <rect width="20" height="35" x="265" y="12.5" fill="whitesmoke"/>
+      <rect width="200" height="30" x="110" y="15" fill="darkgrey"/>
+      <!-- Funitures end -->
+
+      <!-- Pads start -->
+      <use href="#Pad" transform="rotate(0 122,45)" x="113" y="45"/>
+      <use href="#Pad" transform="rotate(180 298,15)" x="289" y="15"/>
+      <!-- Pads end -->
+
+      <!-- Structure start -->
+      <rect width="410" height="20" x="5" y="20" fill="lightgrey"/>
+      <line x1="60" y1="20" x2="60" y2="40" stroke-width="0.3" stroke="darkgrey"/>
+      <line x1="360" y1="20" x2="360" y2="40" stroke-width="0.3" stroke="darkgrey"/>
+      <rect width="415" height="12" x="2.5" y="24" fill="darkgrey"/>
+      <line x1="60" y1="24" x2="60" y2="36" stroke-width="0.3" stroke="#808080"/>
+      <line x1="360" y1="24" x2="360" y2="36" stroke-width="0.3" stroke="#808080"/>
+      <rect width="240" height="25" x="90" y="17.5" fill="grey"/>
+      <!-- Structure end -->
+    </g>
   </defs>
   <!-- Devices definition end -->
   
@@ -280,5 +328,8 @@
 
   <use href="#ICHousing" transform="rotate(-90 390,330)" x="360" y="300"/>
   <use href="#ICHousing" transform="rotate(-90 390,450)" x="360" y="420"/>
+
+  <use href="#Airlock" transform="rotate(0 390,510)" x="180" y="480"/>
+  <use href="#Airlock" transform="rotate(180 390,270)" x="180" y="240"/>
   <!-- Devices placement end -->
 </svg>
