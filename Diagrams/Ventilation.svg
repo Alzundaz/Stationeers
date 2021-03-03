@@ -26,13 +26,13 @@
       <!-- Floppy slot end -->
 
       <!-- Vent grid start -->
-      <path d="M 5 23 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
-      <path d="M 5 29 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
-      <path d="M 5 35 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
-      <path d="M 5 41 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
-      <path d="M 5 47 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
-      <path d="M 5 53 v -5 h 50 v 5" stroke="black"  stroke-width="0.3" fill="transparent"/>
-      <path d="M 5 54 H 55" stroke="black"  stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 23 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 29 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 35 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 41 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 47 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 53 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 54 H 55" stroke="black" stroke-width="0.3" fill="transparent"/>
       <!-- Vent grid start -->
     </g>
 
