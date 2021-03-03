@@ -11,7 +11,8 @@ alias value r0
 alias status r1
 alias tempStatus r2
 alias minOxRatio r3
-alias var r4
+
+alias var r5
 
 start:
 

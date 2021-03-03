@@ -23,8 +23,9 @@ alias VentOut2 d5
 alias mode r0
 alias inP r1
 alias rOut r2
-alias var r3
-alias rVent r4
+alias rVent r3
+
+alias var r5
 
 start:
 l mode Self Setting
