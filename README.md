@@ -20,4 +20,4 @@ These are usually items that can be used with other scripts (like functions or s
 
 ### Index
 
-- [Ventilation](./Documentations/Ventilation.svg)
+- [Ventilation](./Documentations/Ventilation.md)
