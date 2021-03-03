@@ -267,18 +267,18 @@
       </defs>
       
       <!-- Connectors start -->
-      <rect width="13" height="13" x="142" y="0" fill="lightgrey"/>
-      <rect width="13" height="13" x="265" y="0" fill="lightgrey"/>
-      <path d="M 271.5 2 l -3 5 h 3 v 4 l 3 -5 h -3 v -4" fill="yellow"/>
-      <rect width="4" height="4" x="143" y="2" fill="green"/>
-      <rect width="4" height="4" x="150" y="2" fill="green"/>
-      <rect width="4" height="4" x="146.5" y="8" fill="green"/>
-      <path d="M 145 6 v 1 h 7 v -1 M 148.5 8 v -1" stroke-width="0.3" stroke="green" fill="transparent"/>
+      <rect width="13" height="13" x="143.5" y="0" fill="lightgrey"/>
+      <rect width="13" height="13" x="263.5" y="0" fill="lightgrey"/>
+      <path d="M 270 2 l -3 5 h 3 v 4 l 3 -5 h -3 v -4" fill="yellow"/>
+      <rect width="4" height="4" x="144.5" y="2" fill="green"/>
+      <rect width="4" height="4" x="151.5" y="2" fill="green"/>
+      <rect width="4" height="4" x="148" y="8" fill="green"/>
+      <path d="M 146.5 6 v 1 h 6.5 v -1 M 150 8 v -1" stroke-width="0.3" stroke="green" fill="transparent"/>
       <!-- Connectors end -->
 
       <!-- Funitures start -->
-      <rect width="20" height="35" x="135" y="12.5" fill="whitesmoke"/>
-      <rect width="20" height="35" x="265" y="12.5" fill="whitesmoke"/>
+      <rect width="21.5" height="35" x="135" y="12.5" fill="whitesmoke"/>
+      <rect width="21.5" height="35" x="263.5" y="12.5" fill="whitesmoke"/>
       <rect width="200" height="30" x="110" y="15" fill="darkgrey"/>
       <!-- Funitures end -->
 
