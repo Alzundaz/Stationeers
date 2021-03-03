@@ -5,7 +5,7 @@
     Ventilation diagram.
   </desc>
 
-  <!-- Devices placement start -->
+  <!-- Devices definition start -->
   <defs>
     <g id="ActiveVent">
       <!-- Outlines -->
@@ -185,20 +185,7 @@
       <!-- Strips end -->
     </g>
   </defs>
-  
-  <use href="#ActiveVent" transform="rotate(180 30,90)" x="0" y="60"/>
-  <use href="#ActiveVent" transform="rotate(180 390,90)" x="360" y="60"/>
-  <use href="#ActiveVent" transform="rotate(0 30,330)" x="0" y="300"/>
-  <use href="#ActiveVent" transform="rotate(0 390,330)" x="360" y="300"/>
-
-  <use href="#GasSensor" transform="rotate(-90 30,210)" x="0" y="180"/>
-  <use href="#GasSensor" transform="rotate(90 390,210)" x="360" y="180"/>
-
-  <use href="#ICHousing" x="120" y="180"/>
-  <use href="#ICHousing" x="240" y="180"/>
-
-  <use href="#Lever" x="180" y="180"/>
-  <!-- Devices placement end -->
+  <!-- Devices definition end -->
 
   <!-- Cables placement start -->
   <path d="M 30 120 q 0 30 30 30 l 300 0 q 30 0 30 -30" stroke="red" stroke-width="5" fill="transparent"/>
@@ -216,18 +203,33 @@
   <path d="M 20 360 q 0 40 40 40 l 360 0 l 0 -20 l -20 0 l 0 -20 l -20 0 l 0 20 l -320 0 q -20 0 -20 -20" fill="brown"/>
   <!-- Pipes placement end-->
 
-  <!-- Texts placement start -->
+  <!-- Devices placement start -->
+  <use href="#ActiveVent" transform="rotate(180 30,90)" x="0" y="60"/>
+  <use href="#ActiveVent" transform="rotate(180 390,90)" x="360" y="60"/>
+  <use href="#ActiveVent" transform="rotate(0 30,330)" x="0" y="300"/>
+  <use href="#ActiveVent" transform="rotate(0 390,330)" x="360" y="300"/>
+
+  <use href="#GasSensor" transform="rotate(-90 30,210)" x="0" y="180"/>
+  <use href="#GasSensor" transform="rotate(90 390,210)" x="360" y="180"/>
+
+  <use href="#ICHousing" x="120" y="180"/>
+  <use href="#ICHousing" x="240" y="180"/>
+
+  <use href="#Lever" x="180" y="180"/>
+  <!-- Devices placement end -->
+
+  <!-- Labels placement start -->
   <g font-size="10">
-    <text x="10" y="55" >Vent In 1</text>
-    <text x="370" y="55">Vent In 2</text>
-    <text x="10" y="370">Vent Out 1</text>
-    <text x="370" y="370">Vent Out 2</text>
-    <text x="15" y="180">Sensor 1</text>
-    <text x="370" y="180">Sensor 2</text>
-    <text x="130" y="170">Repeater</text>
-    <text x="245" y="170">Vent Control</text>
-    <text x="198" y="170">Lever</text>
+    <text x="10" y="130" transform="rotate(-90 30,90)">Vent In 1</text>
+    <text x="370" y="55" transform="rotate(-90 390,90)">Vent In 2</text>
+    <text x="10" y="370" transform="rotate(-90 30,330)">Vent Out 1</text>
+    <text x="370" y="295" transform="rotate(-90 390,330)">Vent Out 2</text>
+    <text x="15" y="185">Sensor 1</text>
+    <text x="370" y="185">Sensor 2</text>
+    <text x="130" y="175" transform="rotate(-90 150,210)">Repeater</text>
+    <text x="245" y="175" transform="rotate(-90 270,210)">Vent Control</text>
+    <text x="198" y="190" transform="rotate(-90 210,210)">Lever</text>
   </g>
-  <!-- Texts placement end -->
+  <!-- Labels placement end -->
 
 </svg>
