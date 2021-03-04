@@ -9,9 +9,9 @@ alias SensorOut d4
 alias SensorSAS d5
 
 alias status r0
+alias pressureExt r1
 
-alias var r1
-alias pressureExt r2
+alias var r3
 
 s VentIn Lock 1
 s VentOut Lock 1

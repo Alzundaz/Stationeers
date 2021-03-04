@@ -10,7 +10,7 @@ alias StatusMemory d3
 alias status r0
 alias action r1
 
-alias var r2
+alias var r3
 
 s DoorIn Lock 0
 s DoorOut Lock 0
