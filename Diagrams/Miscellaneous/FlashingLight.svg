@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Flashing Light</title>
+  <desc>
+    Flashing Light diagram.
+  </desc>
+
+  <!-- Base structure start -->
+  <path d="M 10 30 L 25 60 L 35 60 L 50 30" fill="grey"/>
+  <path d="M 30 10 l 5 0 q 15 0 15 15 l 0 10 q 0 15 -15 15 l -10 0 q -15 0 -15 -15 l 0 -10 q 0 -15 15 -15 l 5 0" fill="grey"/>
+  <!-- Base structure end -->
+
+  <!-- Light start -->
+  <circle cx="30" cy="30" r="16" fill="darkgrey"/>
+  <circle cx="30" cy="30" r="13" fill="yellow"/>
+  <rect width="26" height="5" x="17" y="27.5" transform="rotate(-15 30,30)" fill="grey"/>
+  <!-- Light end -->
+
+</svg>

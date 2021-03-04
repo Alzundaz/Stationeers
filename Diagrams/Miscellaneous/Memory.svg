@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Memory</title>
+  <desc>
+    Memory diagram.
+  </desc>
+
+  <!-- Background -->
+  <rect width="60" height="30" x="0" y="15" fill="#505050"/>
+
+  <!-- External pins start -->
+  <rect width="4" height="27" x="7" y="16.5" fill="whitesmoke"/>
+  <rect width="4" height="27" x="13" y="16.5" fill="whitesmoke"/>
+  <rect width="4" height="27" x="19" y="16.5" fill="whitesmoke"/>
+  <rect width="4" height="27" x="25" y="16.5" fill="whitesmoke"/>
+  <rect width="4" height="27" x="31" y="16.5" fill="whitesmoke"/>
+  <rect width="4" height="27" x="37" y="16.5" fill="whitesmoke"/>
+  <rect width="4" height="27" x="43" y="16.5" fill="whitesmoke"/>
+  <rect width="4" height="27" x="49" y="16.5" fill="whitesmoke"/>
+
+  <rect width="4" height="25" x="7" y="17.5" fill="white"/>
+  <rect width="4" height="25" x="13" y="17.5" fill="white"/>
+  <rect width="4" height="25" x="19" y="17.5" fill="white"/>
+  <rect width="4" height="25" x="25" y="17.5" fill="white"/>
+  <rect width="4" height="25" x="31" y="17.5" fill="white"/>
+  <rect width="4" height="25" x="37" y="17.5" fill="white"/>
+  <rect width="4" height="25" x="43" y="17.5" fill="white"/>
+  <rect width="4" height="25" x="49" y="17.5" fill="white"/>
+  <!-- External pins end -->
+
+  <!-- Main chip -->
+  <rect width="50" height="20" x="5" y="20" fill="grey"/>
+
+  <!-- Title -->
+  <text x="18" y="31.5" font-size="5" fill="white">MEMORY</text>
+  <rect width="1.5" height="4.5" x="8.75" y="21" fill="white"/>
+  <rect width="4.5" height="1.5" x="7.25" y="22.5" fill="white"/>
+  <rect width="4.5" height="1.5" x="48.25" y="22.5" fill="white"/>
+
+  <!-- Device connectors start -->
+  <path d="M 6 28 l 3.46 -2 l 3.46 2 l 0 4 l -3.46 2 l -3.46 -2 l 0 -4" fill="lightgrey"/>
+  <rect width="7" height="2" x="6" y="29" fill="darkgrey"/>
+
+  <path d="M 47 28 l 3.46 -2 l 3.46 2 l 0 4 l -3.46 2 l -3.46 -2 l 0 -4" fill="lightgrey"/>
+  <rect width="7" height="2" x="47" y="29" fill="darkgrey"/>
+
+  <path d="M 11.5 35 l 1.73 -1 l 1.73 1 l 0 2 l -1.73 1 l -1.73 -1 l 0 -2" fill="lightgrey"/>
+  <rect width="3.5" height="1" x="11.5" y="35.5" fill="darkgrey"/>
+
+  <path d="M 41.5 35 l 1.73 -1 l 1.73 1 l 0 2 l -1.73 1 l -1.73 -1 l 0 -2" fill="lightgrey"/>
+  <rect width="3.5" height="1" x="41.5" y="35.5" fill="darkgrey"/>
+  <!-- Device connectors end -->
+  
+</svg>

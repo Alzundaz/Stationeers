@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Passive Vent</title>
+  <desc>
+    Passive Vent diagram.
+  </desc>
+
+  <!-- Outlines -->
+  <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white" />
+
+  <!-- Vent grid start -->
+  <path d="M 5 12.1 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 19.3 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 26.4 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 33.6 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 40.7 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 47.8 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 55 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <path d="M 5 56 H 55" stroke="black" stroke-width="0.3" fill="transparent"/>
+  <!-- Vent grid start -->
+
+</svg>
