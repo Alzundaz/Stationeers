@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Volum Pump</title>
+  <desc>
+    Volum Pump diagram.
+  </desc>
+
+  <!-- Base structure start -->
+  <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+  <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+  <rect width="40" height="50" x="10" y="5" fill="grey"/>
+  <rect width="40" height="46" x="10" y="7" fill="yellow"/>
+  <!-- Base structure end -->
+
+  <!-- Screws start -->
+  <path d="M 12 8 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 46 8 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 12 48.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 46 48.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <!-- Screws end -->
+
+  <!-- Light start -->
+  <path d="M 20 15 l 2 -2 h 6 l 2 2 v 11 l -2 2 h -6 l -2 -2 v 11" fill="grey"/>
+  <path d="M 21.5 16 l 1.5 -1.5 h 4 l 1.5 1.5 v 9 l -1.5 1.5 h -4 l -1.5 -1.5 v 9" fill="green"/>
+  <!-- Light end -->
+
+  <!-- Valve start -->
+  <circle cx="25" cy="40" r="8" fill="grey" stroke="#656565" stroke-width="0.5"/>
+  <circle cx="25" cy="40" r="6" fill="#505050"/>
+  <rect width="2" height="15" x="24" y="32.5" fill="grey"/>
+  <rect width="2" height="15" x="24" y="32.5" transform="rotate(90 25,40)" fill="grey"/>
+  <circle cx="25" cy="40" r="2" fill="darkgrey"/>
+  <circle cx="25" cy="40" r="6" fill="transparent" stroke="#656565" stroke-width="0.5"/>
+  <!-- Valve end -->
+
+  <!-- Arrow start -->
+  <path d="M 40 19 h 4 l -4 -6 l -4 6 h 4" fill="red"/>
+  <rect width="5" height="8" x="37.5" y="19" fill="red"/>
+  <rect width="5" height="8" x="37.5" y="29" fill="red"/>
+  <rect width="5" height="4" x="37.5" y="39" fill="red"/>
+  <rect width="5" height="2" x="37.5" y="45" fill="red"/>
+  <!-- Arrow end -->
+
+</svg>
