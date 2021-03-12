@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120" height="60">
+  <title>Filtration</title>
+  <desc>
+    Filtration diagram.
+  </desc>
+
+  <!-- Connectors start -->
+  <rect width="13" height="13" x="22.5" y="0" fill="lightgrey"/>
+  <rect width="13" height="13" x="82.5" y="0" fill="lightgrey"/>
+  <!-- Connectors end -->
+
+  <!-- Structure start -->
+  <rect width="120" height="22" x="0" y="19" rx="2" ry="2" fill="grey"/>
+  <rect width="22" height="30" x="19" y="30" rx="2" ry="2" fill="grey"/>
+  <rect width="116" height="56" x="2" y="2" rx="5" ry="5" fill="whitesmoke"/>
+  <!-- Structure end -->
+
+</svg>
