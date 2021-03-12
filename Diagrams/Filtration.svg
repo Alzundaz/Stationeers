@@ -205,9 +205,12 @@
 
 <!-- Cables placement start -->
   <g stroke="red" stroke-width="5" fill="transparent">
-    <path d="M 180 90 h 360 M 180 150 q 30 0 30 -30 q 0 -30 -30 -30 m 30 30 q 0 -30 30 -30"/>
-    <path d="M 300 90 q 30 0 30 30 q 0 30 -30 30"/>
-    <path d="M 360 90 q -30 0 -30 30 v 360"/>
+    <path d="M 180 90 h 120 q 30 0 30 30 q 0 30 -30 30"/>
+    <path d="M 180 150 q 30 0 30 -30 q 0 -30 -30 -30 m 30 30 q 0 -30 30 -30"/>
+    <path d="M 330 120 q 0 30 30 30 q -30 0 -30 30 m -30 -30 h 60 q 30 0 30 30"/>
+    <path d="M 300 150 q 30 0 30 30 v 60 q 0 30 -30 30 q 30 0 30 30 q 0 -30 30 -30 q -30 0 -30 -30 m 0 60 v 180"/>
+    <path d="M 480 450 q 30 0 30 -30 q 0 -30 -30 -30 h -60 q -30 0 -30 30 v 60 q 0 -30 -30 -30 q -30 0 -30 30 m 0 -60 q 0 30 30 30 q 30 0 30 -30"/>
+    <path d="M 150 480 q 0 30 -30 30 h -60 q -30 0 -30 -30 v -180 q 0 -30 30 -30 h 300 q 30 0 30 -30"/>
  </g>
   <!-- Cables placement end -->
 
@@ -232,4 +235,27 @@
 
   <use href="#ICHousing" transform="rotate(0 390,210)" x="360" y="180"/>
   <!-- Devices placement end -->
+
+  <!-- Labels placement start -->
+  <g font-size="10">
+    <text x="120" y="65" transform="rotate(-90 150,90)">Distrib Analyzer</text>
+    <text x="120" y="125" transform="rotate(-90 150,150)">Distrib Pump</text>
+    <text x="245" y="125" transform="rotate(-90 270,150)">Dump Pump</text>
+    <text x="355" y="175" transform="rotate(-90 390,210)">Filtration Control</text>
+    <text x="140" y="300" transform="rotate(0 150,390)">Tank</text>
+    <text x="415" y="425" transform="rotate(-90 450,450)">Inlet Gas Analyzer</text>
+    <text x="370" y="550" transform="rotate(0 360,510)">Filtration</text>
+
+    <!-- Add grey label for 9 panels -->
+    <g fill="grey">
+      <text x="35" y="42">High left</text>
+      <text x="465" y="42">High right</text>
+      <text x="45" y="285">Bottom left</text>
+      <text x="455" y="282">Bottom right</text>
+      <text x="35" y="522">Front left</text>
+      <text x="463" y="522">Front right</text>
+    </g>
+
+  </g>
+  <!-- Labels placement end -->
 </svg>

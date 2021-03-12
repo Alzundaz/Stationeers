@@ -8,7 +8,7 @@ Script : [Filtration](/Scripts/Filtration)
 
 - D0 : Tank
 - D1 : Dump pump for overpressure
-- D2 : Gas analyzer before filtration (can be a tank)
+- D2 : Inlet gas analyzer (can be a tank)
 - D3 : Filtration
 - D4 : Gas analyser on distribution circuit
 - D5 : Volum Pump on distribution circuit

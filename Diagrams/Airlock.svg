@@ -354,6 +354,7 @@
     <text x="120" y="125" transform="rotate(0 150,150)">Gas Sensor In</text>
     <text x="120" y="660" transform="rotate(0 150,630)">Gas Sensor Out</text>
 
+    <!-- Add grey label for 9 panels -->
     <g fill="grey">
       <text x="35" y="40">Indoor left</text>
       <text x="275" y="40">Indoor</text>
@@ -367,6 +368,5 @@
     </g>
 
   </g>
-  <!-- Add grey label for 9 panels -->
   <!-- Labels placement end -->
 </svg>
