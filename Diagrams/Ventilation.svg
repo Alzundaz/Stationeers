@@ -9,7 +9,7 @@
   <defs>
     <g id="ActiveVent">
       <!-- Outlines -->
-      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white" />
+      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white"/>
       
       <!-- Buttons start -->
       <rect width="14" height="7" x="5" y="5" stroke="black" fill="transparent"/>
