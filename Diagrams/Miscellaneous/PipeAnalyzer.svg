@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Pipe Analyzer</title>
+  <desc>
+    Pipe Analyzer diagram.
+  </desc>
+
+  <!-- Base structure start -->
+  <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+  <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+  <rect width="40" height="42" x="10" y="9" fill="grey"/>
+  <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+  <!-- Base structure end -->
+
+  <!-- Screws start -->
+  <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <!-- Screws end -->
+
+  <!-- Light start -->
+  <path d="M 15 15 l 2 -2 h 26 l 2 2 v 30 l -2 2 h -26 l -2 -2 v 30" fill="grey"/>
+  <path d="M 16.5 25 l 1.5 -1.5 h 24 l 1.5 1.5 v 19 l -1.5 1.5 h -24 l -1.5 -1.5 v -19" fill="green"/>
+  <!-- Light end -->
+
+  <!-- Pad start -->
+  <rect width="8" height="8" x="17.5" y="14.25" fill="red"/>
+  <rect width="3" height="3" x="27" y="14.5" fill="whitesmoke"/>
+  <rect width="3" height="3" x="31" y="14.5" fill="whitesmoke"/>
+  <rect width="3" height="3" x="35" y="14.5" fill="whitesmoke"/>
+  <rect width="3" height="3" x="39" y="14.5" fill="whitesmoke"/>
+  <rect width="3" height="3" x="27" y="19" fill="whitesmoke"/>
+  <rect width="3" height="3" x="31" y="19" fill="whitesmoke"/>
+  <rect width="3" height="3" x="35" y="19" fill="whitesmoke"/>
+  <rect width="3" height="3" x="39" y="19" fill="whitesmoke"/>
+  <!-- Pad end -->
+
+</svg>

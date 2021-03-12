@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="540" height="780">
+  <title>Filtration</title>
+  <desc>
+    Filtration diagram.
+  </desc>
+
+  <!-- Grid start -->
+  <line x1="0" y1="30" x2="780" y2="30" stroke="grey"/>
+  <line x1="0" y1="270" x2="780" y2="270" stroke="grey"/>
+  <line x1="0" y1="510" x2="780" y2="510" stroke="grey"/>
+  <line x1="0" y1="750" x2="780" y2="750" stroke="grey"/>
+
+  <line x1="30" y1="0" x2="30" y2="780" stroke="grey"/>
+  <line x1="270" y1="0" x2="270" y2="780" stroke="grey"/>
+  <line x1="510" y1="0" x2="510" y2="780" stroke="grey"/>
+  <!-- Grid end -->
+
+  
+  <!-- Devices definition start -->
+  <defs>
+    <g id="Tank">
+      <rect width="22" height="30" x="79" y="0" rx="2" ry="2" fill="grey"/>
+      <rect width="13" height="13" x="167" y="82.5" fill="lightgrey"/>
+      <circle cx="90" cy="90" r="84" fill="orange" stroke="darkorange" stroke-width="2"/>
+    </g>
+    <g id="VolumPump">
+      <!-- Base structure start -->
+      <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+      <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+      <rect width="40" height="42" x="10" y="9" fill="grey"/>
+      <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+      <!-- Base structure end -->
+
+      <!-- Screws start -->
+      <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <!-- Screws end -->
+
+      <!-- Light start -->
+      <path d="M 20 18 l 2 -2 h 6 l 2 2 v 10 l -2 2 h -6 l -2 -2 v 10" fill="grey"/>
+      <path d="M 21.5 19 l 1.5 -1.5 h 4 l 1.5 1.5 v 8 l -1.5 1.5 h -4 l -1.5 -1.5 v 8" fill="green"/>
+      <!-- Light end -->
+
+      <!-- Valve start -->
+      <circle cx="25" cy="40" r="8" fill="grey" stroke="#656565" stroke-width="0.5"/>
+      <circle cx="25" cy="40" r="6" fill="#505050"/>
+      <rect width="2" height="15" x="24" y="32.5" fill="grey"/>
+      <rect width="2" height="15" x="24" y="32.5" transform="rotate(90 25,40)" fill="grey"/>
+      <circle cx="25" cy="40" r="2" fill="darkgrey"/>
+      <circle cx="25" cy="40" r="6" fill="transparent" stroke="#656565" stroke-width="0.5"/>
+      <!-- Valve end -->
+
+      <!-- Arrow start -->
+      <path d="M 40 20 h 4 l -4 -6 l -4 6 h 4" fill="red"/>
+      <rect width="5" height="6" x="37.5" y="20" fill="red"/>
+      <rect width="5" height="6" x="37.5" y="28" fill="red"/>
+      <rect width="5" height="4" x="37.5" y="36" fill="red"/>
+      <rect width="5" height="2" x="37.5" y="42" fill="red"/>
+      <!-- Arrow end -->
+    </g>
+    <g id="PipeAnalyzer">
+      <!-- Base structure start -->
+      <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+      <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+      <rect width="40" height="42" x="10" y="9" fill="grey"/>
+      <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+      <!-- Base structure end -->
+
+      <!-- Screws start -->
+      <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <!-- Screws end -->
+
+      <!-- Light start -->
+      <path d="M 15 15 l 2 -2 h 26 l 2 2 v 30 l -2 2 h -26 l -2 -2 v 30" fill="grey"/>
+      <path d="M 16.5 25 l 1.5 -1.5 h 24 l 1.5 1.5 v 19 l -1.5 1.5 h -24 l -1.5 -1.5 v -19" fill="green"/>
+      <!-- Light end -->
+
+      <!-- Pad start -->
+      <rect width="8" height="8" x="17.5" y="14.25" fill="red"/>
+      <rect width="3" height="3" x="27" y="14.5" fill="whitesmoke"/>
+      <rect width="3" height="3" x="31" y="14.5" fill="whitesmoke"/>
+      <rect width="3" height="3" x="35" y="14.5" fill="whitesmoke"/>
+      <rect width="3" height="3" x="39" y="14.5" fill="whitesmoke"/>
+      <rect width="3" height="3" x="27" y="19" fill="whitesmoke"/>
+      <rect width="3" height="3" x="31" y="19" fill="whitesmoke"/>
+      <rect width="3" height="3" x="35" y="19" fill="whitesmoke"/>
+      <rect width="3" height="3" x="39" y="19" fill="whitesmoke"/>
+      <!-- Pad end -->
+    </g>
+    <g id="Filtration">
+      <!-- Connectors start -->
+      <rect width="13" height="13" x="23.5" y="0" fill="lightgrey"/>
+      <rect width="13" height="13" x="83.5" y="0" fill="lightgrey"/>
+      <!-- Connectors end -->
+
+      <!-- Structure start -->
+      <rect width="120" height="22" x="0" y="19" rx="2" ry="2" fill="grey"/>
+      <rect width="22" height="30" x="19" y="30" rx="2" ry="2" fill="grey"/>
+      <rect width="116" height="56" x="2" y="2" rx="5" ry="5" fill="whitesmoke"/>
+      <!-- Structure end -->
+    </g>
+    <g id="ICHousing">
+      <!-- Background -->
+      <rect width="60" height="60" x="0" y="0" fill="#505050"/>
+
+      <!-- External pins start -->
+      <rect width="4" height="57" x="7" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="13" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="19" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="25" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="31" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="37" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="43" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="49" y="1.5" fill="whitesmoke"/>
+
+      <rect width="4" height="55" x="7" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="13" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="19" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="25" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="31" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="37" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="43" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="49" y="2.5" fill="white"/>
+
+      <rect width="57" height="4" x="1.5" y="7" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="13" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="19" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="25" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="31" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="37" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="43" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="49" fill="whitesmoke"/>
+
+      <rect width="55" height="4" x="2.5" y="7" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="13" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="19" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="25" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="31" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="37" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="43" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="49" fill="white"/>
+      <!-- External pins end -->
+
+      <!-- Main chip -->
+      <rect width="50" height="50" x="5" y="5" fill="grey"/>
+
+      <!-- Head -->
+      <circle cx="13" cy="11" r="2" fill="red"/>
+      <text x="20" y="10" font-size="5" fill="white">CIRCUIT</text>
+      <text x="19" y="15" font-size="5" fill="white">HOUSING</text>
+
+      <!-- Device connectors start -->
+      <path d="M 9 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="20" fill="darkgrey"/>
+      <text x="9.5" y="19" font-size="3" fill="white" font-family="monospace">D0</text>
+
+      <path d="M 9 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="33" fill="darkgrey"/>
+      <text x="9.5" y="32" font-size="3" fill="white" font-family="monospace">D1</text>
+
+      <path d="M 9 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="46" fill="darkgrey"/>
+      <text x="9.5" y="45" font-size="3" fill="white" font-family="monospace">D2</text>
+
+      <path d="M 47 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="20" fill="darkgrey"/>
+      <text x="47.5" y="19" font-size="3" fill="white" font-family="monospace">D3</text>
+
+      <path d="M 47 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="33" fill="darkgrey"/>
+      <text x="47.5" y="32" font-size="3" fill="white" font-family="monospace">D4</text>
+
+      <path d="M 47 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="46" fill="darkgrey"/>
+      <text x="47.5" y="45" font-size="3" fill="white" font-family="monospace">D5</text>
+      <!-- Device connectors end -->
+
+      <!-- IC Housing -->
+      <rect width="26" height="33" x="17" y="17" fill="black"/>
+
+      <!-- External IC pins start -->
+      <rect width="20" height="2" x="20" y="22" fill="white"/>
+      <rect width="20" height="2" x="20" y="29" fill="white"/>
+      <rect width="20" height="2" x="20" y="37" fill="white"/>
+      <rect width="20" height="2" x="20" y="44" fill="white"/>
+      <!-- External IC pins end -->
+
+      <!-- IC chip start -->
+      <rect width="15" height="30" x="22.5" y="18.5" fill="grey"/>
+      <path d="M 26.5 18.5 q 0 3.5 3.5 3.5 q 3.5 0 3.5 -3.5" fill="#505050"/>
+      <path d="M 26.5 48.5 q 0 -3.5 3.5 -3.5 q 3.5 0 3.5 3.5" fill="#505050"/>
+      <text x="28" y="40" transform="rotate(-90 28,40)" font-size="3" fill="white" font-family="monospace">RECATEK</text>
+      <text x="32" y="40" transform="rotate(-90 32,40)" font-size="4" fill="white" font-family="monospace">IC</text>
+      <text x="32" y="35" transform="rotate(-90 32,35)" font-size="4" fill="darkred" font-family="monospace">10</text>
+      <!-- IC chip end -->
+    </g>
+  </defs>
+  <!-- Devices definition end -->
+
+<!-- Cables placement start -->
+  <g stroke="red" stroke-width="5" fill="transparent">
+    <path d="M 180 90 h 120 q 30 0 30 30 q 0 30 -30 30"/>
+    <path d="M 180 150 q 30 0 30 -30 q 0 -30 -30 -30 m 30 30 q 0 -30 30 -30"/>
+    <path d="M 330 120 q 0 30 30 30 q -30 0 -30 30 m -30 -30 h 60 q 30 0 30 30"/>
+    <path d="M 300 150 q 30 0 30 30 v 60 q 0 30 -30 30 q 30 0 30 30 q 0 -30 30 -30 q -30 0 -30 -30 m 0 60 v 180"/>
+    <path d="M 480 450 q 30 0 30 -30 q 0 -30 -30 -30 h -60 q -30 0 -30 30 v 60 q 0 -30 -30 -30 q -30 0 -30 30 m 0 -60 q 0 30 30 30 q 30 0 30 -30"/>
+    <path d="M 150 480 q 0 30 -30 30 h -60 q -30 0 -30 -30 v -180 q 0 -30 30 -30 h 300 q 30 0 30 -30"/>
+ </g>
+  <!-- Cables placement end -->
+
+  <!-- Pipes placement start-->
+  <g fill="yellow">
+    <path d="M 300 500 q -20 0 -20 -20 v -500 h -20 v 500 q 0 40 40 40 M 240 380 h 20 v 20 h -20"/>
+    <path d="M 140 0 v 180 q 0 40 40 40 h 90 v -20 h -90 q -20 0 -20 -20 v -180"/>
+    <path d="M 460 780 v -300 h -20 v 20 h -20 v 20 h 20 v 40 h -80 q -20 0 -20 -20 h -20 q 0 40 40 40 h 80 v 200"/>
+  </g>
+  <!-- Pipes placement end-->
+
+  <!-- Devices placement start -->
+  <use href="#Tank" transform="rotate(90 150,390)" x="60" y="300"/>
+  
+  <use href="#Filtration" transform="rotate(0 150,390)" x="300" y="480"/>
+
+  <use href="#PipeAnalyzer" transform="rotate(0 450,450)" x="420" y="420"/>
+  <use href="#PipeAnalyzer" transform="rotate(0 450,450)" x="120" y="60"/>
+
+  <use href="#VolumPump" transform="rotate(0 150,150)" x="120" y="120"/>
+  <use href="#VolumPump" transform="rotate(0 270,150)" x="240" y="120"/>
+
+  <use href="#ICHousing" transform="rotate(0 390,210)" x="360" y="180"/>
+  <!-- Devices placement end -->
+
+  <!-- Labels placement start -->
+  <g font-size="10">
+    <text x="120" y="65" transform="rotate(-90 150,90)">Distrib Analyzer</text>
+    <text x="120" y="125" transform="rotate(-90 150,150)">Distrib Pump</text>
+    <text x="245" y="125" transform="rotate(-90 270,150)">Dump Pump</text>
+    <text x="355" y="175" transform="rotate(-90 390,210)">Filtration Control</text>
+    <text x="140" y="300" transform="rotate(0 150,390)">Tank</text>
+    <text x="415" y="425" transform="rotate(-90 450,450)">Inlet Gas Analyzer</text>
+    <text x="370" y="550" transform="rotate(0 360,510)">Filtration</text>
+
+    <!-- Add grey label for 9 panels -->
+    <g fill="grey">
+      <text x="35" y="42">High left</text>
+      <text x="465" y="42">High right</text>
+      <text x="45" y="285">Bottom left</text>
+      <text x="455" y="282">Bottom right</text>
+      <text x="35" y="522">Front left</text>
+      <text x="463" y="522">Front right</text>
+    </g>
+
+  </g>
+  <!-- Labels placement end -->
+</svg>
