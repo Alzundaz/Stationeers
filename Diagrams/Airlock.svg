@@ -6,22 +6,22 @@
   </desc>
 
   <!-- Grid start -->
-  <line x1="0" y1="30" x2="780" y2="30" stroke="grey" />
-  <line x1="0" y1="270" x2="780" y2="270" stroke="grey" />
-  <line x1="0" y1="510" x2="780" y2="510" stroke="grey" />
-  <line x1="0" y1="750" x2="780" y2="750" stroke="grey" />
+  <line x1="0" y1="30" x2="780" y2="30" stroke="grey"/>
+  <line x1="0" y1="270" x2="780" y2="270" stroke="grey"/>
+  <line x1="0" y1="510" x2="780" y2="510" stroke="grey"/>
+  <line x1="0" y1="750" x2="780" y2="750" stroke="grey"/>
 
-  <line x1="30" y1="0" x2="30" y2="780" stroke="grey" />
-  <line x1="270" y1="0" x2="270" y2="780" stroke="grey" />
-  <line x1="510" y1="0" x2="510" y2="780" stroke="grey" />
-  <line x1="750" y1="0" x2="750" y2="780" stroke="grey" />
+  <line x1="30" y1="0" x2="30" y2="780" stroke="grey"/>
+  <line x1="270" y1="0" x2="270" y2="780" stroke="grey"/>
+  <line x1="510" y1="0" x2="510" y2="780" stroke="grey"/>
+  <line x1="750" y1="0" x2="750" y2="780" stroke="grey"/>
   <!-- Grid end -->
 
   <!-- Devices definition start -->
   <defs>
     <g id="ActiveVent">
       <!-- Outlines -->
-      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white" />
+      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white"/>
       
       <!-- Buttons start -->
       <rect width="14" height="7" x="5" y="5" stroke="black" fill="transparent"/>
@@ -236,7 +236,7 @@
     </g>
     <g id="PassiveVent">
       <!-- Outlines -->
-      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white" />
+      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white"/>
 
       <!-- Vent grid start -->
       <path d="M 5 12.1 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>

@@ -5,19 +5,19 @@
     List of all pipe colors.
   </desc>
 
-  <circle cx="15" cy="15" r="10" fill="blue" />
-  <circle cx="15" cy="45" r="10" fill="grey" />
-  <circle cx="15" cy="75" r="10" fill="green" />
-  <circle cx="15" cy="105" r="10" fill="orange" />
-  <circle cx="15" cy="135" r="10" fill="red" />
-  <circle cx="15" cy="165" r="10" fill="yellow" />
+  <circle cx="15" cy="15" r="10" fill="blue"/>
+  <circle cx="15" cy="45" r="10" fill="grey"/>
+  <circle cx="15" cy="75" r="10" fill="green"/>
+  <circle cx="15" cy="105" r="10" fill="orange"/>
+  <circle cx="15" cy="135" r="10" fill="red"/>
+  <circle cx="15" cy="165" r="10" fill="yellow"/>
 
   <circle cx="175" cy="15" r="10" fill="white" stroke="black"/>
-  <circle cx="175" cy="45" r="10" fill="black" />
-  <circle cx="175" cy="75" r="10" fill="brown" />
-  <circle cx="175" cy="105" r="10" fill="khaki" />
-  <circle cx="175" cy="135" r="10" fill="pink" />
-  <circle cx="175" cy="165" r="10" fill="purple" />
+  <circle cx="175" cy="45" r="10" fill="black"/>
+  <circle cx="175" cy="75" r="10" fill="brown"/>
+  <circle cx="175" cy="105" r="10" fill="khaki"/>
+  <circle cx="175" cy="135" r="10" fill="pink"/>
+  <circle cx="175" cy="165" r="10" fill="purple"/>
 
   <text x="30" y="20">Blue : X Cold</text>
   <text x="30" y="50">Grey : Hydroponics</text>
