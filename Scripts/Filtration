@@ -33,6 +33,8 @@ l distributionStatus DistributionPump On
 start:
 
 # Dump in case of overpressure
+bdns Tank overPressureEnd
+bdns DumpPump overPressureEnd
 l pressure Tank Pressure
 
 sgt var pressure MAXPRESSURE
@@ -42,8 +44,11 @@ select dumpStatus var dumpStatus OFF
 
 s DumpPump Setting 100
 s DumpPump On dumpStatus
+overPressureEnd:
 
 # Filtration if sufficient gas supply
+bdns GasSupply filtrationEnd
+bdns Filtration filtrationEnd
 move totalFiltrableMoles 0
 l totalMoles GasSupply TotalMoles
 ls filter Filtration 0 OccupantHash
@@ -53,7 +58,6 @@ ls filter Filtration 1 OccupantHash
 jal getRatio
 mul var totalMoles ratio
 add totalFiltrableMoles totalFiltrableMoles var
-s db Setting totalFiltrableMoles
 
 sgt var totalFiltrableMoles MAXMOLES
 or filtrationStatus filtrationStatus var
@@ -61,8 +65,11 @@ sge var totalFiltrableMoles MINMOLES
 select filtrationStatus var filtrationStatus OFF
 
 s Filtration On filtrationStatus
+filtrationEnd:
 
 # Keep good pressure in distribution pipe
+bdns DistributionAnalyzer distributionEnd
+bdns DistributionPump distributionEnd
 s DistributionAnalyzer On ON
 l pressure DistributionAnalyzer Pressure
 
@@ -73,6 +80,7 @@ select distributionStatus var distributionStatus OFF
 
 s DistributionPump Setting 100
 s DistributionPump On distributionStatus
+distributionEnd:
 
 yield
 j start
