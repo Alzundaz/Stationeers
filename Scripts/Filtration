@@ -1,0 +1,124 @@
+define MAXPRESSURE 50000
+define MINPRESSURE 49000
+define MAXMOLES 1000
+define MINMOLES 100
+define MAXDISTRIBUTION 10000
+define MINDISTRIBUTION 9000
+
+define ON 1
+define OFF 0
+
+alias Tank d0
+alias DumpPump d1
+alias GasSupply d2
+alias Filtration d3
+alias DistributionAnalyzer d4
+alias DistributionPump d5
+
+alias pressure r0
+alias dumpStatus r1
+alias filtrationStatus r2
+alias filter r3
+alias ratio r4
+alias totalMoles r5
+alias totalFiltrableMoles r6
+alias distributionStatus r7
+
+alias var r8
+
+l dumpStatus DumpPump On
+l filtrationStatus Filtration On
+l distributionStatus DistributionPump On
+
+start:
+
+# Dump in case of overpressure
+bdns Tank overPressureEnd
+bdns DumpPump overPressureEnd
+l pressure Tank Pressure
+
+sgt var pressure MAXPRESSURE
+or dumpStatus dumpStatus var
+sge var pressure MINPRESSURE
+select dumpStatus var dumpStatus OFF
+
+s DumpPump Setting 100
+s DumpPump On dumpStatus
+overPressureEnd:
+
+# Filtration if sufficient gas supply
+bdns GasSupply filtrationEnd
+bdns Filtration filtrationEnd
+move totalFiltrableMoles 0
+l totalMoles GasSupply TotalMoles
+ls filter Filtration 0 OccupantHash
+jal getRatio
+mul totalFiltrableMoles totalMoles ratio
+ls filter Filtration 1 OccupantHash
+jal getRatio
+mul var totalMoles ratio
+add totalFiltrableMoles totalFiltrableMoles var
+
+sgt var totalFiltrableMoles MAXMOLES
+or filtrationStatus filtrationStatus var
+sge var totalFiltrableMoles MINMOLES
+select filtrationStatus var filtrationStatus OFF
+
+s Filtration On filtrationStatus
+filtrationEnd:
+
+# Keep good pressure in distribution pipe
+bdns DistributionAnalyzer distributionEnd
+bdns DistributionPump distributionEnd
+s DistributionAnalyzer On ON
+l pressure DistributionAnalyzer Pressure
+
+slt var pressure MINDISTRIBUTION
+or distributionStatus distributionStatus var
+sle var pressure MAXDISTRIBUTION
+select distributionStatus var distributionStatus OFF
+
+s DistributionPump Setting 100
+s DistributionPump On distributionStatus
+distributionEnd:
+
+yield
+j start
+
+getRatio:
+# CO2
+breq filter 1635000764 3
+breq filter 416897318 2
+brne filter 1876847024 3
+l ratio GasSupply RatioCarbonDioxide
+j ra
+# N
+breq filter 632853248 3
+breq filter -632657357 2
+brne filter -1387439451 3
+l ratio GasSupply RatioNitrogen
+j ra
+# NO2
+breq filter -1247674305 3
+breq filter 1824284061 2
+brne filter 465267979 3
+l ratio GasSupply RatioNitrousOxide
+j ra
+# O2
+breq filter -721824748 3
+breq filter -1067319543 2
+brne filter -1217998945 3
+l ratio GasSupply RatioOxygen
+j ra
+# X
+breq filter 1915566057 3
+breq filter 63677771 2
+brne filter 1959564765 3
+l ratio GasSupply RatioPollutant
+j ra
+# H2
+breq filter 15011598 3
+breq filter 1037507240 2
+brne filter 1255156286 3
+l ratio GasSupply RatioVolatiles
+j ra
