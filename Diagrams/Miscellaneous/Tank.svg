@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180" height="180">
+  <title>Tank</title>
+  <desc>
+    Tank diagram.
+  </desc>
+
+  <rect width="22" height="30" x="79" y="0" rx="2" ry="2" fill="grey"/>
+  <rect width="13" height="13" x="167" y="82.5" fill="lightgrey"/>
+  <circle cx="90" cy="90" r="84" fill="orange" stroke="darkorange" stroke-width="2"/>
+
+</svg>
