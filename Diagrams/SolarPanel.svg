@@ -225,8 +225,8 @@
     <g fill="grey">
       <text x="135" y="15">North</text>
       <text x="135" y="285">South</text>
-      <text x="270" y="105" transform="rotate(90 270,120)">East</text>
-      <text x="0" y="105" transform="rotate(-90 30,120)">West</text>
+      <text x="260" y="135" transform="rotate(90 270,150)">East</text>
+      <text x="15" y="135" transform="rotate(-90 30,150)">West</text>
     </g>
   </g>
   <!-- Labels placement end -->
