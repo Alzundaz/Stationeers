@@ -11,18 +11,18 @@
       <line x1="0.5" y1="0" x2="0.5" y2="21" stroke="whitesmoke" stroke-width="0.1"/>
     </pattern>
     <pattern id="FillCaseSolarPanelCell" x="0" y="0" width="0.33333" height="0.33333">
-      <path d="M 3 1 h 13 l 2 2 v 13 l -2 2 h -13 l -2 -2 v -13 l 2 -2" fill="url(#FillSolarCell)"/>
-      <line x1="9.3" y1="0" x2="9.3" y2="18.6" stroke="whitesmoke" stroke-width="0.5"/>
-      <line x1="0" y1="9.3" x2="18.6" y2="9.3" stroke="whitesmoke" stroke-width="0.5"/>
+      <path d="M 3 1 h 14 l 2 2 v 14 l -2 2 h -14 l -2 -2 v -14 l 2 -2" fill="url(#FillSolarCell)"/>
+      <line x1="9.75" y1="0" x2="9.75" y2="20" stroke="whitesmoke" stroke-width="0.5"/>
+      <line x1="0" y1="9.75" x2="20" y2="9.75" stroke="whitesmoke" stroke-width="0.5"/>
     </pattern>
     <pattern id="FillCaseSolarPanel" x="0" y="0" width="0.33333" height="0.33333">
-      <rect width="56" height="56" x="1" y="1" stroke="#505050" stroke-width="1" fill="url(#FillCaseSolarPanelCell)"/>
+      <rect width="60" height="60" x="1" y="1" stroke="#505050" stroke-width="1" fill="url(#FillCaseSolarPanelCell)"/>
     </pattern>
   </defs>
 
   <!-- Structure Start -->
-  <path d="M 35 5 h 110 l 30 30 v 110 l -30 30 h -110 l -30 -30 v -110 l 30 -30" fill="url(#FillCaseSolarPanel)"/>
-  <path d="M 35 6 h 111 l 29 29 v 110 l -30 30 h -110 l -29 -29 v -112 l 28 -28 h 1" stroke="#505050" stroke-width="1" fill="transparent"/>
+  <path d="M 30 0 h 120 l 30 30 v 120 l -30 30 h -120 l -30 -30 v -120 l 30 -30" fill="url(#FillCaseSolarPanel)"/>
+  <path d="M 30 1 h 121 l 29 29 v 120 l -30 30 h -120 l -29 -29 v -122 l 28 -28 h 1" stroke="#505050" stroke-width="1" fill="transparent"/>
   <!-- Structure End -->
 
 </svg>
