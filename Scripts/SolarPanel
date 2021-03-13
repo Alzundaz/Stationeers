@@ -1,0 +1,53 @@
+define AVCORRECT 0.66666
+define BVCORRECT -10
+define AHEADCOEFF 3
+
+alias SunlightSensor d0
+
+alias hSun r0
+alias vSun r1
+alias rValue r2
+alias vValue r3
+
+alias lastRValue r5
+alias lastVValue r6
+
+alias var r8
+
+lb lastRValue -539224550 Horizontal 0
+lb lastVValue -539224550 Vertical 0
+
+start:
+
+l hSun SunlightSensor Horizontal
+l vSun SunlightSensor Vertical
+
+brle vSun 90 4
+move rValue 0
+move vValue 0
+j endConvertion
+
+add rValue hSun 90
+sub vValue 90 vSun
+mul vValue vValue AVCORRECT
+add vValue vValue BVCORRECT
+max vValue vValue 0
+min vValue vValue 50
+
+sub var rValue lastRValue
+move lastRValue rValue
+mul var var AHEADCOEFF
+add rValue rValue var
+
+sub var vValue lastVValue
+move lastVValue vValue
+mul var var AHEADCOEFF
+add vValue vValue var
+
+endConvertion:
+
+sb -539224550 Horizontal rValue
+sb -539224550 Vertical vValue
+
+yield
+j start
