@@ -1,6 +1,6 @@
 define AVCORRECT 0.66666
 define BVCORRECT -10
-define AHEADCOEFF 3
+define AHEADCOEFF 2
 
 alias SunlightSensor d0
 
@@ -27,7 +27,10 @@ move rValue 0
 move vValue 0
 j endConvertion
 
-add rValue hSun 90
+sub rValue hSun 90
+brge rValue 0 2
+add rValue rValue 360
+
 sub vValue 90 vSun
 mul vValue vValue AVCORRECT
 add vValue vValue BVCORRECT
