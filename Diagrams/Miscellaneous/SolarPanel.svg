@@ -21,6 +21,7 @@
   </defs>
 
   <!-- Structure Start -->
+  <path d="M 30 0 h 120 l 30 30 v 120 l -30 30 h -120 l -30 -30 v -120 l 30 -30" fill="whitesmoke"/>
   <path d="M 30 0 h 120 l 30 30 v 120 l -30 30 h -120 l -30 -30 v -120 l 30 -30" fill="url(#FillCaseSolarPanel)"/>
   <path d="M 30 1 h 121 l 29 29 v 120 l -30 30 h -120 l -29 -29 v -122 l 28 -28 h 1" stroke="#505050" stroke-width="1" fill="transparent"/>
   <!-- Structure End -->

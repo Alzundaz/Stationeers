@@ -71,6 +71,7 @@
       </defs>
 
       <!-- Structure Start -->
+      <path d="M 30 0 h 120 l 30 30 v 120 l -30 30 h -120 l -30 -30 v -120 l 30 -30" fill="whitesmoke"/>
       <path d="M 30 0 h 120 l 30 30 v 120 l -30 30 h -120 l -30 -30 v -120 l 30 -30" fill="url(#FillCaseSolarPanel)"/>
       <path d="M 30 1 h 121 l 29 29 v 120 l -30 30 h -120 l -29 -29 v -122 l 28 -28 h 1" stroke="#505050" stroke-width="1" fill="transparent"/>
       <!-- Structure End -->
@@ -217,8 +218,8 @@
   <!-- Labels placement start -->
   <g font-size="10">
     <text x="95" y="56" transform="rotate(0 150,150)">Solar Panel</text>
-    <text x="253" y="175" transform="rotate(0 270,210)">Daylight</text>
-    <text x="256" y="185" transform="rotate(0 270,210)">Sensor</text>
+    <text x="253" y="170" transform="rotate(0 270,210)">Daylight</text>
+    <text x="256" y="180" transform="rotate(0 270,210)">Sensor</text>
     <text x="60" y="296" transform="rotate(0 90,330)">Power Control</text>
     <text x="110" y="355" transform="rotate(-90 150,390)">Solar Panel Control</text>
 
