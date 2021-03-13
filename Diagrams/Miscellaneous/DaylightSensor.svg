@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Daylight Sensor</title>
+  <desc>
+    Daylight Sensor diagram.
+  </desc>
+
+  <defs>
+    <pattern id="FillLightSensor" x="0" y="0" width="0.0476" height="1">
+    <rect x="0" y="0" width="1" height="21" fill="darkblue"/>
+    <line x1="0.5" y1="0" x2="0.5" y2="21" stroke="whitesmoke" stroke-width="0.1"/>
+    </pattern>
+    <g id="LightSensor">
+      <path d="M 2 0 h 17 l 2 2 v 17 l -2 2 h -17 l -2 -2 v -17 l 2 -2" fill="url(#FillLightSensor)"/>
+      <line x1="10.75" y1="0" x2="10.75" y2="21" stroke="whitesmoke" stroke-width="0.5"/>
+      <line x1="0" y1="10.75" x2="21" y2="10.75" stroke="whitesmoke" stroke-width="0.5"/>
+    </g>
+  </defs>
+
+  <!-- Connector Start -->
+  <rect width="25" height="5" x="17.5" y="0" fill="grey"/>
+  <rect width="3" height="3" x="25" y="1" fill="green"/>
+  <rect width="3" height="3" x="31" y="1" fill="green"/>
+  <rect width="3" height="3" x="28.5" y="7" fill="green"/>
+  <path d="M 26.5 4 v 1 h 6 v -1 M 30 7 v -1" stroke-width="0.3" stroke="green" fill="transparent"/>
+  <!-- Connector End -->
+
+  <!-- Structure Start -->
+  <path d="M 5 5 h 50 v 40 l -10 10 h -30 l -10 -10 v -40" fill="whitesmoke"/>
+  <!-- Structure End -->
+
+  <!-- Light Sensors Start -->
+  <use href="#LightSensor" transform="rotate(0 122,45)" x="8.75" y="8"/>
+  <use href="#LightSensor" transform="rotate(0 122,45)" x="30.25" y="8"/>
+  <use href="#LightSensor" transform="rotate(0 122,45)" x="8.75" y="29.5"/>
+  <use href="#LightSensor" transform="rotate(0 122,45)" x="30.25" y="29.5"/>
+  <!-- Light Sensors End -->
+
+  <!-- Mask Start -->
+  <path d="M 8.5 42.5 l 8.5 8.5 h -6.5 l -2 -2" fill="whitesmoke"/>
+  <path d="M 51.5 42.5 l -8.5 8.5 h 6.5 l 2 -2" fill="whitesmoke"/>
+  <path d="M 7 7 h 46 v 36 l -9 9 h -27.5 l -9 -9 v -36" fill="transparent" stroke="grey" stroke-width="1"/>
+  <!-- Mask End -->
+
+</svg>
