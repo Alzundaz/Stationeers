@@ -1,6 +1,7 @@
 define AVCORRECT 0.66666
 define BVCORRECT -10
 define AHEADCOEFF 2
+define MINCHARGE 100
 
 alias SunlightSensor d0
 
@@ -19,17 +20,15 @@ lb lastVValue -539224550 Vertical 0
 
 start:
 
+jal checkCharge
+
 l hSun SunlightSensor Horizontal
 l vSun SunlightSensor Vertical
-
-brle vSun 90 4
-move rValue 0
-move vValue 0
-j endConvertion
 
 sub rValue hSun 90
 brge rValue 0 2
 add rValue rValue 360
+max rValue rValue 0
 
 sub vValue 90 vSun
 mul vValue vValue AVCORRECT
@@ -47,10 +46,20 @@ move lastVValue vValue
 mul var var AHEADCOEFF
 add vValue vValue var
 
-endConvertion:
-
 sb -539224550 Horizontal rValue
 sb -539224550 Vertical vValue
 
+yield
+j start
+
+checkCharge:
+lb var -539224550 Charge 1
+
+bgt var MINCHARGE ra
+
+sb -539224550 Horizontal 0
+sb -539224550 Vertical 0
+
+yield
 yield
 j start
