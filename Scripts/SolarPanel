@@ -2,6 +2,7 @@ define AVCORRECT 0.66666
 define BVCORRECT -10
 define AHEADCOEFF 2
 define MINCHARGE 100
+define SOLARPANELHASH -539224550
 
 alias SunlightSensor d0
 
@@ -15,8 +16,8 @@ alias lastVValue r6
 
 alias var r8
 
-lb lastRValue -539224550 Horizontal 0
-lb lastVValue -539224550 Vertical 0
+lb lastRValue SOLARPANELHASH Horizontal 0
+lb lastVValue SOLARPANELHASH Vertical 0
 
 start:
 
@@ -46,19 +47,19 @@ move lastVValue vValue
 mul var var AHEADCOEFF
 add vValue vValue var
 
-sb -539224550 Horizontal rValue
-sb -539224550 Vertical vValue
+sb SOLARPANELHASH Horizontal rValue
+sb SOLARPANELHASH Vertical vValue
 
 yield
 j start
 
 checkCharge:
-lb var -539224550 Charge 1
+lb var SOLARPANELHASH Charge 1
 
 bgt var MINCHARGE ra
 
-sb -539224550 Horizontal 0
-sb -539224550 Vertical 0
+sb SOLARPANELHASH Horizontal 0
+sb SOLARPANELHASH Vertical 0
 
 yield
 yield
