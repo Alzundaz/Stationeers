@@ -7,8 +7,8 @@
 
   <defs>
     <pattern id="FillLightSensor" x="0" y="0" width="0.0476" height="1">
-    <rect x="0" y="0" width="1" height="21" fill="darkblue"/>
-    <line x1="0.5" y1="0" x2="0.5" y2="21" stroke="whitesmoke" stroke-width="0.1"/>
+      <rect x="0" y="0" width="1" height="21" fill="darkblue"/>
+      <line x1="0.5" y1="0" x2="0.5" y2="21" stroke="whitesmoke" stroke-width="0.1"/>
     </pattern>
     <g id="LightSensor">
       <path d="M 2 0 h 17 l 2 2 v 17 l -2 2 h -17 l -2 -2 v -17 l 2 -2" fill="url(#FillLightSensor)"/>
