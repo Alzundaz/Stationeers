@@ -23,4 +23,5 @@ These are usually items that can be used with other scripts (like functions or s
 - [Airlock](./Documentations/Airlock.md)
 - [Filtration](./Documentations/Filtration.md)
 - [Ventilation](./Documentations/Ventilation.md)
+- [Solar Panel](./Documentations/SolarPanel.md)
 - [Suit](./Documentations/Suit.md)
