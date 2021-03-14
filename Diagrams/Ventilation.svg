@@ -188,14 +188,16 @@
   <!-- Devices definition end -->
 
   <!-- Cables placement start -->
-  <path d="M 30 120 q 0 30 30 30 l 300 0 q 30 0 30 -30" stroke="red" stroke-width="5" fill="transparent"/>
-  <path d="M 30 300 q 0 -30 30 -30 l 300 0 q 30 0 30 30" stroke="red" stroke-width="5" fill="transparent"/>
+  <g stroke="red" stroke-width="5" fill="transparent">
+    <path d="M 30 120 q 0 30 30 30 l 300 0 q 30 0 30 -30"/>
+    <path d="M 30 300 q 0 -30 30 -30 l 300 0 q 30 0 30 30"/>
 
-  <path d="M 60 150 q 30 0 30 30 q 0 30 -30 30 q 30 0 30 30 q 0 30 -30 30" stroke="red" stroke-width="5" fill="transparent"/>
-  <path d="M 360 150 q -30 0 -30 30 q 0 30 30 30 q -30 0 -30 30 q 0 30 30 30" stroke="red" stroke-width="5" fill="transparent"/>
+    <path d="M 60 150 q 30 0 30 30 q 0 30 -30 30 q 30 0 30 30 q 0 30 -30 30"/>
+    <path d="M 360 150 q -30 0 -30 30 q 0 30 30 30 q -30 0 -30 30 q 0 30 30 30"/>
 
-  <path d="M 120 150 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 l 0 60 q 0 30 -30 30" stroke="red" stroke-width="5" fill="transparent"/>
-  <path d="M 300 270 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 l 0 -60 q 0 -30 30 -30" stroke="red" stroke-width="5" fill="transparent"/>
+    <path d="M 120 150 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 l 0 60 q 0 30 -30 30"/>
+    <path d="M 300 270 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30 l 0 -60 q 0 -30 30 -30"/>
+  </g>
   <!-- Cables placement end -->
 
   <!-- Pipes placement start-->
