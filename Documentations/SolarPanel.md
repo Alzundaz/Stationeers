@@ -12,7 +12,7 @@ NB : Solar panels should be placed so that the null position (0:0) faces east.
 Script : [SolarPanel](/Scripts/Airlock/SolarPanel)
 - D0 : Daylight Sensor
 
-NB : The daylight sensor must be installed horizontally facing north (as on the diagram).
+NB : The daylight sensor must be installed horizontally with the top facing north  (as on the diagram).
 
 ## Diagram
 
