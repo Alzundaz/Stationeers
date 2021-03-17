@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Single Led Display</title>
+  <desc>
+    Single Led Display diagram.
+  </desc>
+
+  <!-- Switch start -->
+  <path d="M 24.5 26 L 30 28 L 36 28 v 2 h -12" fill="red"/>
+  <rect width="15" height="5" x="22.5" y="29" rx="2" ry="2" fill="black"/>
+  <!-- Switch end -->
+
+  <!-- Base structure start -->
+  <path d="M 10 30 L 25 60 L 35 60 L 50 30" fill="grey"/>
+  <rect width="60" height="20" x="0" y="30" rx="5" ry="5" fill="whitesmoke"/>
+  <rect width="56" height="16" x="2" y="32" rx="5" ry="5" fill="grey"/>
+  <!-- Base structure end -->
+
+</svg>
