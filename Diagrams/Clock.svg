@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="540">
+  <title>Clock</title>
+  <desc>
+    Clock diagram.
+  </desc>
+
+  <!-- Grid start -->
+  <line x1="0" y1="30" x2="780" y2="30" stroke="grey"/>
+  <line x1="0" y1="270" x2="780" y2="270" stroke="grey"/>
+  <line x1="0" y1="510" x2="780" y2="510" stroke="grey"/>
+
+  <line x1="30" y1="0" x2="30" y2="780" stroke="grey"/>
+  <line x1="270" y1="0" x2="270" y2="780" stroke="grey"/>
+  <!-- Grid end -->
+
+</svg>
