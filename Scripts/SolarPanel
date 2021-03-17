@@ -2,9 +2,10 @@ define AVCORRECT 0.66666
 define BVCORRECT -10
 define AHEADCOEFF 2
 define MINCHARGE 100
-define SOLARPANELHASH -539224550
+define SOLARPANELHASH -2045627372
+define DUALSOLARPANELHASH -539224550
 
-alias SunlightSensor d0
+alias DaylightSensor d0
 
 alias hSun r0
 alias vSun r1
@@ -14,7 +15,8 @@ alias vValue r3
 alias lastRValue r5
 alias lastVValue r6
 
-alias var r8
+alias charge r8
+alias var r9
 
 lb lastRValue SOLARPANELHASH Horizontal 0
 lb lastVValue SOLARPANELHASH Vertical 0
@@ -23,8 +25,8 @@ start:
 
 jal checkCharge
 
-l hSun SunlightSensor Horizontal
-l vSun SunlightSensor Vertical
+l hSun DaylightSensor Horizontal
+l vSun DaylightSensor Vertical
 
 sub rValue hSun 90
 brge rValue 0 2
@@ -49,17 +51,24 @@ add vValue vValue var
 
 sb SOLARPANELHASH Horizontal rValue
 sb SOLARPANELHASH Vertical vValue
+sb DUALSOLARPANELHASH Horizontal rValue
+sb DUALSOLARPANELHASH Vertical vValue
 
 yield
 j start
 
 checkCharge:
-lb var SOLARPANELHASH Charge 1
+lb charge SOLARPANELHASH Charge 1
+lb var DUALSOLARPANELHASH Charge 1
+add charge charge var
 
-bgt var MINCHARGE ra
+div charge charge 2
+bgt charge MINCHARGE ra
 
 sb SOLARPANELHASH Horizontal 0
 sb SOLARPANELHASH Vertical 0
+sb DUALSOLARPANELHASH Horizontal 0
+sb DUALSOLARPANELHASH Vertical 0
 
 yield
 yield
