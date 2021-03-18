@@ -203,7 +203,7 @@
   </defs>
   <!-- Devices definition end -->
 
-<!-- Cables placement start -->
+  <!-- Cables placement start -->
   <g stroke="red" stroke-width="5" fill="transparent">
     <path d="M 180 90 h 120 q 30 0 30 30 q 0 30 -30 30"/>
     <path d="M 180 150 q 30 0 30 -30 q 0 -30 -30 -30 m 30 30 q 0 -30 30 -30"/>
@@ -211,7 +211,7 @@
     <path d="M 300 150 q 30 0 30 30 v 60 q 0 30 -30 30 q 30 0 30 30 q 0 -30 30 -30 q -30 0 -30 -30 m 0 60 v 180"/>
     <path d="M 480 450 q 30 0 30 -30 q 0 -30 -30 -30 h -60 q -30 0 -30 30 v 60 q 0 -30 -30 -30 q -30 0 -30 30 m 0 -60 q 0 30 30 30 q 30 0 30 -30"/>
     <path d="M 150 480 q 0 30 -30 30 h -60 q -30 0 -30 -30 v -180 q 0 -30 30 -30 h 300 q 30 0 30 -30"/>
- </g>
+  </g>
   <!-- Cables placement end -->
 
   <!-- Pipes placement start-->
