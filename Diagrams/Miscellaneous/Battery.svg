@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="120" height="120">
+  <title>Battery</title>
+  <desc>
+    Battery diagram.
+  </desc>
+
+  <!-- Base structure start -->
+  <rect width="120" height="116" x="0" y="2" rx="1" ry="1" fill="whitesmoke"/>
+  <rect width="100" height="120" x="10" y="0" rx="1" ry="1" fill="grey"/>
+  <!-- Base structure end -->
+
+</svg>

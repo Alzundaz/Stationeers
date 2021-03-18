@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="540" height="300">
+  <title>Clock</title>
+  <desc>
+    Clock diagram.
+  </desc>
+
+  <defs>
+    <g id="ICHousing">
+      <!-- Background -->
+      <rect width="60" height="60" x="0" y="0" fill="#505050"/>
+
+      <!-- External pins start -->
+      <rect width="4" height="57" x="7" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="13" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="19" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="25" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="31" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="37" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="43" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="49" y="1.5" fill="whitesmoke"/>
+
+      <rect width="4" height="55" x="7" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="13" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="19" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="25" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="31" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="37" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="43" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="49" y="2.5" fill="white"/>
+
+      <rect width="57" height="4" x="1.5" y="7" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="13" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="19" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="25" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="31" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="37" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="43" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="49" fill="whitesmoke"/>
+
+      <rect width="55" height="4" x="2.5" y="7" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="13" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="19" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="25" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="31" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="37" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="43" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="49" fill="white"/>
+      <!-- External pins end -->
+
+      <!-- Main chip -->
+      <rect width="50" height="50" x="5" y="5" fill="grey"/>
+
+      <!-- Head -->
+      <circle cx="13" cy="11" r="2" fill="red"/>
+      <text x="20" y="10" font-size="5" fill="white">CIRCUIT</text>
+      <text x="19" y="15" font-size="5" fill="white">HOUSING</text>
+
+      <!-- Device connectors start -->
+      <path d="M 9 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="20" fill="darkgrey"/>
+      <text x="9.5" y="19" font-size="3" fill="white" font-family="monospace">D0</text>
+
+      <path d="M 9 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="33" fill="darkgrey"/>
+      <text x="9.5" y="32" font-size="3" fill="white" font-family="monospace">D1</text>
+
+      <path d="M 9 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="46" fill="darkgrey"/>
+      <text x="9.5" y="45" font-size="3" fill="white" font-family="monospace">D2</text>
+
+      <path d="M 47 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="20" fill="darkgrey"/>
+      <text x="47.5" y="19" font-size="3" fill="white" font-family="monospace">D3</text>
+
+      <path d="M 47 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="33" fill="darkgrey"/>
+      <text x="47.5" y="32" font-size="3" fill="white" font-family="monospace">D4</text>
+
+      <path d="M 47 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="46" fill="darkgrey"/>
+      <text x="47.5" y="45" font-size="3" fill="white" font-family="monospace">D5</text>
+      <!-- Device connectors end -->
+
+      <!-- IC Housing -->
+      <rect width="26" height="33" x="17" y="17" fill="black"/>
+
+      <!-- External IC pins start -->
+      <rect width="20" height="2" x="20" y="22" fill="white"/>
+      <rect width="20" height="2" x="20" y="29" fill="white"/>
+      <rect width="20" height="2" x="20" y="37" fill="white"/>
+      <rect width="20" height="2" x="20" y="44" fill="white"/>
+      <!-- External IC pins end -->
+
+      <!-- IC chip start -->
+      <rect width="15" height="30" x="22.5" y="18.5" fill="grey"/>
+      <path d="M 26.5 18.5 q 0 3.5 3.5 3.5 q 3.5 0 3.5 -3.5" fill="#505050"/>
+      <path d="M 26.5 48.5 q 0 -3.5 3.5 -3.5 q 3.5 0 3.5 3.5" fill="#505050"/>
+      <text x="28" y="40" transform="rotate(-90 28,40)" font-size="3" fill="white" font-family="monospace">RECATEK</text>
+      <text x="32" y="40" transform="rotate(-90 32,40)" font-size="4" fill="white" font-family="monospace">IC</text>
+      <text x="32" y="35" transform="rotate(-90 32,35)" font-size="4" fill="darkred" font-family="monospace">10</text>
+      <!-- IC chip end -->
+    </g>
+    <g id="Battery">
+      <!-- Base structure start -->
+      <rect width="120" height="116" x="0" y="2" rx="1" ry="1" fill="whitesmoke"/>
+      <rect width="100" height="120" x="10" y="0" rx="1" ry="1" fill="grey"/>
+      <!-- Base structure end -->
+    </g>
+    <g id="DaylightSensor">
+      <defs>
+        <pattern id="FillLightSensor" x="0" y="0" width="0.0476" height="1">
+          <rect x="0" y="0" width="1" height="21" fill="darkblue"/>
+          <line x1="0.5" y1="0" x2="0.5" y2="21" stroke="whitesmoke" stroke-width="0.1"/>
+        </pattern>
+        <g id="LightSensor">
+          <path d="M 2 0 h 17 l 2 2 v 17 l -2 2 h -17 l -2 -2 v -17 l 2 -2" fill="url(#FillLightSensor)"/>
+          <line x1="10.75" y1="0" x2="10.75" y2="21" stroke="whitesmoke" stroke-width="0.5"/>
+          <line x1="0" y1="10.75" x2="21" y2="10.75" stroke="whitesmoke" stroke-width="0.5"/>
+        </g>
+      </defs>
+
+      <!-- Connector Start -->
+      <rect width="25" height="5" x="17.5" y="0" fill="grey"/>
+      <rect width="3" height="3" x="25" y="1" fill="green"/>
+      <rect width="3" height="3" x="31" y="1" fill="green"/>
+      <rect width="3" height="3" x="28.5" y="7" fill="green"/>
+      <path d="M 26.5 4 v 1 h 6 v -1 M 30 7 v -1" stroke-width="0.3" stroke="green" fill="transparent"/>
+      <!-- Connector End -->
+
+      <!-- Structure Start -->
+      <path d="M 5 5 h 50 v 40 l -10 10 h -30 l -10 -10 v -40" fill="whitesmoke"/>
+      <!-- Structure End -->
+
+      <!-- Light Sensors Start -->
+      <use href="#LightSensor" transform="rotate(0 122,45)" x="8.75" y="8"/>
+      <use href="#LightSensor" transform="rotate(0 122,45)" x="30.25" y="8"/>
+      <use href="#LightSensor" transform="rotate(0 122,45)" x="8.75" y="29.5"/>
+      <use href="#LightSensor" transform="rotate(0 122,45)" x="30.25" y="29.5"/>
+      <!-- Light Sensors End -->
+
+      <!-- Mask Start -->
+      <path d="M 8.5 42.5 l 8.5 8.5 h -6.5 l -2 -2" fill="whitesmoke"/>
+      <path d="M 51.5 42.5 l -8.5 8.5 h 6.5 l 2 -2" fill="whitesmoke"/>
+      <path d="M 7 7 h 46 v 36 l -9 9 h -27.5 l -9 -9 v -36" fill="transparent" stroke="grey" stroke-width="1"/>
+      <!-- Mask End -->
+    </g>
+    <g id="SingleLedDisplay">
+      <!-- Switch start -->
+      <path d="M 24.5 26 L 30 28 L 36 28 v 2 h -12" fill="red"/>
+      <rect width="15" height="5" x="22.5" y="29" rx="2" ry="2" fill="black"/>
+      <!-- Switch end -->
+
+      <!-- Base structure start -->
+      <path d="M 10 30 L 25 60 L 35 60 L 50 30" fill="grey"/>
+      <rect width="60" height="20" x="0" y="30" rx="5" ry="5" fill="whitesmoke"/>
+      <rect width="56" height="16" x="2" y="32" rx="5" ry="5" fill="grey"/>
+      <!-- Base structure end -->
+    </g>
+  </defs>
+
+  <!-- Grid start -->
+  <line x1="0" y1="30" x2="780" y2="30" stroke="grey"/>
+  <line x1="0" y1="270" x2="780" y2="270" stroke="grey"/>
+
+  <line x1="30" y1="0" x2="30" y2="780" stroke="grey"/>
+  <line x1="270" y1="0" x2="270" y2="780" stroke="grey"/>
+  <line x1="510" y1="0" x2="510" y2="780" stroke="grey"/>
+  <!-- Grid end -->
+
+  <!-- Cables placement start -->
+  <g stroke="red" stroke-width="5" fill="transparent">
+    <path d="M 270 0 v 60 m 0 60 q 0 -30 -30 -30 q -30 0 -30 30 q 0 30 -30 30 q 30 0 30 30 q 0 30 30 30 q 30 0 30 -30 m -60 0 v -60"/>
+    <path d="M 270 180 q 0 30 30 30 m -60 0 h 120 q -30 0 -30 -30 q 0 -30 30 -30 q -30 0 -30 -30 v 60 q 0 30 -30 30"/>
+    <path d="M 270 120 q 0 -30 30 -30 q -30 0 -30 -30 q 0 30 -30 30 h 180"/>
+    <path d="M 450 60 q 0 30 -30 30 q -30 0 -30 -30 q 0 30 -30 30 q -30 0 -30 -30"/>
+    <path d="M 330 60 q 0 30 -30 30 q 30 0 30 30 q 0 -30 30 -30"/>
+    <path d="M 510 0 v 180 q 0 30 -30 30"/>
+  </g>
+  <!-- Cables placement end -->
+
+  <!-- Devices placement start -->
+  <use href="#DaylightSensor" transform="rotate(90 150,150)" x="120" y="120"/>
+  <use href="#Battery" transform="rotate(0 420,180)" x="360" y="120"/>
+  <use href="#ICHousing" transform="rotate(0 270,150)" x="240" y="120"/>
+  <use href="#SingleLedDisplay" transform="rotate(0 330,30)" x="300" y="0"/>
+  <use href="#SingleLedDisplay" transform="rotate(0 390,30)" x="360" y="0"/>
+  <use href="#SingleLedDisplay" transform="rotate(0 450,30)" x="420" y="0"/>
+  <!-- Devices placement end -->
+
+  <!-- Labels placement start -->
+  <g font-size="10">
+    <text x="248" y="115" transform="rotate(-90 270,150)">Clock script</text>
+    <text x="133" y="110" transform="rotate(0 150,150)">Daylight</text>
+    <text x="136" y="120" transform="rotate(0 150,150)">Sensor</text>
+    <text x="405" y="115" transform="rotate(0 420,180)">Battery</text>
+    <text x="300" y="20" transform="rotate(0 330,30)">Clock Display</text>
+    <text x="360" y="20" transform="rotate(0 390,30)">Battery Display</text>
+    <text x="420" y="10" transform="rotate(0 450,30)">Battery Clock</text>
+    <text x="430" y="20" transform="rotate(0 450,30)">Display</text>
+
+    <g fill="grey">
+      <text x="135" y="15">North</text>
+      <text x="135" y="285">South</text>
+      <text x="500" y="135" transform="rotate(90 510,150)">East</text>
+      <text x="15" y="135" transform="rotate(-90 30,150)">West</text>
+    </g>
+
+  </g>
+  <!-- Labels placement end -->
+</svg>
