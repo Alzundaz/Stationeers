@@ -5,10 +5,10 @@
     Tank Canister diagram.
   </desc>
 
-  <rect width="30" height="120" x="10" y="0" rx="3" ry="3" fill="yellow"/>
-  <rect width="25" height="115" x="12.5" y="2.5" rx="2.5" ry="2.5" fill="grey"/>
-  <path d="M 13 40 v 75 q 0 2 2 2 h 20 q 2 0 2 -2 v -75" stroke="#606060" stroke-width="1" fill="transparent"/>
-  <text x="15" y="12.5" font-size="8" fill="white" font-family="monospace">TANK</text>
-  <text x="15" y="20" font-size="8" fill="white" font-family="monospace">FILL</text>
+  <rect width="30" height="120" x="15" y="0" rx="3" ry="3" fill="yellow"/>
+  <rect width="25" height="115" x="17.5" y="2.5" rx="2.5" ry="2.5" fill="grey"/>
+  <path d="M 18 40 v 75 q 0 2 2 2 h 20 q 2 0 2 -2 v -75" stroke="#606060" stroke-width="1" fill="transparent"/>
+  <text x="20" y="17.5" font-size="8" fill="white" font-family="monospace">TANK</text>
+  <text x="20" y="25" font-size="8" fill="white" font-family="monospace">FILL</text>
 
 </svg>
