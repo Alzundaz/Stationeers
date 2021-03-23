@@ -3,39 +3,27 @@ define SECONDTARGETPRESSURE 5000
 define THIRDTARGETPRESSURE 5000
 
 alias pressure r0
-alias targetPressure r1
-alias pumpStatus r2
+alias pumpStatus r1
 
 start:
 
-brdns d0 6
-brdns d1 5
-alias PipeAnalyzer d0
-alias Pump d1
-move targetPressure FIRSTTARGETPREESSURE
-jal updateStatus
+brdns d0 5
+brdns d1 4
+l pressure d0 Pressure
+slt pumpStatus pressure FIRSTTARGETPREESSURE
+s d1 On pumpStatus
 
-brdns d0 6
-brdns d1 5
-alias PipeAnalyzer d2
-alias Pump d3
-move targetPressure SECONDTARGETPRESSURE
-jal updateStatus
+brdns d2 5
+brdns d3 4
+l pressure d2 Pressure
+slt pumpStatus pressure FIRSTTARGETPREESSURE
+s d3 On pumpStatus
 
-brdns d0 6
-brdns d1 5
-alias PipeAnalyzer d4
-alias Pump d5
-move targetPressure THIRDTARGETPRESSURE
-jal updateStatus
+brdns d4 5
+brdns d5 4
+l pressure d4 Pressure
+slt pumpStatus pressure FIRSTTARGETPREESSURE
+s d5 On pumpStatus
 
 yield
 j start
-
-updateStatus:
-
-l pressure PipeAnalyzer Pressure
-slt pumpStatus pressure targetPressure
-s Pump On pumpStatus
-
-j ra
