@@ -1,0 +1,29 @@
+define FIRSTTARGETPREESSURE 5000
+define SECONDTARGETPRESSURE 5000
+define THIRDTARGETPRESSURE 5000
+
+alias pressure r0
+alias pumpStatus r1
+
+start:
+
+brdns d0 5
+brdns d1 4
+l pressure d0 Pressure
+slt pumpStatus pressure FIRSTTARGETPREESSURE
+s d1 On pumpStatus
+
+brdns d2 5
+brdns d3 4
+l pressure d2 Pressure
+slt pumpStatus pressure FIRSTTARGETPREESSURE
+s d3 On pumpStatus
+
+brdns d4 5
+brdns d5 4
+l pressure d4 Pressure
+slt pumpStatus pressure FIRSTTARGETPREESSURE
+s d5 On pumpStatus
+
+yield
+j start
