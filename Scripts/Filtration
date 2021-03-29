@@ -26,8 +26,11 @@ alias distributionStatus r7
 
 alias var r8
 
+brdns DumpPump 2
 l dumpStatus DumpPump On
+brdns Filtration 2
 l filtrationStatus Filtration On
+brdns DistributionPump 2
 l distributionStatus DistributionPump On
 
 start:
