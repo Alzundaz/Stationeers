@@ -30,7 +30,6 @@ add lastBatteryLevel lastBatteryLevel var
 move batteryTimeLeft 0
 
 start:
-
 jal doTimeClock
 jal doBatteryTimeLeft
 jal doBatteryTimeClock
@@ -41,7 +40,6 @@ j start
 
 doTimeClock:
 bdns DaylightSensor ra
-
 l solarAngle DaylightSensor Vertical
 
 brge solarAngle lastSolarAngle 2
@@ -50,6 +48,7 @@ move lastSolarAngle solarAngle
 add solarAngle solarAngle 90
 div time solarAngle 360
 mul time time DAYTIME
+mod time time DAYTIME
 
 move var time
 push ra
@@ -58,11 +57,9 @@ pop ra
 
 bdns TimeClock ra
 s TimeClock Setting var
-
 j ra
 
 doBatteryTimeLeft:
-
 lb batteryLevel -400115994 Charge 1
 lb var -1388288459 Charge 1
 add batteryLevel batteryLevel var
@@ -93,7 +90,6 @@ s BatteryTimeLeft Color CHARGECOLOR
 breq batteryStatus CHARGESTATUS 2
 s BatteryTimeLeft Color DISCHARGECOLOR
 s BatteryTimeLeft Setting var
-
 j ra
 
 doBatteryTimeClock:
@@ -112,16 +108,13 @@ s BatteryTimeClock Color CHARGECOLOR
 breq batteryStatus CHARGESTATUS 2
 s BatteryTimeClock Color DISCHARGECOLOR
 s BatteryTimeClock Setting var
-
 j ra
 
 convertTime:
-
 floor secondVar var
 sub var var secondVar
 mul var var 60
 floor var var
 div var var 100
 add var var secondVar
-
 j ra
