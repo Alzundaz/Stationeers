@@ -42,9 +42,10 @@ doTimeClock:
 bdns DaylightSensor ra
 l solarAngle DaylightSensor Vertical
 
+move var solarAngle
 brge solarAngle lastSolarAngle 2
 sub solarAngle 360 solarAngle
-move lastSolarAngle solarAngle
+move lastSolarAngle var
 add solarAngle solarAngle 90
 div time solarAngle 360
 mul time time DAYTIME
