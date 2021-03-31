@@ -1,9 +1,9 @@
 define AVCORRECT 0.66666
 define BVCORRECT -10
-define AHEADCOEFF 2
-define MINCHARGE 100
-define SOLARPANELHASH -2045627372
-define DUALSOLARPANELHASH -539224550
+define AHEADCOEFF 1.5
+define MIN_CHARGE 100
+define SOLAR_PANEL_HASH -2045627372
+define DUAL_SOLAR_PANEL_HASH -539224550
 
 alias DaylightSensor d0
 
@@ -18,8 +18,8 @@ alias lastVValue r6
 alias charge r8
 alias var r9
 
-lb lastRValue SOLARPANELHASH Horizontal 0
-lb lastVValue SOLARPANELHASH Vertical 0
+lb lastRValue SOLAR_PANEL_HASH Horizontal 0
+lb lastVValue SOLAR_PANEL_HASH Vertical 0
 
 start:
 
@@ -49,26 +49,26 @@ move lastVValue vValue
 mul var var AHEADCOEFF
 add vValue vValue var
 
-sb SOLARPANELHASH Horizontal rValue
-sb SOLARPANELHASH Vertical vValue
-sb DUALSOLARPANELHASH Horizontal rValue
-sb DUALSOLARPANELHASH Vertical vValue
+sb SOLAR_PANEL_HASH Horizontal rValue
+sb SOLAR_PANEL_HASH Vertical vValue
+sb DUAL_SOLAR_PANEL_HASH Horizontal rValue
+sb DUAL_SOLAR_PANEL_HASH Vertical vValue
 
 yield
 j start
 
 checkCharge:
-lb charge SOLARPANELHASH Charge 1
-lb var DUALSOLARPANELHASH Charge 1
+lb charge SOLAR_PANEL_HASH Charge 1
+lb var DUAL_SOLAR_PANEL_HASH Charge 1
 add charge charge var
 
 div charge charge 2
-bgt charge MINCHARGE ra
+bgt charge MIN_CHARGE ra
 
-sb SOLARPANELHASH Horizontal 0
-sb SOLARPANELHASH Vertical 0
-sb DUALSOLARPANELHASH Horizontal 0
-sb DUALSOLARPANELHASH Vertical 0
+sb SOLAR_PANEL_HASH Horizontal 0
+sb SOLAR_PANEL_HASH Vertical 0
+sb DUAL_SOLAR_PANEL_HASH Horizontal 0
+sb DUAL_SOLAR_PANEL_HASH Vertical 0
 
 yield
 yield

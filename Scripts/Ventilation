@@ -1,14 +1,14 @@
 define TEMPERATURE 20
-define DELTARATIOTEMPERATURE 100
+define DELTA_RATIO_TEMPERATURE 100
 define PRESSURE 101
-define DEFAULTVENT 0.01
+define DEFAULT__VENT 0.01
 
-define RATIOOXYGEN 0.2
-define KRATIOOXYGEN 0.1
-define RATIOCARBONDIOXIDE 0.1
-define RATIOPOLLUTANT 0.01
-define RATIOVOLATILES 0.01
-define RATIOWATER 0.1
+define RATIO_OXYGEN 0.2
+define KRATIO_OXYGEN 0.1
+define RATIO_CARBONDIOXIDE 0.1
+define RATIO_POLLUTANT 0.01
+define RATIO_VOLATILES 0.01
+define RATIO_WATER 0.1
 
 define KELVIN 273.15
 
@@ -31,7 +31,7 @@ start:
 l mode Self Setting
 
 move inP PRESSURE
-move rVent DEFAULTVENT
+move rVent DEFAULT__VENT
 alias Sensor d0
 alias VentIn d1
 alias VentOut d2
@@ -39,7 +39,7 @@ jal computeROut
 jal applyROut
 
 move inP PRESSURE
-move rVent DEFAULTVENT
+move rVent DEFAULT__VENT
 alias Sensor d3
 alias VentIn d4
 alias VentOut d5
@@ -64,40 +64,40 @@ l var Sensor Temperature
 sub var var TEMPERATURE
 sub var var KELVIN
 abs var var
-div var var DELTARATIOTEMPERATURE
+div var var DELTA_RATIO_TEMPERATURE
 min var var 1
 max rVent rVent var
 
 # RVent function Oxygen
 l var Sensor RatioOxygen
-sub var var RATIOOXYGEN
+sub var var RATIO_OXYGEN
 abs var var
-div var var RATIOOXYGEN
-mul var var KRATIOOXYGEN
+div var var RATIO_OXYGEN
+mul var var KRATIO_OXYGEN
 min var var 1
 max rVent rVent var
 
 # RVent function CarbonDioxide
 l var Sensor RatioCarbonDioxide
-div var var RATIOCARBONDIOXIDE
+div var var RATIO_CARBONDIOXIDE
 min var var 1
 max rVent rVent var
 
 # RVent function Pollutant
 l var Sensor RatioPollutant
-div var var RATIOPOLLUTANT
+div var var RATIO_POLLUTANT
 min var var 1
 max rVent rVent var
 
 # RVent function Volatiles
 l var Sensor RatioVolatiles
-div var var RATIOVOLATILES
+div var var RATIO_VOLATILES
 min var var 1
 max rVent rVent var
 
 # RVent function Water
 l var Sensor RatioWater
-div var var RATIOWATER
+div var var RATIO_WATER
 min var var 1
 max rVent rVent var
 

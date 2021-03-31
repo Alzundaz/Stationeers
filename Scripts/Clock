@@ -1,8 +1,8 @@
 define DAYTIME 20
-define CHARGECOLOR 2
-define DISCHARGECOLOR 3
-define CHARGESTATUS 0
-define DISCHARGESTATUS 1
+define CHARGE_COLOR 2
+define DISCHARGE_COLOR 3
+define CHARGE_STATUS 0
+define DISCHARGE_STATUS 1
 
 alias DaylightSensor d0
 alias TimeClock d1
@@ -74,7 +74,7 @@ sub var batteryLevel lastBatteryLevel
 abs var var
 move lastBatteryLevel batteryLevel
 breq var 0 4
-breq batteryStatus DISCHARGESTATUS 2
+breq batteryStatus DISCHARGE_STATUS 2
 sub batteryLevel maxBatteryLevel batteryLevel
 div var batteryLevel var
 
@@ -87,9 +87,9 @@ push ra
 jal convertTime
 pop ra
 
-s BatteryTimeLeft Color CHARGECOLOR
-breq batteryStatus CHARGESTATUS 2
-s BatteryTimeLeft Color DISCHARGECOLOR
+s BatteryTimeLeft Color CHARGE_COLOR
+breq batteryStatus CHARGE_STATUS 2
+s BatteryTimeLeft Color DISCHARGE_COLOR
 s BatteryTimeLeft Setting var
 j ra
 
@@ -105,9 +105,9 @@ push ra
 jal convertTime
 pop ra
 
-s BatteryTimeClock Color CHARGECOLOR
-breq batteryStatus CHARGESTATUS 2
-s BatteryTimeClock Color DISCHARGECOLOR
+s BatteryTimeClock Color CHARGE_COLOR
+breq batteryStatus CHARGE_STATUS 2
+s BatteryTimeClock Color DISCHARGE_COLOR
 s BatteryTimeClock Setting var
 j ra
 
