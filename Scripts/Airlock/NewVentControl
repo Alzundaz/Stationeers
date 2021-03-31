@@ -1,0 +1,113 @@
+define STATUS_VENT_OUTWARD -2
+define STATUS_WAIT_OUTWARD -1
+define STATUS_OPEN 0
+define STATUS_WAIT_INWARD 1
+define STATUS_VENT_INWARD 2
+
+define ACTION_DEPRESSURE -1
+define ACTION_NONE 0
+define ACTION_PRESSURE 1
+
+define DEPRESSURE_PRECISION 0
+define PRESSURE_PRECISION 10
+
+alias StatusMemory d0
+alias VentIn d1
+alias VentOut d2
+alias SensorSAS d3
+alias SensorIn d4
+alias SensorOut d5
+
+alias status r0
+alias pressureStatus r1
+alias pressureExt r2
+
+alias var r3
+
+s VentIn Lock 1
+s VentOut Lock 1
+s VentIn On 0
+s VentIn On 0
+
+move pressureStatus ACTION_NONE
+
+start:
+yield
+s db Setting pressureStatus
+l status StatusMemory Setting
+beq status STATUS_VENT_OUTWARD outward
+beq status STATUS_WAIT_OUTWARD waitingClosed
+beq status STATUS_OPEN waitingOpened
+beq status STATUS_WAIT_INWARD waitingClosed
+beq status STATUS_VENT_INWARD inward
+j start
+
+waitingClosed:
+s VentIn Mode 1
+s VentIn On 0
+s VentOut Mode 1
+s VentOut On 0
+j start
+
+waitingOpened:
+s VentIn Mode 1
+s VentIn On 0
+s VentOut Mode 1
+s VentOut On 0
+j start
+
+outward:
+brne pressureStatus ACTION_NONE 2
+move pressureStatus ACTION_DEPRESSURE
+brne pressureStatus ACTION_DEPRESSURE 4
+alias Vent d1
+alias Sensor d4
+j depressure
+brne pressureStatus ACTION_PRESSURE 4
+alias Vent d2
+alias Sensor d5
+j pressure
+j start
+
+inward:
+brne pressureStatus ACTION_NONE 2
+move pressureStatus ACTION_DEPRESSURE
+brne pressureStatus ACTION_DEPRESSURE 4
+alias Vent d2
+alias Sensor d5
+j depressure
+brne pressureStatus ACTION_PRESSURE 4
+alias Vent d1
+alias Sensor d4
+j pressure
+j start
+
+pressure:
+l pressureExt Sensor Pressure
+l var SensorSAS Pressure
+sub pressureExt pressureExt PRESSURE_PRECISION
+slt var var pressureExt
+
+brne var 0 6
+move pressureStatus ACTION_NONE
+brne status STATUS_VENT_OUTWARD 2
+s StatusMemory Setting STATUS_WAIT_OUTWARD
+brne status STATUS_VENT_INWARD 2
+s StatusMemory Setting STATUS_WAIT_INWARD
+
+s Vent Mode 0
+s Vent On var
+j start
+
+depressure:
+l pressureExt SensorSAS Pressure
+sgt var pressureExt DEPRESSURE_PRECISION
+
+brne var 0 2
+move pressureStatus ACTION_PRESSURE
+
+s Vent Mode 1
+s Vent PressureExternal 0
+s Vent On var
+
+j start
