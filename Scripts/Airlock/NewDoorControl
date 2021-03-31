@@ -1,0 +1,60 @@
+define STATUS_VENT_OUTWARD -2
+define STATUS_WAIT_OUTWARD -1
+define STATUS_OPEN 0
+define STATUS_WAIT_INWARD 1
+define STATUS_VENT_INWARD 2
+
+alias StatusMemory d0
+alias DoorIn d1
+alias DoorOut d2
+alias Light d3
+alias SensorIn d4
+alias SensorOut d5
+
+alias status r0
+alias action r1
+
+alias var r3
+
+s DoorIn Lock 0
+s DoorOut Lock 0
+s DoorIn Mode 1
+s DoorOut Mode 1
+
+s StatusMemory Setting STATUS_OPEN
+
+start:
+yield
+l status StatusMemory Setting
+beq status STATUS_VENT_OUTWARD doorClosed
+beq status STATUS_WAIT_OUTWARD waitingOutward
+beq status STATUS_OPEN waitingOpened
+beq status STATUS_WAIT_INWARD waitingInward
+beq status STATUS_VENT_INWARD doorClosed
+j start
+
+doorClosed:
+s DoorIn Open 0
+s DoorOut Open 0
+j start
+
+waitingInward:
+s DoorIn Open 1
+s DoorOut Open 0
+j checkIfOpening
+
+waitingOutward:
+s DoorIn Open 0
+s DoorOut Open 1
+j checkIfOpening
+
+waitingOpened:
+s DoorIn Open 0
+s DoorOut Open 0
+j start
+
+checkIfOpening:
+j start
+
+checkIfClosing:
+j start
