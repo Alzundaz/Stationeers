@@ -33,7 +33,6 @@ move pressureStatus ACTION_NONE
 
 start:
 yield
-s db Setting pressureStatus
 l status StatusMemory Setting
 beq status STATUS_VENT_OUTWARD outward
 beq status STATUS_WAIT_OUTWARD waitingClosed
