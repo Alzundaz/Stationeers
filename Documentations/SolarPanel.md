@@ -3,8 +3,8 @@
 ## Infos
 This script control all solar panels on the grid.
 Efficiency is close to 100% (exactly 99.3%).
-The value AHEADCOEFF keep the solar panel in advance of the sun.
-If the total charge falls below MINCHARGE the solar panels return to their initial position to wait for the next sunrise.
+The value AHEAD_COEFF keep the solar panel in advance of the sun.
+If the total charge falls below MIN_CHARGE the solar panels return to their initial position to wait for the next sunrise.
 
 NB : Solar panels should be placed so that the null position (0:0) faces east.
 

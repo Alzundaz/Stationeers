@@ -14,13 +14,13 @@ Script : [Filtration](/Scripts/Filtration)
 - D5 : Volum Pump on distribution circuit
 
 ### Dump Status
-The tank is dump when pressure reached over MAXPRESSURE. The dump keep doing until the pressure down below MINPRESSURE.
+The tank is dump when pressure reached over MAX_PRESSURE. The dump keep doing until the pressure down below MIN_PRESSURE.
 
 ### Filtration Status
-The filtration is activated when the number of mols (according to filters in filtration) reached over MAXMOLES. The filtration keep activate until this value down below MINMOLES.
+The filtration is activated when the number of mols (according to filters in filtration) reached over MAX__MOLES. The filtration keep activate until this value down below MIN_MOLES.
 
 ### Distribution Status
-The distribution pump is activated when the pressure in distribution is below MINDISTRIBUTION. The pump keep  activate until this value reached MAXDISTRIBUTION.
+The distribution pump is activated when the pressure in distribution is below MIN_DISTRIBUTION. The pump keep  activate until this value reached MAX_DISTRIBUTION.
 
 ## Diagram
 

@@ -1,6 +1,6 @@
 define AVCORRECT 0.66666
 define BVCORRECT -10
-define AHEADCOEFF 1.5
+define AHEAD_COEFF 1.5
 define MIN_CHARGE 100
 define SOLAR_PANEL_HASH -2045627372
 define DUAL_SOLAR_PANEL_HASH -539224550
@@ -41,12 +41,12 @@ min vValue vValue 50
 
 sub var rValue lastRValue
 move lastRValue rValue
-mul var var AHEADCOEFF
+mul var var AHEAD_COEFF
 add rValue rValue var
 
 sub var vValue lastVValue
 move lastVValue vValue
-mul var var AHEADCOEFF
+mul var var AHEAD_COEFF
 add vValue vValue var
 
 sb SOLAR_PANEL_HASH Horizontal rValue

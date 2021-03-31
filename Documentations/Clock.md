@@ -8,7 +8,7 @@ This script can display :
 
 The value DAYTIME determine the duration of a day (to display) in hours.
 Default value is 20 for a day of 20 hours (or 20 minutes IRL).
-The values CHARGECOLOR/DISCHARGECOLOR are color for dis/charging.
+The values CHARGE_COLOR/DISCHARGE_COLOR are color for dis/charging.
 Default values are *green* for *charging* and *orange* for *discharging*.
 The format display is the classical HH.MM (MM.SS IRL)
 
