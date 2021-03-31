@@ -1,6 +1,6 @@
-define FIRSTTARGETPREESSURE 5000
-define SECONDTARGETPRESSURE 5000
-define THIRDTARGETPRESSURE 5000
+define FIRST_TARGET_PRESSURE 5000
+define SECOND_TARGET_PRESSURE 5000
+define THIRD_TARGET_PRESSURE 5000
 define ON 1
 
 alias pressure r0
@@ -11,21 +11,21 @@ start:
 brdns d0 5
 brdns d1 4
 l pressure d0 Pressure
-slt pumpStatus pressure FIRSTTARGETPREESSURE
+slt pumpStatus pressure FIRST_TARGET_PRESSURE
 s d0 On ON
 s d1 On pumpStatus
 
 brdns d2 5
 brdns d3 4
 l pressure d2 Pressure
-slt pumpStatus pressure FIRSTTARGETPREESSURE
+slt pumpStatus pressure SECOND_TARGET_PRESSURE
 s d2 On ON
 s d3 On pumpStatus
 
 brdns d4 5
 brdns d5 4
 l pressure d4 Pressure
-slt pumpStatus pressure FIRSTTARGETPREESSURE
+slt pumpStatus pressure THIRD_TARGET_PRESSURE
 s d4 On ON
 s d5 On pumpStatus
 
