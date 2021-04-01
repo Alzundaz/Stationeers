@@ -14,10 +14,10 @@ This will be more important in the next versions. Like keeping the SAS open if t
 
 ## Door Control
 Script : [DoorControl](/Scripts/Airlock/DoorControl)
-- D0 : Airlock Indoor
-- D1 : Airlock Outdoor
-- D2 : Light
-- D3 : Status Memory
+- D0 : Status Memory
+- D1 : Airlock Indoor
+- D2 : Airlock Outdoor
+- D3 : Light
 
 This script update **Status Memory** to trigger the cycle.
 The status depend on which door is trigger (only closed door can be triggered).
@@ -33,9 +33,9 @@ Script : [VentControl](/Scripts/Airlock/VentControl)
 - D0 : Status Memory
 - D1 : Vent In
 - D2 : Vent Out
-- D3 : Sensor In
-- D4 : Sensor Out
-- D5 : Sensor SAS
+- D3 : Sensor SAS
+- D4 : Sensor In
+- D5 : Sensor Out
 
 This script manage pressurization/depressurization cycle with respect to **Status Memory**.
 When the cycle is done the **Status Memory** is reset to 0.
