@@ -84,6 +84,7 @@ j start
 pressure:
 l pressureExt Sensor Pressure
 l var SensorSAS Pressure
+s Vent PressureExternal pressureExt
 sub pressureExt pressureExt PRESSURE_PRECISION
 slt var var pressureExt
 
