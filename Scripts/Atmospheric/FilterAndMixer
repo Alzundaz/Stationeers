@@ -1,0 +1,115 @@
+define MAX_PRESSURE 45000
+define MIN_PRESSURE 44000
+define MAX_MOLES 1000
+define MIN_MOLES 100
+define O2_RATIO 0.2
+define O2_RATIO_MAX 0.25
+define O2_RATIO_IN 0.15
+define KRATIO 2
+define REVERSED 0
+define FILTRATION_BATCH 0
+
+alias WasteTank d0
+alias WasteDump d1
+alias Filtration d2
+alias AtmoTank d3
+alias AtmoDump d4
+alias AtmoMixer d5
+
+alias pressure r0
+alias o2Ratio r1
+alias nMoles r2
+
+alias value r4
+alias var r5
+
+s AtmoDump Setting 100
+
+start:
+
+jal setWasteDump
+jal setAtmoDump
+jal setRatio
+jal setFiltration
+
+yield
+j start
+
+setWasteDump:
+alias Tank d0
+alias Dump d1
+j setDump
+
+setAtmoDump:
+alias Tank d3
+alias Dump d4
+j setDump
+
+setDump:
+
+l value Dump On
+l pressure Tank Pressure
+
+sgt var pressure MAX_PRESSURE
+or value value var
+sge var pressure MIN_PRESSURE
+select value var value 0
+
+l o2Ratio AtmoTank RatioOxygen
+sgt var o2Ratio O2_RATIO_MAX
+or value value var
+slt var o2Ratio O2_RATIO_MIN
+or value value var
+
+s Dump Setting 100
+s Dump On value
+
+j ra
+
+setRatio:
+
+l pressure AtmoTank Pressure
+brlt pressure MIN_PRESSURE 3
+s AtmoMixer On 0
+j ra
+
+l o2Ratio AtmoTank RatioOxygen
+l nMoles AtmoTank TotalMoles
+
+log var nMoles
+sub o2Ratio O2_RATIO o2Ratio
+mul var var o2Ratio
+mul var var KRATIO
+add var var O2_RATIO
+
+min var var 1
+max var var 0
+
+breq REVERSED 0 2
+sub var 1 var
+
+mul var var 100
+
+s AtmoMixer On 1
+s AtmoMixer Setting var
+
+j ra
+
+setFiltration:
+
+l nMoles WasteTank TotalMoles
+brne FILTRATION_BATCH 0 3
+l value Filtration On
+jr 2
+l value Filtration Setting
+
+sgt var nMoles MAX_MOLES
+or value value var
+sge var nMoles MIN_MOLES
+select value var value 0
+
+brne FILTRATION_BATCH 0 3
+s Filtration On value
+j ra
+s Filtration Setting value
+j ra
