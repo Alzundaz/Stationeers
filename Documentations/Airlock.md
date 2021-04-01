@@ -9,7 +9,7 @@ The scripts follow a simple cycle when triggerd.
 
 Only closed doors can trigger the cycle.
 
-The notation *Indoor/Outdoor* indicates which doors are to be closed during initialization.
+The notation *Indoor/Outdoor* indicates which doors should be closed during initialization.
 This will be more important in the advanced versions. Like keeping the SAS open if there is the same atmosphere on each side and close right door on depressurisation or pollution.
 
 ## Door Control
