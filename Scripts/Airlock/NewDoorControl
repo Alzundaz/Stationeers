@@ -3,6 +3,12 @@ define STATUS_WAIT_OUTWARD -1
 define STATUS_OPEN 0
 define STATUS_WAIT_INWARD 1
 define STATUS_VENT_INWARD 2
+define DIFF_TEMPERATURE 10
+define DIFF_PRESSURE 10
+define DIFF_OXYGEN 0.02
+define DIFF_CARBONDIOXIDE 0.01
+define DIFF_VOLATILES 0.01
+define DIFF_POLLUTANT 0.00001
 
 alias StatusMemory d0
 alias DoorIn d1
@@ -13,18 +19,21 @@ alias SensorOut d5
 
 alias status r0
 alias action r1
+alias defaultAction r2
+alias value r3
+alias var r4
 
-alias var r3
-
-s DoorIn Lock 0
-s DoorOut Lock 0
 s DoorIn Mode 1
 s DoorOut Mode 1
-
-s StatusMemory Setting STATUS_OPEN
+l value DoorIn Open
+l var DoorOut Open
+sub var value var
+s StatusMemory Setting var
 
 start:
 yield
+s DoorIn Lock 0
+s DoorOut Lock 0
 l status StatusMemory Setting
 beq status STATUS_VENT_OUTWARD doorClosed
 beq status STATUS_WAIT_OUTWARD waitingOutward
@@ -36,25 +45,84 @@ j start
 doorClosed:
 s DoorIn Open 0
 s DoorOut Open 0
+s DoorIn Lock 1
+s DoorOut Lock 1
+s DoorIn Setting 0
+s DoorOut Setting 0
+s Light On 1
 j start
 
 waitingInward:
 s DoorIn Open 1
 s DoorOut Open 0
-j checkIfOpening
-
+s Light On 0
+l value DoorOut Setting
+bne value 1 checkOpening
+s DoorIn Open 0
+yield
+s StatusMemory Setting STATUS_VENT_OUTWARD
+j start
 waitingOutward:
 s DoorIn Open 0
 s DoorOut Open 1
-j checkIfOpening
-
-waitingOpened:
-s DoorIn Open 0
+s Light On 0
+l value DoorIn Setting
+bne value 1 checkOpening
 s DoorOut Open 0
+yield
+s StatusMemory Setting STATUS_VENT_INWARD
+j start
+waitingOpened:
+s DoorIn Open 1
+s DoorOut Open 1
+s Light On 0
+jal checkAction
+s StatusMemory Setting action
 j start
 
-checkIfOpening:
+checkOpening:
+jal checkAction
+bne action STATUS_OPEN start
+s StatusMemory Setting action
 j start
 
-checkIfClosing:
-j start
+checkAction:
+move action STATUS_OPEN
+select defaultAction status status STATUS_WAIT_OUTWARD
+l value SensorIn Temperature
+l var SensorOut Temperature
+sub var value var
+abs var var
+brlt var DIFF_TEMPERATURE 2
+move action defaultAction
+l value SensorIn Pressure
+l var SensorOut Pressure
+sub var value var
+abs var var
+brlt var DIFF_PRESSURE 2
+move action defaultAction
+l value SensorIn RatioOxygen
+l var SensorOut RatioOxygen
+sub var value var
+abs var var
+brlt var DIFF_OXYGEN 2
+move action defaultAction
+l value SensorIn RatioCarbonDioxide
+l var SensorOut RatioCarbonDioxide
+sub var value var
+abs var var
+brlt var DIFF_CARBONDIOXIDE 2
+move action defaultAction
+l value SensorIn RatioVolatiles
+l var SensorOut RatioVolatiles
+sub var value var
+abs var var
+brlt var DIFF_VOLATILES 2
+move action defaultAction
+l value SensorIn RatioPollutant
+l var SensorOut RatioPollutant
+sub var value var
+abs var var
+brlt var DIFF_POLLUTANT 2
+move action defaultAction
+j ra
