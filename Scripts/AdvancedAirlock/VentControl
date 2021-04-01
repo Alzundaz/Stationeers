@@ -46,6 +46,7 @@ s VentIn Mode 1
 s VentIn On 0
 s VentOut Mode 1
 s VentOut On 0
+move pressureStatus ACTION_NONE
 j start
 
 waitingOpened:
@@ -53,6 +54,7 @@ s VentIn Mode 1
 s VentIn On 0
 s VentOut Mode 1
 s VentOut On 0
+move pressureStatus ACTION_NONE
 j start
 
 outward:
