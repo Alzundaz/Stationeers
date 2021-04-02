@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="480" height="480">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="420" height="420">
   <title>Big Tank</title>
   <desc>
     Big Tank diagram.
   </desc>
 
-  <rect width="22" height="30" x="229" y="0" rx="2" ry="2" fill="grey"/>
-  <rect width="13" height="13" x="467" y="232.5" fill="lightgrey"/>
-  <circle cx="240" cy="240" r="234" fill="orange" stroke="darkorange" stroke-width="2"/>
+  <rect width="22" height="30" x="199" y="0" rx="2" ry="2" fill="grey"/>
+  <rect width="13" height="13" x="407" y="202.5" fill="lightgrey"/>
+  <circle cx="210" cy="210" r="204" fill="orange" stroke="darkorange" stroke-width="2"/>
 
 </svg>
