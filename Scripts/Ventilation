@@ -8,7 +8,8 @@ define KRATIO_OXYGEN 0.1
 define RATIO_CARBONDIOXIDE 0.1
 define RATIO_POLLUTANT 0.01
 define RATIO_VOLATILES 0.01
-define RATIO_WATER 0.1
+define RATIO_NITROGEN 0.01
+define RATIO_NITROUS_OXYDE 0.01
 
 define KELVIN 273.15
 
@@ -95,9 +96,15 @@ div var var RATIO_VOLATILES
 min var var 1
 max rVent rVent var
 
-# RVent function Water
-l var Sensor RatioWater
-div var var RATIO_WATER
+# RVent function Nitrogen
+l var Sensor RatioNitrogen
+div var var RATIO_NITROGEN
+min var var 1
+max rVent rVent var
+
+# RVent function Nitrous Oxyde
+l var Sensor RatioNitrousOxide
+div var var RATIO_NITROUS_OXYDE
 min var var 1
 max rVent rVent var
 
