@@ -231,17 +231,35 @@
     </g>
   </defs>
 
+  <!-- Cables placement start -->
+  <g stroke="red" stroke-width="5" fill="transparent">
+    <path d="M 60 270 q -30 0 -30 30 v 180 q 0 30 30 30 h 540 q 30 0 30 30 v 60 q 0 30 -30 30 q -30 0 -30 30"/>
+    <path d="M 540 270 q -30 0 -30 30 v 180 q 0 30 -30 30 q 30 0 30 30 q 0 -30 30 -30 q -30 0 -30 -30 m 30 30 q 30 0 30 30 q 0 -30 30 -30"/>
+    <path d="M 450 720 q 0 30 -30 30 h -240 q -30 0 -30 -30 v -60 q 0 -30 30 -30 h 120 q 30 0 30 30 v 60 q 0 30 30 30"/>
+    <path d="M 300 630 q -30 0 -30 30 q 0 -30 -30 -30 q -30 0 -30 30 q 0 -30 -30 -30 m -30 30 q 0 30 -30 30 q 30 0 30 30 m 30 30 q 30 0 30 -30 q 0 30 30 30 q 30 0 30 -30 q 0 30 30 30 q 30 0 30 -30"/>
+    <path d="M 150 660 v -60 q 0 30 30 30 m -30 -30 v -60 q 0 -30 30 -30 m -30 30 q 0 -30 -30 -30"/>
+  </g>
+  <!-- Cables placement end -->
+
+  <!-- Pipes placement start-->
+  <path d="M 500 600 v 80 h -30 v 20 h 30 v 80 h 20 v -80 h 30 v -20 h -30 v -80 h -20" fill="yellow"/>
+  <path d="M 740 480 v 80 h -140 v 20 h 140 v 100 h -140 v 20 h 140 v 80 h 20 v -300" fill="brown"/>
+  <path d="M 260 480 v 80 h -260 v 20 h 80 v 80 h 20 v -80 h 280 v 80 q 0 40 40 40 v -20 q -20 0 -20 -20 v -80 h 80 v -20 h -200 v -80 h -20" fill="khaki"/>
+  <path d="M 80 720 v 60 h 20 v -60 h -20" fill="white" stroke="black"/>
+  <path d="M 60 680 q -40 0 -40 40 v 60 h 20 v -60 q 0 -20 20 -20 v -20" fill="green"/>
+  <!-- Pipes placement end-->
+
   <!-- Devices placement start -->
   <use href="#BigTank" transform="rotate(180 270,270)" x="60" y="60"/>
   <use href="#BigTank" transform="rotate(180 750,270)" x="540" y="60"/>
-  <use href="#Filtration" transform="rotate(0 150,390)" x="480" y="540"/>
+  <use href="#Filtration" transform="rotate(0 510,570)" x="480" y="540"/>
 
   <use href="#VolumPump" transform="rotate(90 450,690)" x="420" y="660"/>
   <use href="#VolumPump" transform="rotate(-90 570,690)" x="540" y="660"/>
-  <use href="#GasMixer" transform="rotate(0 270,150)" x="60" y="660"/>
+  <use href="#GasMixer" transform="rotate(0 90,690)" x="60" y="660"/>
 
-  <use href="#Lever" transform="rotate(0 270,150)" x="180" y="660"/>
-  <use href="#ICHousing" transform="rotate(0 390,210)" x="240" y="660"/>
+  <use href="#Lever" transform="rotate(0 210,690)" x="180" y="660"/>
+  <use href="#ICHousing" transform="rotate(0 270,690)" x="240" y="660"/>
   <!-- Devices placement end -->
 
 </svg>
