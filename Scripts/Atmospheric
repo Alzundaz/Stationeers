@@ -7,14 +7,14 @@ define O2_RATIO_MAX 0.25
 define O2_RATIO_IN 0.15
 define KRATIO 2
 define REVERSED 0
-define FILTRATION_BATCH 0
+define FILTRATION_HASH -348054045
 
 alias WasteTank d0
 alias WasteDump d1
-alias Filtration d2
+alias AtmoMixer d2
 alias AtmoTank d3
 alias AtmoDump d4
-alias AtmoMixer d5
+alias DumpLever d5
 
 alias pressure r0
 alias o2Ratio r1
@@ -48,7 +48,12 @@ j setDump
 setDump:
 
 l value Dump On
+l var DumpLever On
 l pressure Tank Pressure
+
+breq var 0 3
+move value 1
+j endDump
 
 sgt var pressure MAX_PRESSURE
 or value value var
@@ -60,6 +65,8 @@ sgt var o2Ratio O2_RATIO_MAX
 or value value var
 slt var o2Ratio O2_RATIO_MIN
 or value value var
+
+endDump:
 
 s Dump Setting 100
 s Dump On value
@@ -98,18 +105,12 @@ j ra
 setFiltration:
 
 l nMoles WasteTank TotalMoles
-brne FILTRATION_BATCH 0 3
-l value Filtration On
-jr 2
-l value Filtration Setting
+lb value FILTRATION_HASH On 0
 
 sgt var nMoles MAX_MOLES
 or value value var
 sge var nMoles MIN_MOLES
 select value var value 0
 
-brne FILTRATION_BATCH 0 3
-s Filtration On value
-j ra
-s Filtration Setting value
+sb FILTRATION_HASH On value
 j ra
