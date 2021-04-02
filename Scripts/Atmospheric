@@ -1,10 +1,10 @@
 define MAX_PRESSURE 45000
 define MIN_PRESSURE 44000
-define MAX_MOLES 1000
-define MIN_MOLES 100
+define MAX_MOLES 2500
+define MIN_MOLES 250
 define O2_RATIO 0.2
 define O2_RATIO_MAX 0.25
-define O2_RATIO_IN 0.15
+define O2_RATIO_MIN 0.15
 define KRATIO 2
 define REVERSED 0
 define FILTRATION_HASH -348054045
@@ -27,10 +27,27 @@ s AtmoDump Setting 100
 
 start:
 
+jal setManualDump
 jal setWasteDump
 jal setAtmoDump
 jal setRatio
 jal setFiltration
+
+yield
+j start
+
+setManualDump:
+
+l var DumpLever Setting
+
+beq var 0 ra
+
+s WasteDump Setting 100
+s WasteDump On 1
+s AtmoDump Setting 100
+s AtmoDump On 1
+s AtmoMixer On 0
+sb FILTRATION_HASH On 0
 
 yield
 j start
@@ -48,12 +65,7 @@ j setDump
 setDump:
 
 l value Dump On
-l var DumpLever On
 l pressure Tank Pressure
-
-breq var 0 3
-move value 1
-j endDump
 
 sgt var pressure MAX_PRESSURE
 or value value var
@@ -65,8 +77,6 @@ sgt var o2Ratio O2_RATIO_MAX
 or value value var
 slt var o2Ratio O2_RATIO_MIN
 or value value var
-
-endDump:
 
 s Dump Setting 100
 s Dump On value
@@ -105,7 +115,7 @@ j ra
 setFiltration:
 
 l nMoles WasteTank TotalMoles
-lb value FILTRATION_HASH On 0
+lb value FILTRATION_HASH On 3
 
 sgt var nMoles MAX_MOLES
 or value value var
