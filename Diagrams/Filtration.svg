@@ -16,7 +16,6 @@
   <line x1="510" y1="0" x2="510" y2="780" stroke="grey"/>
   <!-- Grid end -->
 
-  
   <!-- Devices definition start -->
   <defs>
     <g id="Tank">
@@ -258,4 +257,5 @@
 
   </g>
   <!-- Labels placement end -->
+
 </svg>
