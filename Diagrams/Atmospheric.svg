@@ -261,5 +261,20 @@
   <use href="#Lever" transform="rotate(0 210,690)" x="180" y="660"/>
   <use href="#ICHousing" transform="rotate(0 270,690)" x="240" y="660"/>
   <!-- Devices placement end -->
+  
+  <!-- Labels placement start -->
+  <g font-size="10">
+    <text x="730" y="270">Waste Tank</text>
+    <text x="230" y="270">Atmospheric Tank</text>
+    <text x="560" y="720">Waste</text>
+    <text x="550" y="730">Dump Pump</text>
+    <text x="425" y="650">Atmospheric</text>
+    <text x="425" y="660">Dump Pump</text>
+    <text x="550" y="610">Filtration</text>
+    <text x="70" y="655">Gas Mixer</text>
+    <text x="185" y="665" transform="rotate(-90 210,690)">Dump Lever</text>
+    <text x="230" y="655" transform="rotate(-90 270,690)">Atmospheric Control</text>
+  </g>
+  <!-- Labels placement end -->
 
 </svg>
