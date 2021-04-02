@@ -111,7 +111,6 @@ max rVent rVent var
 j ra
 
 applyROut:
-
 bdns Sensor ra
 bdns VentIn ra
 bdns VentOut ra
@@ -125,5 +124,4 @@ s VentIn PressureExternal inP
 s VentOut PressureExternal var
 s VentIn Mode 0
 s VentOut Mode 1
-
 j ra
