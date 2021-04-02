@@ -35,7 +35,7 @@ The status indicate which doors need to be *open/close*
 - *STATUS_VENT_OUTWARD* : Wait with both doors closed
 - *STATUS_WAIT_OUTWARD* : Wait trigger on inside door and open outside door
 - *STATUS_OPEN* : Open both doors
-- STATUS_WAIT_INWARD* : Wait trigger on outside door and open inside door
+- *STATUS_WAIT_INWARD* : Wait trigger on outside door and open inside door
 - *STATUS_VENT_INWARD* : Wait with both doors closed
 
 The light is **On** in *STATUS_VENT_OUTWARD* and *STATUS_VENT_INWARD* status.
