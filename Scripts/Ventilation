@@ -1,7 +1,7 @@
 define TEMPERATURE 20
 define DELTA_RATIO_TEMPERATURE 100
 define PRESSURE 101
-define DEFAULT__VENT 0.01
+define DEFAULT_VENT 0.01
 
 define RATIO_OXYGEN 0.2
 define KRATIO_OXYGEN 0.1
@@ -31,7 +31,7 @@ start:
 l mode Self Setting
 
 move inP PRESSURE
-move rVent DEFAULT__VENT
+move rVent DEFAULT_VENT
 alias Sensor d0
 alias VentIn d1
 alias VentOut d2
@@ -39,7 +39,7 @@ jal computeROut
 jal applyROut
 
 move inP PRESSURE
-move rVent DEFAULT__VENT
+move rVent DEFAULT_VENT
 alias Sensor d3
 alias VentIn d4
 alias VentOut d5
