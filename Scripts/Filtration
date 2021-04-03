@@ -71,6 +71,7 @@ s Filtration On filtrationStatus
 filtrationEnd:
 
 # Keep good pressure in distribution pipe
+bdns Tank distributionEnd
 bdns DistributionAnalyzer distributionEnd
 bdns DistributionPump distributionEnd
 s DistributionAnalyzer On ON
@@ -81,6 +82,9 @@ or distributionStatus distributionStatus var
 sle var pressure MAX_DISTRIBUTION
 select distributionStatus var distributionStatus OFF
 
+l var Tank Pressure
+select distributionStatus var distributionStatus OFF
+
 s DistributionPump Setting 100
 s DistributionPump On distributionStatus
 distributionEnd:
@@ -89,37 +93,31 @@ yield
 j start
 
 getRatio:
-# CO2
 breq filter 1635000764 3
 breq filter 416897318 2
 brne filter 1876847024 3
 l ratio GasSupply RatioCarbonDioxide
 j ra
-# N
 breq filter 632853248 3
 breq filter -632657357 2
 brne filter -1387439451 3
 l ratio GasSupply RatioNitrogen
 j ra
-# NO2
 breq filter -1247674305 3
 breq filter 1824284061 2
 brne filter 465267979 3
 l ratio GasSupply RatioNitrousOxide
 j ra
-# O2
 breq filter -721824748 3
 breq filter -1067319543 2
 brne filter -1217998945 3
 l ratio GasSupply RatioOxygen
 j ra
-# X
 breq filter 1915566057 3
 breq filter 63677771 2
 brne filter 1959564765 3
 l ratio GasSupply RatioPollutant
 j ra
-# H2
 breq filter 15011598 3
 breq filter 1037507240 2
 brne filter 1255156286 3
