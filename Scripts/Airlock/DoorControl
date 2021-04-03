@@ -2,10 +2,10 @@ define STATUS_WAIT 0
 define STATUS_INWARD 1
 define STATUS_OUTWARD 2
 
-alias DoorIn d0
-alias DoorOut d1
-alias Light d2
-alias StatusMemory d3
+alias StatusMemory d0
+alias DoorIn d1
+alias DoorOut d2
+alias Light d3
 
 alias status r0
 alias action r1
