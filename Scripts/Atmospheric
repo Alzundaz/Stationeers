@@ -38,6 +38,7 @@ j start
 
 setManualDump:
 
+bdns DumpLever ra
 l var DumpLever Setting
 
 beq var 0 ra
