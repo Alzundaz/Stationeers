@@ -1,0 +1,128 @@
+define STATUS_VENT_OUTWARD -2
+define STATUS_WAIT_OUTWARD -1
+define STATUS_OPEN 0
+define STATUS_WAIT_INWARD 1
+define STATUS_VENT_INWARD 2
+define DIFF_TEMPERATURE 10
+define DIFF_PRESSURE 10
+define DIFF_OXYGEN 0.02
+define DIFF_CARBONDIOXIDE 0.01
+define DIFF_VOLATILES 0.01
+define DIFF_NITROGEN 0.01
+define DIFF_NITROUS_OXYDE 0.00001
+define DIFF_POLLUTANT 0.00001
+alias StatusMemory d0
+alias DoorIn d1
+alias DoorOut d2
+alias Light d3
+alias SensorIn d4
+alias SensorOut d5
+alias status r0
+alias action r1
+alias defaultAction r2
+alias diffGas r3
+alias value r5
+alias var r6
+
+s DoorIn Mode 1
+s DoorOut Mode 1
+l value DoorIn Open
+l var DoorOut Open
+sub var value var
+s StatusMemory Setting var
+start:
+yield
+s DoorIn Lock 0
+s DoorOut Lock 0
+l status StatusMemory Setting
+beq status STATUS_VENT_OUTWARD doorClosed
+beq status STATUS_WAIT_OUTWARD waitingOutward
+beq status STATUS_OPEN waitingOpened
+beq status STATUS_WAIT_INWARD waitingInward
+beq status STATUS_VENT_INWARD doorClosed
+j start
+doorClosed:
+s DoorIn Open 0
+s DoorOut Open 0
+s DoorIn Lock 1
+s DoorOut Lock 1
+s DoorIn Setting 0
+s DoorOut Setting 0
+s Light On 1
+j start
+waitingInward:
+s DoorIn Open 1
+s DoorOut Open 0
+s Light On 0
+l value DoorOut Setting
+bne value 1 checkOpening
+s DoorIn Open 0
+yield
+s StatusMemory Setting STATUS_VENT_OUTWARD
+j start
+waitingOutward:
+s DoorIn Open 0
+s DoorOut Open 1
+s Light On 0
+l value DoorIn Setting
+bne value 1 checkOpening
+s DoorOut Open 0
+yield
+s StatusMemory Setting STATUS_VENT_INWARD
+j start
+waitingOpened:
+s DoorIn Open 1
+s DoorOut Open 1
+s Light On 0
+jal checkAction
+s StatusMemory Setting action
+j start
+checkOpening:
+jal checkAction
+bne action STATUS_OPEN start
+s StatusMemory Setting action
+j start
+checkAction:
+move action STATUS_OPEN
+select defaultAction status status STATUS_WAIT_OUTWARD
+push ra
+l value SensorIn Temperature
+l var SensorOut Temperature
+move diffGas DIFF_TEMPERATURE
+jal checkActionFunc
+l value SensorIn Pressure
+l var SensorOut Pressure
+move diffGas DIFF_PRESSURE
+jal checkActionFunc
+l value SensorIn RatioOxygen
+l var SensorOut RatioOxygen
+move diffGas DIFF_OXYGEN
+jal checkActionFunc
+l value SensorIn RatioCarbonDioxide
+l var SensorOut RatioCarbonDioxide
+move diffGas DIFF_CARBONDIOXIDE
+jal checkActionFunc
+l value SensorIn RatioVolatiles
+l var SensorOut RatioVolatiles
+move diffGas DIFF_VOLATILES
+jal checkActionFunc
+l value SensorIn RatioNitrogen
+l var SensorOut RatioNitrogen
+move diffGas DIFF_NITROGEN
+jal checkActionFunc
+l value SensorIn RatioNitrousOxide
+l var SensorOut RatioNitrousOxide
+move diffGas DIFF_NITROUS_OXYDE
+jal checkActionFunc
+l value SensorIn RatioPollutant
+l var SensorOut RatioPollutant
+move diffGas DIFF_POLLUTANT
+jal checkActionFunc
+pop ra
+j ra
+checkActionFunc:
+sub var value var
+abs var var
+brlt var diffGas 2
+move action defaultAction
+j ra

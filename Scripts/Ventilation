@@ -1,14 +1,14 @@
 define TEMPERATURE 20
 define DELTA_RATIO_TEMPERATURE 100
 define PRESSURE 101
-define DEFAULT__VENT 0.01
+define DEFAULT_VENT 0.01
 
 define RATIO_OXYGEN 0.2
 define KRATIO_OXYGEN 0.1
 define RATIO_CARBONDIOXIDE 0.1
 define RATIO_POLLUTANT 0.01
 define RATIO_VOLATILES 0.01
-define RATIO_WATER 0.1
+define RATIO_NITROUS_OXYDE 0.01
 
 define KELVIN 273.15
 
@@ -31,7 +31,7 @@ start:
 l mode Self Setting
 
 move inP PRESSURE
-move rVent DEFAULT__VENT
+move rVent DEFAULT_VENT
 alias Sensor d0
 alias VentIn d1
 alias VentOut d2
@@ -39,7 +39,7 @@ jal computeROut
 jal applyROut
 
 move inP PRESSURE
-move rVent DEFAULT__VENT
+move rVent DEFAULT_VENT
 alias Sensor d3
 alias VentIn d4
 alias VentOut d5
@@ -95,16 +95,15 @@ div var var RATIO_VOLATILES
 min var var 1
 max rVent rVent var
 
-# RVent function Water
-l var Sensor RatioWater
-div var var RATIO_WATER
+# RVent function Nitrous Oxyde
+l var Sensor RatioNitrousOxide
+div var var RATIO_NITROUS_OXYDE
 min var var 1
 max rVent rVent var
 
 j ra
 
 applyROut:
-
 bdns Sensor ra
 bdns VentIn ra
 bdns VentOut ra
@@ -118,5 +117,4 @@ s VentIn PressureExternal inP
 s VentOut PressureExternal var
 s VentIn Mode 0
 s VentOut Mode 1
-
 j ra

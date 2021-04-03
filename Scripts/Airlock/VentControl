@@ -4,9 +4,9 @@ define PRESSURE_PRECISION 10
 alias StatusMemory d0
 alias VentIn d1
 alias VentOut d2
-alias SensorIn d3
-alias SensorOut d4
-alias SensorSAS d5
+alias SensorSAS d3
+alias SensorIn d4
+alias SensorOut d5
 
 alias status r0
 alias pressureExt r1
