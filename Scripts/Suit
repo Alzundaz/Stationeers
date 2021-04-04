@@ -36,24 +36,15 @@ or status status tempStatus
 slt tempStatus TMAX value
 or status status tempStatus
 
-updateSuit:
-
-l value Suit On
-breq value status 2
-s Suit On status
-
-l value Suit AirRelease
-breq value status 2
-s Suit AirRelease status
-
-l value Suit Filtration
-breq value status 2
-s Suit Filtration status
+xor status status 1
+s Helmet Open status
+brne status 0 2
+yield
 
 xor status status 1
-l value Helmet Open
-breq value status 2
-s Helmet Open status
+s Suit On status
+s Suit AirRelease status
+s Suit Filtration status
 
 yield
 j start
