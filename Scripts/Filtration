@@ -52,6 +52,7 @@ overPressureEnd:
 # Filtration if sufficient gas supply
 bdns GasSupply filtrationEnd
 bdns Filtration filtrationEnd
+s GasSupply On ON
 move totalFiltrableMoles 0
 l totalMoles GasSupply TotalMoles
 ls filter Filtration 0 OccupantHash
