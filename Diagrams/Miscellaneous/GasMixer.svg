@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="780" height="780">
+  <title>Gas Mixer</title>
+  <desc>
+    Gas Mixer diagram.
+  </desc>
+
+  <!-- Base structure start -->
+  <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+  <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+  <rect width="30" height="20" x="0" y="20" fill="yellow"/>
+  <rect width="41" height="42" x="9" y="9" fill="grey"/>
+  <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+  <!-- Base structure end -->
+
+  <!-- Screws start -->
+  <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+  <!-- Screws end -->
+
+  <!-- Light start -->
+  <path d="M 33 18 l 2 -2 h 8 l 2 2 v 10 l -2 2 h -8 l -2 -2 v 10" fill="grey"/>
+  <path d="M 34.5 19 l 1.5 -1.5 h 6 l 1.5 1.5 v 8 l -1.5 1.5 h -6 l -1.5 -1.5 v 8" fill="green"/>
+  <!-- Light end -->
+
+  <!-- Valve start -->
+  <circle cx="38" cy="40" r="8" fill="grey" stroke="#656565" stroke-width="0.5"/>
+  <circle cx="38" cy="40" r="6" fill="#505050"/>
+  <rect width="2" height="15" x="37" y="32.5" fill="grey"/>
+  <rect width="2" height="15" x="37" y="32.5" transform="rotate(90 38,40)" fill="grey"/>
+  <circle cx="38" cy="40" r="2" fill="darkgrey"/>
+  <circle cx="38" cy="40" r="6" fill="transparent" stroke="#656565" stroke-width="0.5"/>
+  <!-- Valve end -->
+
+  <!-- Arrow start -->
+  <rect width="5" height="5" x="22.5" y="27.5" fill="green"/>
+  <rect width="5" height="7.5" x="22.5" y="17" fill="green"/>
+  <rect width="5" height="7.5" x="22.5" y="39" fill="green"/>
+  <rect width="5" height="5" x="11" y="27.5" fill="green"/>
+  <path d="M 25 12 l -4 6 h 8 l -4 -6" fill="green"/>
+  <path d="M 25 34 l -4 6 h 8 l -4 -6" fill="green"/>
+  <path d="M 21 30 l -6 -4 v 8 l 6 -4" fill="green"/>
+  <!-- Arrow end -->
+
+</svg>
