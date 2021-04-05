@@ -1,0 +1,51 @@
+define TARGET_PRESSURE 30000
+define TARGET_HEAT 323.15
+define TARGET_COLD 223.15
+define TARGET_STEP 0.025
+
+alias HeatInVent d0
+alias HeatOutVent d1
+alias HeatSensor d2
+alias ColdInVent d3
+alias ColdOutVent d4
+alias ColdSensor d5
+
+alias value r0
+alias var r1
+
+alias heatTargetPressure r3
+alias coldTargetPressure r4
+
+start:
+
+l value HeatSensor Temperature
+sub var value TARGET_HEAT
+mul var var TARGET_STEP
+max var var 0
+sub heatTargetPressure TARGET_PRESSURE var
+
+l value ColdSensor Temperature
+sub var TARGET_COLD value
+mul var var TARGET_STEP
+max var var 0
+sub coldTargetPressure TARGET_PRESSURE var
+
+s HeatInVent PressureExternal TARGET_PRESSURE
+s HeatOutVent PressureExternal heatTargetPressure
+s ColdInVent PressureExternal TARGET_PRESSURE
+s ColdOutVent PressureExternal coldTargetPressure
+
+s HeatInVent Mode 0
+s HeatOutVent Mode 1
+s ColdInVent Mode 0
+s ColdOutVent Mode 1
+
+s HeatInVent On 1
+s HeatOutVent On 1
+s ColdInVent On 1
+s ColdOutVent On 1
+
+yield
+j start
+
+j ra
