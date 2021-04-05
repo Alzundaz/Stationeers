@@ -1,6 +1,6 @@
 define TARGET_PRESSURE 30000
-define TARGET_HEAT 323.15
-define TARGET_COLD 223.15
+define TARGET_HEAT 328.15
+define TARGET_COLD 218.15
 define TARGET_STEP 0.025
 
 alias HeatInVent d0
