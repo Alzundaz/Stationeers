@@ -23,10 +23,10 @@ lb lastVValue SOLAR_PANEL_HASH Vertical 0
 
 start:
 
-jal checkCharge
-
 l hSun DaylightSensor Horizontal
 l vSun DaylightSensor Vertical
+
+jal checkCharge
 
 sub rValue hSun 90
 brge rValue 0 2
@@ -58,6 +58,8 @@ yield
 j start
 
 checkCharge:
+brgt vSun 90 8
+
 lb charge SOLAR_PANEL_HASH Charge 1
 lb var DUAL_SOLAR_PANEL_HASH Charge 1
 add charge charge var
