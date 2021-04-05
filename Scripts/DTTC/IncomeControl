@@ -1,0 +1,42 @@
+define TARGET_IN_PRESSURE 10000
+define TARGET_TANK_PRESSURE 10000
+
+alias VentMemory d0
+alias PipeAnalyzer d1
+alias HeatTank d2
+alias ColdTank d3
+alias HeatPump d4
+alias ColdPump d5
+
+alias value r0
+alias var r1
+
+start:
+
+jal incomeStatus
+jal tanks
+
+yield
+j start
+
+incomeStatus:
+
+l value PipeAnalyzer Pressure
+slt var value TARGET_IN_PRESSURE
+s VentMemory Setting var
+
+j ra
+
+tanks:
+
+l value HeatTank Pressure
+slt var value TARGET_TANK_PRESSURE
+s HeatPump On var
+s HeatPump Setting 100
+
+l value ColdTank Pressure
+slt var value TARGET_TANK_PRESSURE
+s ColdPump On var
+s ColdPump Setting 100
+
+j ra
