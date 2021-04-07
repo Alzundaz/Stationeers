@@ -1,51 +1,61 @@
-define TARGET_PRESSURE 30000
+define TARGET_MAX_PRESSURE 30000
+define TARGET_MIN_PRESSURE 29000
 define TARGET_HEAT 328.15
 define TARGET_COLD 218.15
-define TARGET_STEP 0.025
+define TARGET_STEP 1000
 
-alias HeatInVent d0
-alias HeatOutVent d1
+alias HeatInPump d0
+alias HeatOutPump d1
 alias HeatSensor d2
-alias ColdInVent d3
-alias ColdOutVent d4
+alias ColdInPump d3
+alias ColdOutPump d4
 alias ColdSensor d5
 
-alias value r0
-alias var r1
+alias pressure r0
+alias temperature r1
 
-alias heatTargetPressure r3
-alias coldTargetPressure r4
+alias heatInPumpStatus r4
+alias heatOutPumpStatus r5
+alias coldInPumpStatus r6
+alias coldOutPumpStatus r7
+
+alias var r9
 
 start:
 
-l value HeatSensor Temperature
-sub var value TARGET_HEAT
+l pressure HeatSensor Pressure
+l temperature HeatSensor Temperature
+
+sub var temperature TARGET_HEAT
 mul var var TARGET_STEP
 max var var 0
-sub heatTargetPressure TARGET_PRESSURE var
+sub var TARGET_MAX_PRESSURE var
+max var var 0
 
-l value ColdSensor Temperature
-sub var TARGET_COLD value
+slt heatInPumpStatus pressure TARGET_MIN_PRESSURE
+slt heatOutPumpStatus var pressure
+
+l pressure ColdSensor Pressure
+l temperature ColdSensor Temperature
+
+sub var TARGET_COLD temperature
 mul var var TARGET_STEP
 max var var 0
-sub coldTargetPressure TARGET_PRESSURE var
+sub var TARGET_MAX_PRESSURE var
+max var var 0
 
-s HeatInVent PressureExternal TARGET_PRESSURE
-s HeatOutVent PressureExternal heatTargetPressure
-s ColdInVent PressureExternal TARGET_PRESSURE
-s ColdOutVent PressureExternal coldTargetPressure
+slt coldInPumpStatus pressure TARGET_MIN_PRESSURE
+slt coldOutPumpStatus var pressure
 
-s HeatInVent Mode 0
-s HeatOutVent Mode 1
-s ColdInVent Mode 0
-s ColdOutVent Mode 1
+s HeatInPump Setting 100
+s HeatOutPump Setting 100
+s ColdInPump Setting 100
+s ColdOutPump Setting 100
 
-s HeatInVent On 1
-s HeatOutVent On 1
-s ColdInVent On 1
-s ColdOutVent On 1
+s HeatInPump On heatInPumpStatus
+s HeatOutPump On heatOutPumpStatus
+s ColdInPump On coldInPumpStatus
+s ColdOutPump On coldOutPumpStatus
 
 yield
 j start
-
-j ra
