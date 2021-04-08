@@ -1,0 +1,44 @@
+define MAX_PRESSURE 45000
+define MAX_INCOME 44000
+define MIN_TEMP 263.15
+define MAX_TEMP 283.15
+
+alias VentMemory d0
+alias Tank d1
+alias Sensor d2
+alias Dump d3
+
+alias pressure r0
+alias temperature r1
+alias temperatureExt r2
+alias status r3
+alias dump r4
+
+start:
+
+move status 1
+
+l pressure Tank Pressure
+
+brlt pressure MAX_INCOME 2
+move status 0
+
+l temperature Tank Temperature
+l temperatureExt Sensor Temperature
+
+brgt temperature MIN_TEMP 3
+brgt temperatureExt temperature 2
+move status 0
+
+brlt temperature MAX_TEMP 3
+brlt temperatureExt temperature 2
+move status 0
+
+sgt dump pressure MAX_PRESSURE
+
+s VentMemory Setting status
+s Dump Setting 100
+s Dump On dump
+
+yield
+j start

@@ -1,0 +1,28 @@
+define TARGET_HEAT 323.15
+define TARGET_COLD 223.15
+
+alias HeatControlMemory d0
+alias HeatSensor d1
+alias ColdSensor d2
+
+alias value r0
+alias heatControlStatus r1
+
+alias var r3
+
+start:
+
+move heatControlStatus 0
+
+l value HeatSensor Temperature  
+slt var value TARGET_HEAT
+or heatControlStatus heatControlStatus var
+
+l value ColdSensor Temperature
+sgt var value TARGET_COLD
+or heatControlStatus heatControlStatus var
+
+s HeatControlMemory Setting heatControlStatus
+
+yield
+j start

@@ -1,0 +1,61 @@
+define TARGET_MAX_PRESSURE 30000
+define TARGET_MIN_PRESSURE 29000
+define TARGET_HEAT 328.15
+define TARGET_COLD 218.15
+define TARGET_STEP 1000
+
+alias HeatInPump d0
+alias HeatOutPump d1
+alias HeatSensor d2
+alias ColdInPump d3
+alias ColdOutPump d4
+alias ColdSensor d5
+
+alias pressure r0
+alias temperature r1
+
+alias heatInPumpStatus r4
+alias heatOutPumpStatus r5
+alias coldInPumpStatus r6
+alias coldOutPumpStatus r7
+
+alias var r9
+
+start:
+
+l pressure HeatSensor Pressure
+l temperature HeatSensor Temperature
+
+sub var temperature TARGET_HEAT
+mul var var TARGET_STEP
+max var var 0
+sub var TARGET_MAX_PRESSURE var
+max var var 0
+
+slt heatInPumpStatus pressure TARGET_MIN_PRESSURE
+slt heatOutPumpStatus var pressure
+
+l pressure ColdSensor Pressure
+l temperature ColdSensor Temperature
+
+sub var TARGET_COLD temperature
+mul var var TARGET_STEP
+max var var 0
+sub var TARGET_MAX_PRESSURE var
+max var var 0
+
+slt coldInPumpStatus pressure TARGET_MIN_PRESSURE
+slt coldOutPumpStatus var pressure
+
+s HeatInPump Setting 100
+s HeatOutPump Setting 100
+s ColdInPump Setting 100
+s ColdOutPump Setting 100
+
+s HeatInPump On heatInPumpStatus
+s HeatOutPump On heatOutPumpStatus
+s ColdInPump On coldInPumpStatus
+s ColdOutPump On coldOutPumpStatus
+
+yield
+j start
