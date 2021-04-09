@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Back Pressure Regulator</title>
+  <desc>
+    Back Pressure Regulator diagram.
+  </desc>
+
+  <!-- Base structure start -->
+  <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+  <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+  <rect width="40" height="42" x="10" y="9" fill="grey"/>
+  <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+  <!-- Base structure end -->
+
+  <!-- Screws start -->
+  <g fill="grey">
+    <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+    <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+    <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+    <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+  </g>
+  <!-- Screws end -->
+
+  <!-- Light start -->
+  <path d="M 15 15 l 2 -2 h 6 l 2 2 v 10 l -2 2 h -6 l -2 -2 v 10" fill="grey"/>
+  <path d="M 16.5 16 l 1.5 -1.5 h 4 l 1.5 1.5 v 8 l -1.5 1.5 h -4 l -1.5 -1.5 v 8" fill="green"/>
+  <!-- Light end -->
+
+  <!-- Valve start -->
+  <circle cx="30" cy="38" r="9" fill="grey" stroke="#656565" stroke-width="0.5"/>
+  <circle cx="30" cy="38" r="7" fill="#505050"/>
+  <rect x="29" y="31.5" width="2" height="15" fill="grey"/>
+  <rect x="29" y="31.5" width="2" height="15" transform="rotate(90 30,38)" fill="grey"/>
+  <circle cx="30" cy="38" r="2.5" fill="darkgrey"/>
+  <circle cx="30" cy="38" r="7" fill="transparent" stroke="#656565" stroke-width="0.5"/>
+  <!-- Valve end -->
+
+  <!-- Arrow start -->
+  <g fill="red">
+    <path d="M 40 17 l -5 6 h 10 l -5 -6"/>
+    <rect x="37.5" y="21" width="5" height="6"/>
+    <rect x="35" y="14" width="10" height="2"/>
+  </g>
+  <!-- Arrow end -->
+
+</svg>
