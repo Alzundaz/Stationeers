@@ -4,6 +4,7 @@
   <desc>
     Radiator diagram.
   </desc>
+
   <defs>
     <pattern id="FillRadiator" x="0" y="0" width="1" height="0.0435">
       <rect x="0" y="0" width="50" height="1" fill="#505050"/>
