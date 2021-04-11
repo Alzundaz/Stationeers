@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1260" height="1020" style="background: white">
+  <title>Dual Tower</title>
+  <desc>
+    Dual Tower diagram.
+  </desc>
+
+  <!-- Grid start -->
+  <line x1="0" y1="30" x2="1260" y2="30" stroke="grey"/>
+  <line x1="0" y1="270" x2="1260" y2="270" stroke="grey"/>
+  <line x1="0" y1="510" x2="1260" y2="510" stroke="grey"/>
+  <line x1="0" y1="750" x2="1260" y2="750" stroke="grey"/>
+  <line x1="0" y1="990" x2="1260" y2="990" stroke="grey"/>
+
+  <line x1="30" y1="0" x2="30" y2="1020" stroke="grey"/>
+  <line x1="270" y1="0" x2="270" y2="1020" stroke="grey"/>
+  <line x1="510" y1="0" x2="510" y2="1020" stroke="grey"/>
+  <line x1="750" y1="0" x2="750" y2="1020" stroke="grey"/>
+  <line x1="990" y1="0" x2="990" y2="1020" stroke="grey"/>
+  <line x1="1230" y1="0" x2="1230" y2="1020" stroke="grey"/>
+  <!-- Grid end -->
+
+  <!-- Devices definition start -->
+  <defs>
+    <g id="ActiveVent">
+      <!-- Outlines -->
+      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white"/>
+
+      <!-- Buttons start -->
+      <rect width="14" height="7" x="5" y="5" stroke="black" fill="transparent"/>
+      <rect width="7" height="7" x="5" y="5" fill="darkred"/>
+      <rect width="7" height="7" x="12" y="5" fill="red"/>
+      <rect width="14" height="7" x="41" y="5" stroke="black" fill="transparent"/>
+      <rect width="7" height="7" x="41" y="5" fill="darkblue"/>
+      <rect width="7" height="7" x="48" y="5" fill="blue"/>
+      <!-- Buttons end -->
+
+      <!-- Floppy slot start -->
+      <line x1="25" y1="8" x2="35" y2="8" stroke="black" stroke-width="2"/>
+      <circle cx="30" cy="8" r="2" fill="black"/>
+      <!-- Floppy slot end -->
+
+      <!-- Vent grid start -->
+      <path d="M 5 23 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 29 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 35 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 41 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 47 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 53 v -5 h 50 v 5" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 54 H 55" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <!-- Vent grid start -->
+    </g>
+    <g id="PassiveVent">
+      <!-- Outlines -->
+      <path d="M 10 0 H 50 Q 60 0 60 10 V 50 Q 60 60 50 60 H 10 Q 0 60 0 50 V 10 Q 0 0 10 0" stroke="black" stroke-width="1" fill="white"/>
+
+      <!-- Vent grid start -->
+      <path d="M 5 12.1 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 19.3 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 26.4 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 33.6 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 40.7 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 47.8 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 55 v -6.1 h 50 v 6.1" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <path d="M 5 56 H 55" stroke="black" stroke-width="0.3" fill="transparent"/>
+      <!-- Vent grid start -->
+    </g>
+    <g id="VolumPump">
+      <!-- Base structure start -->
+      <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+      <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+      <rect width="40" height="42" x="10" y="9" fill="grey"/>
+      <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+      <!-- Base structure end -->
+
+      <!-- Screws start -->
+      <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73" fill="grey"/>
+      <!-- Screws end -->
+
+      <!-- Light start -->
+      <path d="M 20 18 l 2 -2 h 6 l 2 2 v 10 l -2 2 h -6 l -2 -2 v 10" fill="grey"/>
+      <path d="M 21.5 19 l 1.5 -1.5 h 4 l 1.5 1.5 v 8 l -1.5 1.5 h -4 l -1.5 -1.5 v 8" fill="green"/>
+      <!-- Light end -->
+
+      <!-- Valve start -->
+      <circle cx="25" cy="40" r="8" fill="grey" stroke="#656565" stroke-width="0.5"/>
+      <circle cx="25" cy="40" r="6" fill="#505050"/>
+      <rect width="2" height="15" x="24" y="32.5" fill="grey"/>
+      <rect width="2" height="15" x="24" y="32.5" transform="rotate(90 25,40)" fill="grey"/>
+      <circle cx="25" cy="40" r="2" fill="darkgrey"/>
+      <circle cx="25" cy="40" r="6" fill="transparent" stroke="#656565" stroke-width="0.5"/>
+      <!-- Valve end -->
+
+      <!-- Arrow start -->
+      <path d="M 40 20 h 4 l -4 -6 l -4 6 h 4" fill="red"/>
+      <rect width="5" height="6" x="37.5" y="20" fill="red"/>
+      <rect width="5" height="6" x="37.5" y="28" fill="red"/>
+      <rect width="5" height="4" x="37.5" y="36" fill="red"/>
+      <rect width="5" height="2" x="37.5" y="42" fill="red"/>
+      <!-- Arrow end -->
+    </g>
+    <g id="PressureRegulator">
+      <!-- Base structure start -->
+      <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+      <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+      <rect width="40" height="42" x="10" y="9" fill="grey"/>
+      <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+      <!-- Base structure end -->
+
+      <!-- Screws start -->
+      <g fill="grey">
+        <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+        <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+        <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+        <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+      </g>
+      <!-- Screws end -->
+
+      <!-- Light start -->
+      <path d="M 15 15 l 2 -2 h 6 l 2 2 v 10 l -2 2 h -6 l -2 -2 v 10" fill="grey"/>
+      <path d="M 16.5 16 l 1.5 -1.5 h 4 l 1.5 1.5 v 8 l -1.5 1.5 h -4 l -1.5 -1.5 v 8" fill="green"/>
+      <!-- Light end -->
+
+      <!-- Valve start -->
+      <circle cx="30" cy="38" r="9" fill="grey" stroke="#656565" stroke-width="0.5"/>
+      <circle cx="30" cy="38" r="7" fill="#505050"/>
+      <rect x="29" y="31.5" width="2" height="15" fill="grey"/>
+      <rect x="29" y="31.5" width="2" height="15" transform="rotate(90 30,38)" fill="grey"/>
+      <circle cx="30" cy="38" r="2.5" fill="darkgrey"/>
+      <circle cx="30" cy="38" r="7" fill="transparent" stroke="#656565" stroke-width="0.5"/>
+      <!-- Valve end -->
+
+      <!-- Arrow start -->
+      <g fill="red">
+        <path d="M 40 14 l -5 6 h 10 l -5 -6"/>
+        <rect x="37.5" y="18" width="5" height="6"/>
+        <rect x="35" y="25" width="10" height="2"/>
+      </g>
+      <!-- Arrow end -->
+    </g>
+    <g id="BackPressureRegulator">
+      <!-- Base structure start -->
+      <path d="M 30 50 L 60 35 L 60 25 L 30 10" fill="grey"/>
+      <rect width="20" height="60" x="20" y="0" fill="yellow"/>
+      <rect width="40" height="42" x="10" y="9" fill="grey"/>
+      <rect width="40" height="40" x="10" y="10" fill="yellow"/>
+      <!-- Base structure end -->
+
+      <!-- Screws start -->
+      <g fill="grey">
+        <path d="M 12 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+        <path d="M 46 11 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+        <path d="M 12 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+        <path d="M 46 45.54 h 2 l 1 1.73 l -1 1.73 h -2 l -1 -1.73 l 1 -1.73"/>
+      </g>
+      <!-- Screws end -->
+
+      <!-- Light start -->
+      <path d="M 15 15 l 2 -2 h 6 l 2 2 v 10 l -2 2 h -6 l -2 -2 v 10" fill="grey"/>
+      <path d="M 16.5 16 l 1.5 -1.5 h 4 l 1.5 1.5 v 8 l -1.5 1.5 h -4 l -1.5 -1.5 v 8" fill="green"/>
+      <!-- Light end -->
+
+      <!-- Valve start -->
+      <circle cx="30" cy="38" r="9" fill="grey" stroke="#656565" stroke-width="0.5"/>
+      <circle cx="30" cy="38" r="7" fill="#505050"/>
+      <rect x="29" y="31.5" width="2" height="15" fill="grey"/>
+      <rect x="29" y="31.5" width="2" height="15" transform="rotate(90 30,38)" fill="grey"/>
+      <circle cx="30" cy="38" r="2.5" fill="darkgrey"/>
+      <circle cx="30" cy="38" r="7" fill="transparent" stroke="#656565" stroke-width="0.5"/>
+      <!-- Valve end -->
+
+      <!-- Arrow start -->
+      <g fill="red">
+        <path d="M 40 17 l -5 6 h 10 l -5 -6"/>
+        <rect x="37.5" y="21" width="5" height="6"/>
+        <rect x="35" y="14" width="10" height="2"/>
+      </g>
+      <!-- Arrow end -->
+    </g>
+    <g id="Radiator">
+      <defs>
+        <pattern id="FillRadiator" x="0" y="0" width="1" height="0.0435">
+          <rect x="0" y="0" width="50" height="1" fill="#505050"/>
+        </pattern>
+      </defs>
+
+      <rect width="60" height="60" x="0" y="0" rx="5" ry="5" fill="lightgrey"/>
+      <rect width="50" height="50" x="5" y="5" rx="5" ry="5" fill="url(#FillRadiator)" stroke="#505050" stroke-width="0.2"/>
+    </g>
+    <g id="WallCooler">
+      <!-- Base structure -->
+      <rect width="22" height="30" x="19" y="30" rx="2" ry="2" fill="grey"/>
+      <rect width="11" height="11" x="24.5" y="0" fill="lightgrey"/>
+      <path d="M 30 1 l -3 5 h 3 v 4 l 3 -5 h -3 v -4" fill="yellow"/>
+      <rect width="55" height="55" x="2.5" y="2.5" rx="5" ry="5" fill="whitesmoke"/>
+
+      <!-- Floppy slot start -->
+      <line x1="10" y1="12" x2="20" y2="12" stroke="black" stroke-width="2"/>
+      <circle cx="15" cy="12" r="2" fill="black"/>
+      <!-- Floppy slot end -->
+
+      <!-- Buttons start -->
+      <rect x="38" y="9" width="14" height="7" stroke="black" fill="transparent"/>
+      <rect x="38" y="9" width="7" height="7" fill="darkred"/>
+      <rect x="45" y="9" width="7" height="7" fill="red"/>
+      <!-- Buttons end -->
+
+      <!-- Ventilation start -->
+      <circle cx="30" cy="35" r="15" fill="#202020" stroke="grey" stroke-width="1"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3 l 1 10" fill="#303030" transform="rotate(45 30,35)"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3" fill="transparent" stroke="#aaaaaa" stroke-width="0.3" transform="rotate(45 30,35)"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3 l 1 10" fill="#303030" transform="rotate(135 30,35)"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3" fill="transparent" stroke="#aaaaaa" stroke-width="0.3" transform="rotate(135 30,35)"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3 l 1 10" fill="#303030" transform="rotate(-45 30,35)"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3" fill="transparent" stroke="#aaaaaa" stroke-width="0.3" transform="rotate(-45 30,35)"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3 l 1 10" fill="#303030" transform="rotate(-135 30,35)"/>
+      <path d="M 32 35 l 1 -10 q 0 -3 -3 -3 q -3 0 -3 3" fill="transparent" stroke="#aaaaaa" stroke-width="0.3" transform="rotate(-135 30,35)"/>
+
+      <circle cx="30" cy="35" r="3" fill="grey"/>
+      <circle cx="30" cy="35" r="2" fill="darkgrey"/>
+      <circle cx="30" cy="35" r="1" fill="whitesmoke"/>
+
+      <g stroke="whitesmoke" stroke-width="0.5">
+        <line x1="21" y1="23.33" x2="39" y2="23.33"/>
+        <line x1="18" y1="26.66" x2="42" y2="26.66"/>
+        <line x1="16" y1="30" x2="44" y2="30"/>
+        <line x1="15" y1="33.33" x2="45" y2="33.33"/>
+        <line x1="15" y1="36.66" x2="45" y2="36.66"/>
+        <line x1="16" y1="40" x2="44" y2="40"/>
+        <line x1="18" y1="43.33" x2="42" y2="43.33"/>
+        <line x1="21" y1="46.66" x2="39" y2="46.66"/>
+      </g>
+      <!-- Ventilation end -->
+    </g>
+    <g id="Tank">
+      <rect width="22" height="30" x="79" y="0" rx="2" ry="2" fill="grey"/>
+      <rect width="13" height="13" x="167" y="82.5" fill="lightgrey"/>
+      <circle cx="90" cy="90" r="84" fill="orange" stroke="darkorange" stroke-width="2"/>
+    </g>
+    <g id="BatchWriter">
+      <!-- Background -->
+      <rect width="60" height="60" x="0" y="0" fill="#505050"/>
+
+      <!-- External pins start -->
+      <g fill="whitesmoke">
+        <rect width="57" height="4" x="1.5" y="7"/>
+        <rect width="57" height="4" x="1.5" y="13"/>
+        <rect width="57" height="4" x="1.5" y="19"/>
+        <rect width="57" height="4" x="1.5" y="25"/>
+        <rect width="57" height="4" x="1.5" y="31"/>
+        <rect width="57" height="4" x="1.5" y="37"/>
+        <rect width="57" height="4" x="1.5" y="43"/>
+        <rect width="57" height="4" x="1.5" y="49"/>
+      </g>
+
+      <g fill="white">
+        <rect width="55" height="4" x="2.5" y="7"/>
+        <rect width="55" height="4" x="2.5" y="13"/>
+        <rect width="55" height="4" x="2.5" y="19"/>
+        <rect width="55" height="4" x="2.5" y="25"/>
+        <rect width="55" height="4" x="2.5" y="31"/>
+        <rect width="55" height="4" x="2.5" y="37"/>
+        <rect width="55" height="4" x="2.5" y="43"/>
+        <rect width="55" height="4" x="2.5" y="49"/>
+      </g>
+      <!-- External pins end -->
+
+      <!-- Main chip -->
+      <rect width="50" height="50" x="5" y="5" fill="grey"/>
+
+      <!-- Head -->
+      <circle cx="13" cy="11" r="2" fill="red"/>
+      <g font-size="10" fill="white" font-family="monospace">
+        <text x="15" y="28">BATCH</text>
+        <text x="13" y="38">WRITER</text>
+      </g>
+
+      <!-- Device connectors start -->
+      <g fill="lightgrey">
+        <path d="M 9 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46"/>
+        <path d="M 47 7 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46"/>
+        <path d="M 47 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46"/>
+      </g>
+
+      <g fill="darkgrey">
+        <rect x="10" y="46" width="2" height="7"/>
+        <rect x="48" y="7" width="2" height="7"/>
+        <rect x="48" y="46" width="2" height="7"/>
+      </g>
+
+      <g font-size="3" fill="white" font-family="monospace">
+        <text x="16" y="50">IN</text>
+        <text x="39" y="10">OUT</text>
+        <text x="38" y="13">TYPE</text>
+        <text x="39" y="49">OUT</text>
+        <text x="39" y="52">VAR</text>
+      </g>
+      <!-- Device connectors end -->
+    </g>
+    <g id="ICHousing">
+      <!-- Background -->
+      <rect width="60" height="60" x="0" y="0" fill="#505050"/>
+
+      <!-- External pins start -->
+      <rect width="4" height="57" x="7" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="13" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="19" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="25" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="31" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="37" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="43" y="1.5" fill="whitesmoke"/>
+      <rect width="4" height="57" x="49" y="1.5" fill="whitesmoke"/>
+
+      <rect width="4" height="55" x="7" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="13" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="19" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="25" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="31" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="37" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="43" y="2.5" fill="white"/>
+      <rect width="4" height="55" x="49" y="2.5" fill="white"/>
+
+      <rect width="57" height="4" x="1.5" y="7" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="13" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="19" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="25" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="31" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="37" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="43" fill="whitesmoke"/>
+      <rect width="57" height="4" x="1.5" y="49" fill="whitesmoke"/>
+
+      <rect width="55" height="4" x="2.5" y="7" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="13" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="19" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="25" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="31" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="37" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="43" fill="white"/>
+      <rect width="55" height="4" x="2.5" y="49" fill="white"/>
+      <!-- External pins end -->
+
+      <!-- Main chip -->
+      <rect width="50" height="50" x="5" y="5" fill="grey"/>
+
+      <!-- Head -->
+      <circle cx="13" cy="11" r="2" fill="red"/>
+      <text x="20" y="10" font-size="5" fill="white">CIRCUIT</text>
+      <text x="19" y="15" font-size="5" fill="white">HOUSING</text>
+
+      <!-- Device connectors start -->
+      <path d="M 9 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="20" fill="darkgrey"/>
+      <text x="9.5" y="19" font-size="3" fill="white" font-family="monospace">D0</text>
+
+      <path d="M 9 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="33" fill="darkgrey"/>
+      <text x="9.5" y="32" font-size="3" fill="white" font-family="monospace">D1</text>
+
+      <path d="M 9 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="10" y="46" fill="darkgrey"/>
+      <text x="9.5" y="45" font-size="3" fill="white" font-family="monospace">D2</text>
+
+      <path d="M 47 20 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="20" fill="darkgrey"/>
+      <text x="47.5" y="19" font-size="3" fill="white" font-family="monospace">D3</text>
+
+      <path d="M 47 33 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="33" fill="darkgrey"/>
+      <text x="47.5" y="32" font-size="3" fill="white" font-family="monospace">D4</text>
+
+      <path d="M 47 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46" fill="lightgrey"/>
+      <rect width="2" height="7" x="48" y="46" fill="darkgrey"/>
+      <text x="47.5" y="45" font-size="3" fill="white" font-family="monospace">D5</text>
+      <!-- Device connectors end -->
+
+      <!-- IC Housing -->
+      <rect width="26" height="33" x="17" y="17" fill="black"/>
+
+      <!-- External IC pins start -->
+      <rect width="20" height="2" x="20" y="22" fill="white"/>
+      <rect width="20" height="2" x="20" y="29" fill="white"/>
+      <rect width="20" height="2" x="20" y="37" fill="white"/>
+      <rect width="20" height="2" x="20" y="44" fill="white"/>
+      <!-- External IC pins end -->
+
+      <!-- IC chip start -->
+      <rect width="15" height="30" x="22.5" y="18.5" fill="grey"/>
+      <path d="M 26.5 18.5 q 0 3.5 3.5 3.5 q 3.5 0 3.5 -3.5" fill="#505050"/>
+      <path d="M 26.5 48.5 q 0 -3.5 3.5 -3.5 q 3.5 0 3.5 3.5" fill="#505050"/>
+      <text x="28" y="40" transform="rotate(-90 28,40)" font-size="3" fill="white" font-family="monospace">RECATEK</text>
+      <text x="32" y="40" transform="rotate(-90 32,40)" font-size="4" fill="white" font-family="monospace">IC</text>
+      <text x="32" y="35" transform="rotate(-90 32,35)" font-size="4" fill="darkred" font-family="monospace">10</text>
+      <!-- IC chip end -->
+    </g>
+    <g id="Memory">
+      <!-- Background -->
+      <rect width="60" height="30" x="0" y="15" fill="#505050"/>
+
+      <!-- External pins start -->
+      <rect width="4" height="27" x="7" y="16.5" fill="whitesmoke"/>
+      <rect width="4" height="27" x="13" y="16.5" fill="whitesmoke"/>
+      <rect width="4" height="27" x="19" y="16.5" fill="whitesmoke"/>
+      <rect width="4" height="27" x="25" y="16.5" fill="whitesmoke"/>
+      <rect width="4" height="27" x="31" y="16.5" fill="whitesmoke"/>
+      <rect width="4" height="27" x="37" y="16.5" fill="whitesmoke"/>
+      <rect width="4" height="27" x="43" y="16.5" fill="whitesmoke"/>
+      <rect width="4" height="27" x="49" y="16.5" fill="whitesmoke"/>
+
+      <rect width="4" height="25" x="7" y="17.5" fill="white"/>
+      <rect width="4" height="25" x="13" y="17.5" fill="white"/>
+      <rect width="4" height="25" x="19" y="17.5" fill="white"/>
+      <rect width="4" height="25" x="25" y="17.5" fill="white"/>
+      <rect width="4" height="25" x="31" y="17.5" fill="white"/>
+      <rect width="4" height="25" x="37" y="17.5" fill="white"/>
+      <rect width="4" height="25" x="43" y="17.5" fill="white"/>
+      <rect width="4" height="25" x="49" y="17.5" fill="white"/>
+      <!-- External pins end -->
+
+      <!-- Main chip -->
+      <rect width="50" height="20" x="5" y="20" fill="grey"/>
+
+      <!-- Title -->
+      <text x="18" y="31.5" font-size="5" fill="white">MEMORY</text>
+      <rect width="1.5" height="4.5" x="8.75" y="21" fill="white"/>
+      <rect width="4.5" height="1.5" x="7.25" y="22.5" fill="white"/>
+      <rect width="4.5" height="1.5" x="48.25" y="22.5" fill="white"/>
+
+      <!-- Device connectors start -->
+      <path d="M 6 28 l 3.46 -2 l 3.46 2 l 0 4 l -3.46 2 l -3.46 -2 l 0 -4" fill="lightgrey"/>
+      <rect width="7" height="2" x="6" y="29" fill="darkgrey"/>
+
+      <path d="M 47 28 l 3.46 -2 l 3.46 2 l 0 4 l -3.46 2 l -3.46 -2 l 0 -4" fill="lightgrey"/>
+      <rect width="7" height="2" x="47" y="29" fill="darkgrey"/>
+
+      <path d="M 11.5 35 l 1.73 -1 l 1.73 1 l 0 2 l -1.73 1 l -1.73 -1 l 0 -2" fill="lightgrey"/>
+      <rect width="3.5" height="1" x="11.5" y="35.5" fill="darkgrey"/>
+
+      <path d="M 41.5 35 l 1.73 -1 l 1.73 1 l 0 2 l -1.73 1 l -1.73 -1 l 0 -2" fill="lightgrey"/>
+      <rect width="3.5" height="1" x="41.5" y="35.5" fill="darkgrey"/>
+      <!-- Device connectors end -->
+    </g>
+    <g id="GasSensor">
+      <!-- Base structure start -->
+      <path d="M 10 30 L 25 60 L 35 60 L 50 30" fill="grey"/>
+      <circle cx="30" cy="30" r="20" fill="grey"/>
+      <circle cx="30" cy="30" r="19" fill="lightgrey"/>
+      <circle cx="30" cy="30" r="17" fill="grey"/>
+      <!-- Base structure end -->
+
+      <!-- Vents start -->
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(0 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(40 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(80 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(120 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(160 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(200 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(240 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(280 30,30)" fill="#656565"/>
+      <path d="M 28 17 L 30 30 L 32 17" transform="rotate(320 30,30)" fill="#656565"/>
+
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(0 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(40 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(80 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(120 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(160 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(200 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(240 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(280 30,30)" stroke="#505050"/>
+      <line x1="28" y1="17" x2="32" y2="17" transform="rotate(320 30,30)" stroke="#505050"/>
+
+      <circle cx="30" cy="30" r="7" fill="grey"/>
+      <!-- Vents end -->
+    </g>
+    <pattern id="HeavyCable" patternUnits="userSpaceOnUse" width="7" height="7">
+      <rect x="0" y="0" width="7" height="7" fill="red"/>
+      <path d="M 0 7 L 7 0 M -1 1 L 1 -1 M 6 8 L 8 6" stroke="black" stroke-width="2" />
+    </pattern>
+  </defs>
+  <!-- Devices definition end -->
+
+  <!-- Background color chambers -->
+  <rect x="270" y="270" width="240" height="240" fill="blue" fill-opacity="0.5"/>
+  <rect x="750" y="270" width="240" height="240" fill="red" fill-opacity="0.5"/>
+  <rect x="750" y="750" width="240" height="240" fill="grey" fill-opacity="0.5"/>
+
+  <!-- Cables placement start -->
+  <g stroke="red" stroke-width="5" fill="transparent">
+    <!-- Cold circuit -->
+    <path d="M 390 120 q 0 -30 -30 -30 h 60 q -30 0 -30 30 v 60 q 0 30 -30 30 h -60 q -30 0 -30 30 q 0 30 -30 30 h -60 q -30 0 -30 -30 v 60 m 30 -30 q -30 0 -30 30 v 240 q 0 30 -30 30 h 60 q -30 0 -30 -30"/>
+    <path d="M 360 390 h -180 q -30 0 -30 30 m 30 -30 q -30 0 -30 -30"/>
+    <path d="M 120 570 q 30 0 30 30 m 30 -30 q -30 0 -30 30 v 180 q 0 30 -30 30 m 60 0 q -30 0 -30 -30"/>
+
+    <!-- Hot circuit -->
+    <path d="M 870 120 q 0 -30 -30 -30 h 60 q -30 0 -30 30 v 60 q 0 30 30 30 h 60 q 30 0 30 30 q 0 30 30 30 h 60 q 30 0 30 30 v 240 q 0 30 -30 30 h 60 q -30 0 -30 -30"/>
+    <path d="M 900 390 h 180 q 30 0 30 30 m -30 -30 q 30 0 30 -30"/>
+    <path d="M 1110 60 q 0 -30 -30 -30 h -60 q -30 0 -30 30 v 180 m 0 -60 q 0 30 -30 30"/>
+    <path d="M 1110 780 v -180 q 0 -30 -30 -30 m 30 30 q 0 -30 30 -30"/>
+    <path d="M 960 390 q 30 0 30 30 m 30 -30 q -30 0 -30 30 v 120 q 0 30 -30 30 h -60 m 60 0 q -30 0 -30 30"/>
+
+    <!-- Middle -->
+    <path d="M 510 240 v 60 q 0 30 30 30 h 60 q 30 0 30 30 v 180 q 0 30 -30 30 h 60 q -30 0 -30 -30"/>
+    <path d="M 750 180 q 0 -30 -30 -30 q -30 0 -30 30 v 120 q 0 30 -30 30 h -60 m 60 0 q -30 0 -30 30"/>
+    <path d="M 600 570 q 30 0 30 30 m 30 -30 q -30 0 -30 30 v 180 q 0 30 -30 30 m 60 0 q -30 0 -30 -30"/>
+    <path d="M 900 870 q 30 0 30 -30 q 0 -30 -30 -30 m 30 30 v -60"/>
+
+    <!-- Logic Circuit -->
+    <path d="M 90 840 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 h 60 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 h -360"/>
+    <path d="M 90 900 q 0 30 30 30 q 30 0 30 -30 q 0 30 30 30 q 30 0 30 -30 q 0 30 30 30 q 30 0 30 -30 q 0 30 30 30 h 60 q 30 0 30 -30 q 0 30 30 30 q 30 0 30 30"/>
+    <path d="M 360 870 q 30 0 30 -30 q 0 30 30 30 q -30 0 -30 30 q 0 -30 -30 -30 h 60"/>
+    <path d="M 300 870 q -30 0 -30 30 v -60 q 0 30 30 30"/>
+    <path d="M 360 990 q 30 0 30 -30 q 0 -30 -30 -30 h 60 q -30 0 -30 30 q 0 30 30 30 h -60"/>
+    <path d="M 300 990 q -30 0 -30 -30 q 0 -30 30 -30 h -180 m 120 0 q 30 0 30 30"/>
+
+    <!-- Income circuit -->
+    <path d="M 420 570 q 30 0 30 30 v 180 q 0 30 -30 30 m 60 0 q -30 0 -30 -30"/>
+    <path d="M 900 570 q 30 0 30 30 v 180 q 0 30 -30 30 h -420"/>
+    <path d="M 720 870 q 30 0 30 -30 q 0 -30 -30 -30 m 60 0 q -30 0 -30 30"/>
+  </g>
+  <g stroke="url(#HeavyCable)" stroke-width="7" fill="transparent">
+    <path d="M 480 990 q 30 0 30 -30 v -60 q 0 -30 -30 -30 q 30 0 30 -30 m 0 60 v -480 q 0 -30 -30 -30 q -30 0 -30 30 v -60 q 0 30 30 30"/>
+    <path d="M 840 930 h -300 q -30 0 -30 30 m 30 -30 q -30 0 -30 -30"/>
+  </g>
+  <!-- Cables placement end -->
+
+  <!-- Pipes placement start -->
+  <g fill="transparent" stroke-width="20">
+    <path d="M 0 690 h 210 v -120 m 0 120 h 480 m 0 -120 v 300 m 0 -180 h 450 q 30 0 30 -30 v -60" stroke="yellow"/>
+    <path d="M 0 630 h 90 v -60 m 0 60 h 480 v -60 m 0 60 h 450 q 30 0 30 -30" stroke="pink"/>
+    <path d="M 450 480 q 0 30 30 30 h 90 v 60 m 0 -60 h 120 v 60 m 0 -60 h 90 q 30 0 30 -30 v -180 q 0 -30 -30 -30 h -300 q -30 0 -30 30" stroke="purple"/>
+    <path d="M 630 0 v 210 h 210 q 30 0 30 30 v 90 M 630 210 h -210 q -30 0 -30 30 v 90" stroke="yellow"/>
+    <path d="M 330 0 v 480 q 0 30 -30 30 h -90 v 30 m 0 -30 h -90 q -30 0 -30 30 M 330 30 h 90 q 30 0 30 30 v 60 q 0 30 -30 30 h -180" stroke="blue"/>
+    <path d="M 930 0 v 480 q 0 30 30 30 h 90 v 30 m 0 -30 h 90 q 30 0 30 30 M 930 30 h -90 q -30 0 -30 30 v 60 q 0 30 30 30 h 180" stroke="purple"/>
+    <path d="M 1020 870 h -30 v 60 h -90 m 90 0 v 30 q 0 30 -30 30 h -240 q -30 0 -30 -30 v -60" stroke="black"/>
+    <path d="M 990 870 v -90 q 0 -30 -30 -30 h -90 v -270 m 0 270 h -450 q -30 0 -30 -30 v -270" stroke="black"/>
+  </g>
+  <!-- Pipes placement end -->
+
+  <!-- Devices placement start -->
+  <use href="#Tank" x="60" y="60" transform="rotate(90 150,150)"/>
+  <use href="#Tank" x="1020" y="60" transform="rotate(-90 1110,150)"/>
+  <use href="#Tank" x="1020" y="780" transform="rotate(-90 1110,870)"/>
+
+  <use href="#VolumPump" x="300" y="60" transform="rotate(0 330,90)"/>
+  <use href="#VolumPump" x="420" y="60" transform="rotate(180 450,90)"/>
+  <use href="#VolumPump" x="780" y="60" transform="rotate(0 810,90)"/>
+  <use href="#VolumPump" x="900" y="60" transform="rotate(180 930,90)"/>
+
+  <use href="#WallCooler" x="420" y="300" transform="rotate(180 450,330)"/>
+  <use href="#WallCooler" x="420" y="420" transform="rotate(0 450,450)"/>
+
+  <use href="#Radiator" x="300" y="300"/>
+  <use href="#Radiator" x="300" y="360"/>
+  <use href="#Radiator" x="300" y="420"/>
+
+  <use href="#Radiator" x="780" y="300"/>
+  <use href="#Radiator" x="780" y="360"/>
+  <use href="#Radiator" x="780" y="420"/>
+
+  <use href="#Radiator" x="900" y="300"/>
+  <use href="#Radiator" x="900" y="360"/>
+  <use href="#Radiator" x="900" y="420"/>
+
+  <use href="#PassiveVent" x="360" y="300" transform="rotate(180 390,330)"/>
+  <use href="#PassiveVent" x="360" y="420" transform="rotate(0 390,450)"/>
+  <use href="#PassiveVent" x="840" y="300" transform="rotate(180 870,330)"/>
+  <use href="#PassiveVent" x="840" y="420" transform="rotate(0 870,450)"/>
+  <use href="#ActiveVent" x="840" y="900" transform="rotate(-90 870,930)"/>
+
+  <use href="#GasSensor" x="360" y="360" transform="rotate(90 390,390)"/>
+  <use href="#GasSensor" x="840" y="360" transform="rotate(-90 870,390)"/>
+  <use href="#GasSensor" x="840" y="840" transform="rotate(-90 870,870)"/>
+
+  <use href="#VolumPump" x="660" y="840"/>
+  <use href="#VolumPump" x="360" y="540"/>
+  <use href="#VolumPump" x="840" y="540"/>
+  <use href="#VolumPump" x="480" y="180" transform="rotate(90 510,210)"/>
+  <use href="#VolumPump" x="720" y="180" transform="rotate(-90 750,210)"/>
+
+  <use href="#PressureRegulator" x="60" y="540"/>
+  <use href="#BackPressureRegulator" x="180" y="540" transform="rotate(-180 210,570)"/>
+  <use href="#PressureRegulator" x="540" y="540"/>
+  <use href="#BackPressureRegulator" x="660" y="540" transform="rotate(-180 690,570)"/>
+  <use href="#PressureRegulator" x="1020" y="540"/>
+  <use href="#BackPressureRegulator" x="1140" y="540" transform="rotate(-180 1170,570)"/>
+
+  <use href="#ICHousing" x="60" y="840"/>
+  <use href="#ICHousing" x="120" y="840"/>
+  <use href="#ICHousing" x="180" y="840"/>
+
+  <use href="#Memory" x="300" y="840"/>
+  <use href="#Memory" x="300" y="960"/>
+
+  <use href="#BatchWriter" x="420" y="840"/>
+  <use href="#BatchWriter" x="420" y="960"/>
+  <!-- Devices placement end -->
+
+  <!-- Labels placement start -->
+  <g font-size="10">
+    <!-- Circuits labels placement -->
+    <text x="130" y="150">Cold Tank</text>
+    <text x="1090" y="150">Heat Tank</text>
+    <text x="1090" y="870">Gas Tank</text>
+    <text x="367" y="80">Cold Pumps</text>
+    <text x="847" y="80">Heat Pumps</text>
+    <text x="670" y="845" transform="rotate(-90 690,870)">Gas Dump</text>
+    <text x="140" y="535">Cold</text>
+    <text x="115" y="545">Pressure Regulators</text>
+    <text x="615" y="535">Transfer</text>
+    <text x="595" y="545">Pressure Regulators</text>
+    <text x="1100" y="535">Heat</text>
+    <text x="1075" y="545">Pressure Regulators</text>
+
+    <!-- Logics labels placement -->
+    <text x="75" y="825">Income</text>
+    <text x="75" y="835">Control</text>
+    <text x="135" y="825">Pressure</text>
+    <text x="135" y="835">Control</text>
+    <text x="195" y="825">Transfer</text>
+    <text x="195" y="835">Control</text>
+    <text x="303" y="850">Vent Memory</text>
+    <text x="298" y="970">Coolers Memory</text>
+    <text x="425" y="910">Vent Writer</text>
+    <text x="420" y="955">Coolers Writer</text>
+
+    <!-- Sensors labels placement -->
+    <text x="368" y="369">Cold Sensor</text>
+    <text x="848" y="369">Hot Sensor</text>
+    <text x="840" y="840">Exterior Sensor</text>
+    <text x="845" y="975">Exterior Vent</text>
+
+    <!-- Wall coolers labels placement -->
+    <text x="425" y="295" transform="rotate(90 450,330)">Wall Cooler</text>
+    <text x="425" y="415" transform="rotate(90 450,450)">Wall Cooler</text>
+
+    <!-- Chambers Pumps labels placement -->
+    <text x="500" y="175">Cold</text>
+    <text x="485" y="185">Dump Pump</text>
+    <text x="742" y="240">Hot</text>
+    <text x="725" y="250">Dump Pump</text>
+    <text x="865" y="535" transform="rotate(-90 870,570)">Hot</text>
+    <text x="845" y="545" transform="rotate(-90 870,570)">Income Pump</text>
+    <text x="380" y="535" transform="rotate(-90 390,570)">Cold</text>
+    <text x="365" y="545" transform="rotate(-90 390,570)">Income Pump</text>
+
+    <!-- Chambers labels placement -->
+    <text x="360" y="285">Cold Chamber</text>
+    <text x="840" y="285">Hot Chamber</text>
+    <text x="855" y="775">Exterior</text>
+  </g>
+  <!-- Labels placement end -->
+
+</svg>

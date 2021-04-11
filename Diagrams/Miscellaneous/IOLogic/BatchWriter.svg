@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Batch Writer</title>
+  <desc>
+    Batch Writer diagram.
+  </desc>
+
+  <!-- Background -->
+  <rect width="60" height="60" x="0" y="0" fill="#505050"/>
+
+  <!-- External pins start -->
+  <g fill="whitesmoke">
+    <rect width="57" height="4" x="1.5" y="7"/>
+    <rect width="57" height="4" x="1.5" y="13"/>
+    <rect width="57" height="4" x="1.5" y="19"/>
+    <rect width="57" height="4" x="1.5" y="25"/>
+    <rect width="57" height="4" x="1.5" y="31"/>
+    <rect width="57" height="4" x="1.5" y="37"/>
+    <rect width="57" height="4" x="1.5" y="43"/>
+    <rect width="57" height="4" x="1.5" y="49"/>
+  </g>
+
+  <g fill="white">
+    <rect width="55" height="4" x="2.5" y="7"/>
+    <rect width="55" height="4" x="2.5" y="13"/>
+    <rect width="55" height="4" x="2.5" y="19"/>
+    <rect width="55" height="4" x="2.5" y="25"/>
+    <rect width="55" height="4" x="2.5" y="31"/>
+    <rect width="55" height="4" x="2.5" y="37"/>
+    <rect width="55" height="4" x="2.5" y="43"/>
+    <rect width="55" height="4" x="2.5" y="49"/>
+  </g>
+  <!-- External pins end -->
+
+  <!-- Main chip -->
+  <rect width="50" height="50" x="5" y="5" fill="grey"/>
+
+  <!-- Head -->
+  <circle cx="13" cy="11" r="2" fill="red"/>
+  <g font-size="10" fill="white" font-family="monospace">
+    <text x="15" y="28">BATCH</text>
+    <text x="13" y="38">WRITER</text>
+  </g>
+
+  <!-- Device connectors start -->
+  <g fill="lightgrey">
+    <path d="M 9 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46"/>
+    <path d="M 47 7 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46"/>
+    <path d="M 47 46 l 4 0 l 2 3.46 l -2 3.46 l -4 0 l -2 -3.46 l 2 -3.46"/>
+  </g>
+
+  <g fill="darkgrey">
+    <rect x="10" y="46" width="2" height="7"/>
+    <rect x="48" y="7" width="2" height="7"/>
+    <rect x="48" y="46" width="2" height="7"/>
+  </g>
+  
+  <g font-size="3" fill="white" font-family="monospace">
+    <text x="16" y="50">IN</text>
+    <text x="39" y="10">OUT</text>
+    <text x="38" y="13">TYPE</text>
+    <text x="39" y="49">OUT</text>
+    <text x="39" y="52">VAR</text>
+  </g>
+  <!-- Device connectors end -->
+
+</svg>

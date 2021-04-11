@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="60" height="60">
+  <title>Radiator</title>
+  <desc>
+    Radiator diagram.
+  </desc>
+
+  <defs>
+    <pattern id="FillRadiator" x="0" y="0" width="1" height="0.0435">
+      <rect x="0" y="0" width="50" height="1" fill="#505050"/>
+    </pattern>
+  </defs>
+
+  <rect width="60" height="60" x="0" y="0" rx="5" ry="5" fill="lightgrey"/>
+  <rect width="50" height="50" x="5" y="5" rx="5" ry="5" fill="url(#FillRadiator)" stroke="#505050" stroke-width="0.2"/>
+
+</svg>
