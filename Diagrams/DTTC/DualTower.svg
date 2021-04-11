@@ -504,7 +504,7 @@
     <path d="M 510 240 v 60 q 0 30 30 30 h 60 q 30 0 30 30 v 180 q 0 30 -30 30 h 60 q -30 0 -30 -30"/>
     <path d="M 750 180 q 0 -30 -30 -30 q -30 0 -30 30 v 120 q 0 30 -30 30 h -60 m 60 0 q -30 0 -30 30"/>
     <path d="M 600 570 q 30 0 30 30 m 30 -30 q -30 0 -30 30 v 180 q 0 30 -30 30 m 60 0 q -30 0 -30 -30"/>
-    <path d="M 870 840 q 0 -30 -30 -30 m 60 0 q -30 0 -30 30"/>
+    <path d="M 900 870 q 30 0 30 -30 q 0 -30 -30 -30 m 30 30 v -60"/>
     
     <!-- Logic Circuit -->
     <path d="M 90 840 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 h 60 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 h -360"/>
@@ -567,7 +567,7 @@
 
   <use href="#GasSensor" x="360" y="360" transform="rotate(90 390,390)"/>
   <use href="#GasSensor" x="840" y="360" transform="rotate(-90 870,390)"/>
-  <use href="#GasSensor" x="840" y="840" transform="rotate(180 870,870)"/>
+  <use href="#GasSensor" x="840" y="840" transform="rotate(-90 870,870)"/>
 
   <use href="#VolumPump" x="360" y="540"/>
   <use href="#VolumPump" x="840" y="540"/>
@@ -622,8 +622,22 @@
     <!-- Sensors labels placement -->
     <text x="368" y="369">Cold Sensor</text>
     <text x="848" y="369">Hot Sensor</text>
-    <text x="840" y="835">Exterior Sensor</text>
-    <text x="845" y="970">Exterior Vent</text>
+    <text x="840" y="840">Exterior Sensor</text>
+    <text x="845" y="975">Exterior Vent</text>
+
+    <!-- Wall coolers labels placement -->
+    <text x="425" y="295" transform="rotate(90 450,330)">Wall Cooler</text>
+    <text x="425" y="415" transform="rotate(90 450,450)">Wall Cooler</text>
+
+    <!-- Chambers Pumps labels placement -->
+    <text x="500" y="175">Cold</text>
+    <text x="485" y="185">Dump Pump</text>
+    <text x="742" y="240">Hot</text>
+    <text x="725" y="250">Dump Pump</text>
+    <text x="865" y="535" transform="rotate(-90 870,570)">Hot</text>
+    <text x="845" y="545" transform="rotate(-90 870,570)">Income Pump</text>
+    <text x="380" y="535" transform="rotate(-90 390,570)">Cold</text>
+    <text x="365" y="545" transform="rotate(-90 390,570)">Income Pump</text>
 
     <!-- Chambers labels placement -->
     <text x="360" y="285">Cold Chamber</text>
