@@ -481,6 +481,11 @@
   </defs>
   <!-- Devices definition end -->
 
+  <!-- Background color chambers -->
+  <rect x="270" y="270" width="240" height="240" fill="blue" fill-opacity="0.5"/>
+  <rect x="750" y="270" width="240" height="240" fill="red" fill-opacity="0.5"/>
+  <rect x="750" y="750" width="240" height="240" fill="grey" fill-opacity="0.5"/>
+
   <!-- Cables placement start -->
   <g stroke="red" stroke-width="5" fill="transparent">
     <!-- Cold circuit -->
@@ -499,6 +504,7 @@
     <path d="M 510 240 v 60 q 0 30 30 30 h 60 q 30 0 30 30 v 180 q 0 30 -30 30 h 60 q -30 0 -30 -30"/>
     <path d="M 750 180 q 0 -30 -30 -30 q -30 0 -30 30 v 120 q 0 30 -30 30 h -60 m 60 0 q -30 0 -30 30"/>
     <path d="M 600 570 q 30 0 30 30 m 30 -30 q -30 0 -30 30 v 180 q 0 30 -30 30 m 60 0 q -30 0 -30 -30"/>
+    <path d="M 870 840 q 0 -30 -30 -30 m 60 0 q -30 0 -30 30"/>
     
     <!-- Logic Circuit -->
     <path d="M 90 840 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 h 60 q 30 0 30 30 q 0 -30 30 -30 q 30 0 30 30 q 0 -30 30 -30 h -360"/>
@@ -514,7 +520,7 @@
   </g>
   <g stroke="url(#HeavyCable)" stroke-width="7" fill="transparent">
     <path d="M 480 990 q 30 0 30 -30 v -60 q 0 -30 -30 -30 q 30 0 30 -30 v -420 q 0 -30 -30 -30 q -30 0 -30 30 v -60 q 0 30 30 30"/>
-    <path d="M 480 870 h 360 M 510 840 q 0 30 30 30 q -30 0 -30 30"/>
+    <path d="M 480 870 h 300 q 30 0 30 30 q 0 30 30 30 M 510 840 q 0 30 30 30 q -30 0 -30 30"/>
   </g>
   <!-- Cables placement end -->
 
@@ -525,7 +531,7 @@
   <path d="M 620 0 v 200 h -200 q -40 0 -40 40 v 60 h 20 v -60 q 0 -20 20 -20 h 420 q 20 0 20 20 v 60 h 20 v -60 q 0 -40 -40 -40 h -200 v -200 h -20" fill="yellow"/>
   <path d="M 940 0 v 140 h 80 v 20 h -80 v 320 q 0 20 20 20 h 180 q 40 0 40 40 h -20 q 0 -20 -20 -20 h -80 v 20 h -20 v -20 h -80 q -40 0 -40 -40 v -480 m 0 20 h -80 q -40 0 -40 40 v 60 q 0 40 40 40 h 80 v -20 h -80 q -20 0 -20 -20 v -60 q 0 -20 20 -20 h 80" fill="purple"/>
   <path d="M 320 0 v 140 h -80 v 20 h 80 v 320 q 0 20 -20 20 h -180 q -40 0 -40 40 h 20 q 0 -20 20 -20 h 80 v 20 h 20 v -20 h 80 q 40 0 40 -40 v -480 m 0 20 h 80 q 40 0 40 40 v 60 q 0 40 -40 40 h -80 v -20 h 80 q 20 0 20 -20 v -60 q 0 -20 -20 -20 h -80" fill="blue"/>
-  <path d="M 1020 860 h -20 v -80 q 0 -40 -40 -40 h -80 v -260 h -20 v 260 h -440 q -20 0 -20 -20 v -240 h -20 v 240 q 0 40 40 40 h 540 q 20 0 20 20 v 80 h -80 v 20 h 120 v -20" fill="black"/>
+  <path d="M 1020 860 h -20 v -80 q 0 -40 -40 -40 h -80 v -260 h -20 v 260 h -440 q -20 0 -20 -20 v -240 h -20 v 240 q 0 40 40 40 h 540 q 20 0 20 20 v 120 q 0 20 -20 20 h -60 v 20 h 60 q 40 0 40 -40 v -20 h 20 v -20" fill="black"/>
   <!-- Pipes placement end-->
 
   <!-- Devices placement start -->
@@ -557,10 +563,11 @@
   <use href="#PassiveVent" x="360" y="420" transform="rotate(0 390,450)"/>
   <use href="#PassiveVent" x="840" y="300" transform="rotate(180 870,330)"/>
   <use href="#PassiveVent" x="840" y="420" transform="rotate(0 870,450)"/>
-  <use href="#ActiveVent" x="840" y="840" transform="rotate(-90 870,870)"/>
+  <use href="#ActiveVent" x="840" y="900" transform="rotate(-90 870,930)"/>
 
   <use href="#GasSensor" x="360" y="360" transform="rotate(90 390,390)"/>
   <use href="#GasSensor" x="840" y="360" transform="rotate(-90 870,390)"/>
+  <use href="#GasSensor" x="840" y="840" transform="rotate(180 870,870)"/>
 
   <use href="#VolumPump" x="360" y="540"/>
   <use href="#VolumPump" x="840" y="540"/>
@@ -584,5 +591,45 @@
   <use href="#BatchWriter" x="420" y="840"/>
   <use href="#BatchWriter" x="420" y="960"/>
   <!-- Devices placement end -->
+
+  <!-- Labels placement start -->
+  <g font-size="10">
+    <!-- Circuits labels placement -->
+    <text x="130" y="150">Cold Tank</text>
+    <text x="1090" y="150">Heat Tank</text>
+    <text x="1090" y="870">Gas Tank</text>
+    <text x="367" y="80">Cold Pumps</text>
+    <text x="847" y="80">Heat Pumps</text>
+    <text x="140" y="535">Cold</text>
+    <text x="115" y="545">Pressure Regulators</text>
+    <text x="615" y="535">Transfer</text>
+    <text x="595" y="545">Pressure Regulators</text>
+    <text x="1100" y="535">Heat</text>
+    <text x="1075" y="545">Pressure Regulators</text>
+
+    <!-- Logics labels placement -->
+    <text x="75" y="825">Income</text>
+    <text x="75" y="835">Control</text>
+    <text x="135" y="825">Pressure</text>
+    <text x="135" y="835">Control</text>
+    <text x="195" y="825">Transfer</text>
+    <text x="195" y="835">Control</text>
+    <text x="303" y="850">Vent Memory</text>
+    <text x="298" y="970">Coolers Memory</text>
+    <text x="425" y="910">Vent Writer</text>
+    <text x="420" y="955">Coolers Writer</text>
+
+    <!-- Sensors labels placement -->
+    <text x="368" y="369">Cold Sensor</text>
+    <text x="848" y="369">Hot Sensor</text>
+    <text x="840" y="835">Exterior Sensor</text>
+    <text x="845" y="970">Exterior Vent</text>
+
+    <!-- Chambers labels placement -->
+    <text x="360" y="285">Cold Chamber</text>
+    <text x="840" y="285">Hot Chamber</text>
+    <text x="855" y="775">Exterior</text>
+  </g>
+  <!-- Labels placement end -->
 
 </svg>
